@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Win.yahoohub
 {
     public partial class FormLogin : Form
@@ -19,7 +20,25 @@ namespace Win.yahoohub
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string usuario;
+            string contraseña;
+
+            usuario = textBox1.Text;
+            contraseña = textBox2.Text;
+
+            // codigo para validar credenciales
+            if(usuario == "admin" && contraseña == "1234")
+            {
+                //codigo para abrir form menu y cerrar form login
+                FormMenu formMenu = new FormMenu();
+                this.Hide();
+                formMenu.ShowDialog();
+                this.Close();
+            }
+            else
+            { 
             MessageBox.Show("Usuario o Contraseña incorrecto, intente de nuevo.");
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -32,9 +51,11 @@ namespace Win.yahoohub
 
         }
 
+       
+
         private void Close_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult result = MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (result == DialogResult.Yes)
             {
                 //UsuarioAutenticado = Cancelar;

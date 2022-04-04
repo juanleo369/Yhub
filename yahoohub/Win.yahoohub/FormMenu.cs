@@ -65,7 +65,7 @@ namespace Win.yahoohub
         }
         private void FormMenu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -464,11 +464,13 @@ namespace Win.yahoohub
 
         private void button32_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Seguro que dese salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Seguro que desea salir del Sistema?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                //UsuarioAutenticado = Cancelar;
-                Application.Exit();
+                FormLogin formLogin = new FormLogin();
+                this.Hide();
+                formLogin.ShowDialog();
+                this.Close();
             }
 
             if (result == DialogResult.No)
