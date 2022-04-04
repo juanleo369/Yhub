@@ -1225,7 +1225,7 @@ namespace Win.yahoohub
             this.button40.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button40.Size = new System.Drawing.Size(250, 40);
             this.button40.TabIndex = 6;
-            this.button40.Text = "Modificar Orden";
+            this.button40.Text = "Generar Comprobante";
             this.button40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button40.UseVisualStyleBackColor = true;
             this.button40.Click += new System.EventHandler(this.button40_Click);
