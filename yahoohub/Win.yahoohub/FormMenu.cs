@@ -477,7 +477,12 @@ namespace Win.yahoohub
             }
         }
 
-        
+        private void button40_Click(object sender, EventArgs e)
+        {
+            //poner codigo para llamar form hijo
+
+            hideSubMenu();
+        }
     }
 }
 
