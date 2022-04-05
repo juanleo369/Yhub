@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.yahoohub;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,12 @@ namespace Win.yahoohub
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
+
         public FormLogin()
         {
             InitializeComponent();
+            _seguridad = new SeguridadBL();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,8 +30,10 @@ namespace Win.yahoohub
             usuario = textBox1.Text;
             contraseña = textBox2.Text;
 
+            var resultado = _seguridad.Autorizar(usuario, contraseña);
+
             // codigo para validar credenciales
-            if(usuario == "admin" && contraseña == "1234")
+            if(resultado == true)
             {
                 //codigo para abrir form menu y cerrar form login
                 FormMenu formMenu = new FormMenu();

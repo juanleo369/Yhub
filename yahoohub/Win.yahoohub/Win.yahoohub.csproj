@@ -119,5 +119,11 @@
   <ItemGroup>
     <None Include="Resources\publicom logo pagina.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.yahoohub\BL.yahoohub.csproj">
+      <Project>{d200ddd5-0d26-47b5-a33c-d21c466bdee9}</Project>
+      <Name>BL.yahoohub</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
