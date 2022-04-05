@@ -19,11 +19,13 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 {
        
     modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-   // Database.SetInitializer(new DatosdeInicio());
+    Database.SetInitializer(new DatosdeInicio());
 }
 
-public DbSet<Producto> Productos { get; set; }
-public DbSet<Categoria> Categorias { get; set; }
+    public DbSet<Producto> Productos { get; set; }
+    public DbSet<PrecioCuadrado> PrecioCuadrados { get; set; }
+     
+    public  DbSet<Categoria> Categorias { get; set; }
 
 
     }

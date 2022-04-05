@@ -59,8 +59,6 @@ namespace Win.yahoohub
             this.button29 = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.panelProductosSubmenu = new System.Windows.Forms.Panel();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
@@ -73,8 +71,6 @@ namespace Win.yahoohub
             this.button18 = new System.Windows.Forms.Button();
             this.btnInventarios = new System.Windows.Forms.Button();
             this.panelEmpleadosSubmenu = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -241,7 +237,7 @@ namespace Win.yahoohub
             this.panelReportesSubmenu.Controls.Add(this.button38);
             this.panelReportesSubmenu.Controls.Add(this.button39);
             this.panelReportesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportesSubmenu.Location = new System.Drawing.Point(0, 1807);
+            this.panelReportesSubmenu.Location = new System.Drawing.Point(0, 1651);
             this.panelReportesSubmenu.Name = "panelReportesSubmenu";
             this.panelReportesSubmenu.Size = new System.Drawing.Size(250, 281);
             this.panelReportesSubmenu.TabIndex = 22;
@@ -382,7 +378,7 @@ namespace Win.yahoohub
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnReportes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReportes.Location = new System.Drawing.Point(0, 1762);
+            this.btnReportes.Location = new System.Drawing.Point(0, 1606);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(250, 45);
@@ -399,7 +395,7 @@ namespace Win.yahoohub
             this.panelProveedoresSubmenu.Controls.Add(this.button30);
             this.panelProveedoresSubmenu.Controls.Add(this.button31);
             this.panelProveedoresSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProveedoresSubmenu.Location = new System.Drawing.Point(0, 1635);
+            this.panelProveedoresSubmenu.Location = new System.Drawing.Point(0, 1479);
             this.panelProveedoresSubmenu.Name = "panelProveedoresSubmenu";
             this.panelProveedoresSubmenu.Size = new System.Drawing.Size(250, 127);
             this.panelProveedoresSubmenu.TabIndex = 20;
@@ -468,7 +464,7 @@ namespace Win.yahoohub
             this.btnProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProveedores.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnProveedores.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnProveedores.Location = new System.Drawing.Point(0, 1590);
+            this.btnProveedores.Location = new System.Drawing.Point(0, 1434);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnProveedores.Size = new System.Drawing.Size(250, 45);
@@ -485,7 +481,7 @@ namespace Win.yahoohub
             this.panelClientesSubmenu.Controls.Add(this.button28);
             this.panelClientesSubmenu.Controls.Add(this.button29);
             this.panelClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelClientesSubmenu.Location = new System.Drawing.Point(0, 1463);
+            this.panelClientesSubmenu.Location = new System.Drawing.Point(0, 1307);
             this.panelClientesSubmenu.Name = "panelClientesSubmenu";
             this.panelClientesSubmenu.Size = new System.Drawing.Size(250, 127);
             this.panelClientesSubmenu.TabIndex = 18;
@@ -554,7 +550,7 @@ namespace Win.yahoohub
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnClientes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClientes.Location = new System.Drawing.Point(0, 1418);
+            this.btnClientes.Location = new System.Drawing.Point(0, 1262);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnClientes.Size = new System.Drawing.Size(250, 45);
@@ -567,55 +563,17 @@ namespace Win.yahoohub
             // panelProductosSubmenu
             // 
             this.panelProductosSubmenu.BackColor = System.Drawing.SystemColors.Control;
-            this.panelProductosSubmenu.Controls.Add(this.button19);
-            this.panelProductosSubmenu.Controls.Add(this.button20);
             this.panelProductosSubmenu.Controls.Add(this.button21);
             this.panelProductosSubmenu.Controls.Add(this.button22);
             this.panelProductosSubmenu.Controls.Add(this.button23);
             this.panelProductosSubmenu.Controls.Add(this.button24);
             this.panelProductosSubmenu.Controls.Add(this.button25);
             this.panelProductosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelProductosSubmenu.Location = new System.Drawing.Point(0, 1125);
+            this.panelProductosSubmenu.Location = new System.Drawing.Point(0, 1046);
             this.panelProductosSubmenu.Name = "panelProductosSubmenu";
-            this.panelProductosSubmenu.Size = new System.Drawing.Size(250, 293);
+            this.panelProductosSubmenu.Size = new System.Drawing.Size(250, 216);
             this.panelProductosSubmenu.TabIndex = 16;
             this.panelProductosSubmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelProductosSubmenu_Paint);
-            // 
-            // button19
-            // 
-            this.button19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button19.Location = new System.Drawing.Point(0, 240);
-            this.button19.Name = "button19";
-            this.button19.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button19.Size = new System.Drawing.Size(250, 40);
-            this.button19.TabIndex = 7;
-            this.button19.Text = "Modificar Precio M2";
-            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button20.Location = new System.Drawing.Point(0, 200);
-            this.button20.Name = "button20";
-            this.button20.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button20.Size = new System.Drawing.Size(250, 40);
-            this.button20.TabIndex = 6;
-            this.button20.Text = "Modificar Categorias";
-            this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -717,7 +675,7 @@ namespace Win.yahoohub
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductos.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnProductos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnProductos.Location = new System.Drawing.Point(0, 1080);
+            this.btnProductos.Location = new System.Drawing.Point(0, 1001);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnProductos.Size = new System.Drawing.Size(250, 45);
@@ -734,7 +692,7 @@ namespace Win.yahoohub
             this.panelInventariosSubmenu.Controls.Add(this.button17);
             this.panelInventariosSubmenu.Controls.Add(this.button18);
             this.panelInventariosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInventariosSubmenu.Location = new System.Drawing.Point(0, 953);
+            this.panelInventariosSubmenu.Location = new System.Drawing.Point(0, 874);
             this.panelInventariosSubmenu.Name = "panelInventariosSubmenu";
             this.panelInventariosSubmenu.Size = new System.Drawing.Size(250, 127);
             this.panelInventariosSubmenu.TabIndex = 14;
@@ -804,7 +762,7 @@ namespace Win.yahoohub
             this.btnInventarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventarios.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold);
             this.btnInventarios.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInventarios.Location = new System.Drawing.Point(0, 908);
+            this.btnInventarios.Location = new System.Drawing.Point(0, 829);
             this.btnInventarios.Name = "btnInventarios";
             this.btnInventarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInventarios.Size = new System.Drawing.Size(250, 45);
@@ -817,8 +775,6 @@ namespace Win.yahoohub
             // panelEmpleadosSubmenu
             // 
             this.panelEmpleadosSubmenu.BackColor = System.Drawing.SystemColors.Control;
-            this.panelEmpleadosSubmenu.Controls.Add(this.button15);
-            this.panelEmpleadosSubmenu.Controls.Add(this.button14);
             this.panelEmpleadosSubmenu.Controls.Add(this.button1);
             this.panelEmpleadosSubmenu.Controls.Add(this.button10);
             this.panelEmpleadosSubmenu.Controls.Add(this.button11);
@@ -827,44 +783,8 @@ namespace Win.yahoohub
             this.panelEmpleadosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEmpleadosSubmenu.Location = new System.Drawing.Point(0, 615);
             this.panelEmpleadosSubmenu.Name = "panelEmpleadosSubmenu";
-            this.panelEmpleadosSubmenu.Size = new System.Drawing.Size(250, 293);
+            this.panelEmpleadosSubmenu.Size = new System.Drawing.Size(250, 214);
             this.panelEmpleadosSubmenu.TabIndex = 12;
-            // 
-            // button15
-            // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button15.Location = new System.Drawing.Point(0, 240);
-            this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(250, 40);
-            this.button15.TabIndex = 7;
-            this.button15.Text = "Modificar Metodo Pago";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button14.Location = new System.Drawing.Point(0, 200);
-            this.button14.Name = "button14";
-            this.button14.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button14.Size = new System.Drawing.Size(250, 40);
-            this.button14.TabIndex = 6;
-            this.button14.Text = "Modificar Puesto";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button1
             // 
@@ -1291,12 +1211,8 @@ namespace Win.yahoohub
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Panel panelProductosSubmenu;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
