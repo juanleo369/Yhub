@@ -44,6 +44,7 @@ namespace Win.yahoohub
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Producto guardado exitosamente");
             }
             else
             {
