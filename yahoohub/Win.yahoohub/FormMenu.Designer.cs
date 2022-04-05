@@ -87,6 +87,7 @@ namespace Win.yahoohub
             this.button7 = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelOrdenesSubmenu = new System.Windows.Forms.Panel();
+            this.button40 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -96,7 +97,6 @@ namespace Win.yahoohub
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button40 = new System.Windows.Forms.Button();
             this.panelStatus.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             this.panelInformaciones.SuspendLayout();
@@ -1077,6 +1077,24 @@ namespace Win.yahoohub
             this.panelOrdenesSubmenu.Size = new System.Drawing.Size(250, 253);
             this.panelOrdenesSubmenu.TabIndex = 1;
             // 
+            // button40
+            // 
+            this.button40.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button40.FlatAppearance.BorderSize = 0;
+            this.button40.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button40.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button40.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.Location = new System.Drawing.Point(0, 200);
+            this.button40.Name = "button40";
+            this.button40.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button40.Size = new System.Drawing.Size(250, 40);
+            this.button40.TabIndex = 6;
+            this.button40.Text = "Generar Comprobante";
+            this.button40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
             // button6
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1211,24 +1229,6 @@ namespace Win.yahoohub
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // button40
-            // 
-            this.button40.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button40.FlatAppearance.BorderSize = 0;
-            this.button40.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button40.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button40.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.Location = new System.Drawing.Point(0, 200);
-            this.button40.Name = "button40";
-            this.button40.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button40.Size = new System.Drawing.Size(250, 40);
-            this.button40.TabIndex = 6;
-            this.button40.Text = "Generar Comprobante";
-            this.button40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
             // 
             // FormMenu
             // 
