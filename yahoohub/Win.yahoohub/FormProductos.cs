@@ -76,12 +76,20 @@ namespace Win.yahoohub
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if(productoIdTextBox.Text != "")
-            {
-                var id = Convert.ToInt32(productoIdTextBox.Text);
+          
+            if (productoIdTextBox.Text != "")
+               {
+                var resultado = MessageBox.Show("Desea Eliminar este registro?","Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                   {
+                    var id = Convert.ToInt32(productoIdTextBox.Text);
 
-                Eliminar(id);
-            }
+                    Eliminar(id);
+                    }
+               
+               }
+            
+            
            
         }
 
