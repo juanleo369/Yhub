@@ -111,6 +111,7 @@ namespace BL.yahoohub
         public double Tamaño_Largo { get; set; }
         public double Tamaño_Ancho { get; set; }
         public double Precio { get; set; }
+        public byte[] Imagen { get; set; }
         public bool Activo { get; set; }
 
 

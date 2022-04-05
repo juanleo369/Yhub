@@ -39,6 +39,7 @@ namespace Win.yahoohub
             System.Windows.Forms.Label tamaño_LargoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -60,7 +61,10 @@ namespace Win.yahoohub
             this.productoIdTextBox = new System.Windows.Forms.TextBox();
             this.tamaño_AnchoTextBox = new System.Windows.Forms.TextBox();
             this.tamaño_LargoTextBox = new System.Windows.Forms.TextBox();
-            this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             activoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -71,6 +75,7 @@ namespace Win.yahoohub
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).BeginInit();
             this.listaProductosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -164,9 +169,13 @@ namespace Win.yahoohub
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(899, 27);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(876, 27);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaProductosBindingSource
+            // 
+            this.listaProductosBindingSource.DataSource = typeof(BL.yahoohub.Producto);
             // 
             // bindingNavigatorCountItem
             // 
@@ -279,7 +288,7 @@ namespace Win.yahoohub
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(828, 12);
+            this.button7.Location = new System.Drawing.Point(805, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(59, 51);
             this.button7.TabIndex = 8;
@@ -345,15 +354,49 @@ namespace Win.yahoohub
             this.tamaño_LargoTextBox.Size = new System.Drawing.Size(104, 22);
             this.tamaño_LargoTextBox.TabIndex = 21;
             // 
-            // listaProductosBindingSource
+            // ImagenPictureBox
             // 
-            this.listaProductosBindingSource.DataSource = typeof(BL.yahoohub.Producto);
+            this.ImagenPictureBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ImagenPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "Imagen", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.ImagenPictureBox.Location = new System.Drawing.Point(418, 69);
+            this.ImagenPictureBox.Name = "ImagenPictureBox";
+            this.ImagenPictureBox.Size = new System.Drawing.Size(292, 231);
+            this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImagenPictureBox.TabIndex = 23;
+            this.ImagenPictureBox.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(433, 315);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 58);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Agregar Imagen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(571, 315);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(139, 58);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Remover Imagen";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 511);
+            this.ClientSize = new System.Drawing.Size(876, 525);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ImagenPictureBox);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(descripcionLabel);
@@ -378,6 +421,7 @@ namespace Win.yahoohub
             this.listaProductosBindingNavigator.ResumeLayout(false);
             this.listaProductosBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +452,9 @@ namespace Win.yahoohub
         private System.Windows.Forms.TextBox tamaño_AnchoTextBox;
         private System.Windows.Forms.TextBox tamaño_LargoTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
+        private System.Windows.Forms.PictureBox ImagenPictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
