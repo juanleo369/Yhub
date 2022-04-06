@@ -34,7 +34,10 @@ namespace BL.yahoohub
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<TipoUsuario> TipoUsuarios { get; set; }
-
+        public DbSet<Compra> Compras { get; set; }
+        public DbSet<CDetalle> CDetalles { get; set; }
+        public DbSet<Material> Materiales { get; set; }
+        public DbSet<Inventario> Inventarios { get; set; }
 
 
 

@@ -33,7 +33,6 @@ namespace BL.yahoohub
         }
 
         //Codigo que sirve para Guardar datos en la base de datos
-
         public ResultadoEmpleado GuardarEmpleado(Empleado empleado)
         {
             var resultado = Validar(empleado);
@@ -49,7 +48,6 @@ namespace BL.yahoohub
         }
 
         //Codigo que sirve para agregar datos en la base de datos
-
         public void AgregarEmpleado()
         {
             var nuevoEmpleado = new Empleado();
@@ -57,7 +55,6 @@ namespace BL.yahoohub
         }
 
         //Codigo que sirve para eliminar datos en la base de datos
-
         public bool EliminarEmpleado(int id)
         {
             foreach (var empleado in ListaEmpleados)
@@ -113,7 +110,6 @@ namespace BL.yahoohub
     }
 
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
-
     public class Empleado
     {
         public int EmpleadoId { get; set; }
@@ -138,7 +134,6 @@ namespace BL.yahoohub
     }
 
     //Codigo que sirve para validar los campos que se ingresan
-
     public class ResultadoEmpleado
     {
         public bool Exitoso { get; set; }
