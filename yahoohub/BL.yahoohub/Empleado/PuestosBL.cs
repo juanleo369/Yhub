@@ -23,7 +23,7 @@ namespace BL.yahoohub
 
         //Codigo que sirve para crear una lista de  datos y enviarla al form
 
-        public BindingList<Puesto> ObtenerPuesto()
+        public BindingList<Puesto> ObtenerPuestos()
         {
             _contexto.Puestos.Load();
 

@@ -31,6 +31,9 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
     public DbSet<Empleado> Empleados { get; set; }
     public DbSet<Puesto> Puestos { get; set; }
     public DbSet<MetodoPago> MetodoPagos { get; set; }
+    public DbSet<Proveedor> Proveedores { get; set; }
+
+
 
 
     }

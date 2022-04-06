@@ -8,63 +8,57 @@ using System.Threading.Tasks;
 
 namespace BL.yahoohub
 {
-    public class EmpleadosBL
+    public class ProveedoresBL
     {
-        //Variable local de la base y Variable de la lista
-
         Contexto _contexto;
-
-        public BindingList<Empleado> ListaEmpleados { get; set; }
+        public BindingList<Proveedor> ListaProveedores { get; set; }
 
         //Codigo que sirve para hacer el llamado de la base de datos y inicializar listas.
-        public EmpleadosBL()
+        public ProveedoresBL()
         {
             _contexto = new Contexto();
-            ListaEmpleados = new BindingList<Empleado>();
-
+            ListaProveedores = new BindingList<Proveedor>();
         }
 
         //Codigo que sirve para crear una lista de  datos y enviarla al form
-        public BindingList<Empleado> ObtenerEmpleados()
+        public BindingList<Proveedor> ObtenerProveedores()
         {
-            _contexto.Empleados.Load();
-            ListaEmpleados = _contexto.Empleados.Local.ToBindingList();
-            return ListaEmpleados;
+            _contexto.Proveedores.Load();
+
+            ListaProveedores = _contexto.Proveedores.Local.ToBindingList();
+            return ListaProveedores;
         }
 
         //Codigo que sirve para Guardar datos en la base de datos
-
-        public ResultadoEmpleado GuardarEmpleado(Empleado empleado)
+        public ResultadoProveedor GuardarProveedor(Proveedor proveedor)
         {
-            var resultado = Validar(empleado);
+            var resultadoproveedor = Validar(proveedor);
 
-            if (resultado.Exitoso == false)
+            if (resultadoproveedor.Exitoso == false)
             {
-                return resultado;
+                return resultadoproveedor;
             }
 
             _contexto.SaveChanges();
-            resultado.Exitoso = true;
-            return resultado;
+            resultadoproveedor.Exitoso = true;
+            return resultadoproveedor;
         }
 
         //Codigo que sirve para agregar datos en la base de datos
-
-        public void AgregarEmpleado()
+        public void AgregarProveedor()
         {
-            var nuevoEmpleado = new Empleado();
-            ListaEmpleados.Add(nuevoEmpleado);
+            var nuevoProveedor = new Proveedor();
+            ListaProveedores.Add(nuevoProveedor);
         }
 
         //Codigo que sirve para eliminar datos en la base de datos
-
-        public bool EliminarEmpleado(int id)
+        public bool EliminarProveedor(int id)
         {
-            foreach (var empleado in ListaEmpleados)
-            { 
-                if (empleado.EmpleadoId == id)
+            foreach (var proveedor in ListaProveedores)
+            {
+                if (proveedor.ProveedorId == id)
                 {
-                    ListaEmpleados.Remove(empleado);
+                    ListaProveedores.Remove(proveedor);
                     _contexto.SaveChanges();
                     return true;
                 }
@@ -73,35 +67,36 @@ namespace BL.yahoohub
         }
 
         //Codigo para validar los campos  que se desean guardar no esten vacios.
-        private ResultadoEmpleado Validar(Empleado empleado)
+        private ResultadoProveedor Validar(Proveedor proveedor)
         {
-            var resultado = new ResultadoEmpleado();
+            var resultado = new ResultadoProveedor();
             resultado.Exitoso = true;
-            if (string.IsNullOrEmpty(empleado.Nombre) == true)
+
+            if (string.IsNullOrEmpty(proveedor.Nombre) == true)
             {
-                resultado.Mensaje = "ingrese el nombre del Cliente";
+                resultado.Mensaje = "ingrese el nombre del proveedor";
                 resultado.Exitoso = false;
 
             }
-            if (string.IsNullOrEmpty(empleado.Direccion) == true)
+            if (string.IsNullOrEmpty(proveedor.Direccion) == true)
             {
                 resultado.Mensaje = "Ingrese la dirección";
                 resultado.Exitoso = false;
 
             }
 
-            if (string.IsNullOrEmpty(empleado.Deparmento) == true)
+            if (string.IsNullOrEmpty(proveedor.Deparmento) == true)
             {
                 resultado.Mensaje = "Ingrese el Departamento";
                 resultado.Exitoso = false;
             }
 
-            if (string.IsNullOrEmpty(empleado.Ciudad) == true)
+            if (string.IsNullOrEmpty(proveedor.Ciudad) == true)
             {
                 resultado.Mensaje = "Ingrese la ciudad";
                 resultado.Exitoso = false;
             }
-            if (string.IsNullOrEmpty(empleado.Correo) == true)
+            if (string.IsNullOrEmpty(proveedor.Correo) == true)
             {
                 resultado.Mensaje = "Ingrese el correo";
                 resultado.Exitoso = false;
@@ -110,15 +105,14 @@ namespace BL.yahoohub
 
             return resultado;
         }
+
     }
 
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
-
-    public class Empleado
+    public class Proveedor
     {
-        public int EmpleadoId { get; set; }
+        public int ProveedorId { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
         public int RTN { get; set; }
         public int Telefono { get; set; }
         public string Direccion { get; set; }
@@ -128,18 +122,12 @@ namespace BL.yahoohub
         public DateTime Fecha { get; set; }
         public byte[] Imagen { get; set; }
         public bool Activo { get; set; }
-        public int PuestoId { get; set; }
-        public Puesto Puesto { get; set; }
-        public int MetodoId { get; set; }
-        public MetodoPago MetodoPago { get; set; }
-        public double Salario { get; set; }
 
 
     }
 
     //Codigo que sirve para validar los campos que se ingresan
-
-    public class ResultadoEmpleado
+    public class ResultadoProveedor
     {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
