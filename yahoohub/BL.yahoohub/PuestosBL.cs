@@ -8,37 +8,35 @@ using System.Threading.Tasks;
 
 namespace BL.yahoohub
 {
-    public class TipoClientesBL
+    public class PuestosBL
     {
         Contexto _contexto;
-        public BindingList<TipoCliente> ListaTipoClientes { get; set; }
+        public BindingList<Puesto> ListaPuestos { get; set; }
 
         //Codigo que sirve para hacer el llamado de la base de datos y inicializar listas.
 
-        public TipoClientesBL()
+        public PuestosBL()
         {
             _contexto = new Contexto();
-            ListaTipoClientes = new BindingList<TipoCliente>();
+            ListaPuestos = new BindingList<Puesto>();
         }
 
         //Codigo que sirve para crear una lista de  datos y enviarla al form
 
-        public BindingList<TipoCliente> ObtenerClientes()
+        public BindingList<Puesto> ObtenerPuesto()
         {
-            _contexto.Clientes.Load();
+            _contexto.Puestos.Load();
 
-            ListaTipoClientes = _contexto.TipoClientes.Local.ToBindingList();
-            return ListaTipoClientes;
+            ListaPuestos = _contexto.Puestos.Local.ToBindingList();
+            return ListaPuestos;
         }
     }
-
         //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
-        public class TipoCliente
-    {
-        public int TipoClienteId { get; set; }
-        public string Descripcion { get; set; }
+        public class Puesto
+        {
+            public int PuestoId { get; set; }
+            public string Descripcion { get; set; }
+        }
 
-
+        
     }
-
-}

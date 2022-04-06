@@ -117,7 +117,7 @@ namespace BL.yahoohub
 
             #endregion
 
-            #region
+            #region Tipo de clientes
             var tipocliente1 = new TipoCliente();
             tipocliente1.Descripcion = "Empresa";
             contexto.TipoClientes.Add(tipocliente1);
@@ -135,6 +135,63 @@ namespace BL.yahoohub
             contexto.TipoClientes.Add(tipocliente4);
 
             #endregion
+
+            #region Puestos
+            var Puesto1 = new Puesto();
+            Puesto1.Descripcion = "Gerente General";
+            contexto.Puestos.Add(Puesto1);
+
+            var Puesto2 = new Puesto();
+            Puesto2.Descripcion = "Gerente Administrativo";
+            contexto.Puestos.Add(Puesto2);
+
+            var Puesto3 = new Puesto();
+            Puesto3.Descripcion = "Tapicero";
+            contexto.Puestos.Add(Puesto3);
+
+            var Puesto4 = new Puesto();
+            Puesto4.Descripcion = "Soldador";
+            contexto.Puestos.Add(Puesto4);
+
+            var Puesto5 = new Puesto();
+            Puesto5.Descripcion = "Vendedor";
+            contexto.Puestos.Add(Puesto5);
+
+            var Puesto6 = new Puesto();
+            Puesto4.Descripcion = "Supervisor";
+            contexto.Puestos.Add(Puesto4);
+
+            var Puesto7 = new Puesto();
+            Puesto7.Descripcion = "Electricista";
+            contexto.Puestos.Add(Puesto7);
+
+
+            #endregion
+
+            #region Metodo Pago 
+
+            var MetodoPago1 = new MetodoPago();
+            MetodoPago1.Descripcion = "Hora";
+            contexto.MetodoPagos.Add(MetodoPago1);
+
+            var MetodoPago2 = new MetodoPago();
+            MetodoPago2.Descripcion = "Díario";
+            contexto.MetodoPagos.Add(MetodoPago2);
+
+            var MetodoPago3 = new MetodoPago();
+            MetodoPago3.Descripcion = "Semanal";
+            contexto.MetodoPagos.Add(MetodoPago3);
+
+            var MetodoPago4 = new MetodoPago();
+            MetodoPago4.Descripcion = "Quincenal";
+            contexto.MetodoPagos.Add(MetodoPago4);
+
+            var MetodoPago5 = new MetodoPago();
+            MetodoPago5.Descripcion = "Mensual";
+            contexto.MetodoPagos.Add(MetodoPago5);
+
+            #endregion
+
 
             base.Seed(contexto);
 

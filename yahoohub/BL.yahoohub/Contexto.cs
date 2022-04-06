@@ -27,8 +27,11 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
      
     public  DbSet<Categoria> Categorias { get; set; }
     public DbSet<Cliente> Clientes { get; set; }
+    public DbSet<TipoCliente> TipoClientes { get; set; }
+    public DbSet<Empleado> Empleados { get; set; }
+    public DbSet<Puesto> Puestos { get; set; }
+    public DbSet<MetodoPago> MetodoPagos { get; set; }
 
-        public DbSet<TipoCliente> TipoClientes { get; set; }
 
     }
 }
