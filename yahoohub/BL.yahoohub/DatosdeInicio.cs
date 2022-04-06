@@ -136,6 +136,41 @@ namespace BL.yahoohub
 
             #endregion
 
+            #region Empleados
+            var empleado1 = new Empleado();
+            empleado1.Nombre = "juan Leonardo";
+            empleado1.Apellido = "Alvarado Muñoz";
+            empleado1.RTN = 0;
+            empleado1.Telefono = 98887457;
+            empleado1.Direccion = "Barrio Santa ana";
+            empleado1.Ciudad = "San Pedro Sula";
+            empleado1.Correo = "juanleo369@gmail.com";
+            empleado1.Fecha = new DateTime(2021, 2, 6);
+            empleado1.Imagen = null;
+            empleado1.Activo = true;
+            empleado1.PuestoId = 5;
+            empleado1.MetodoId = 7;
+            empleado1.Salario = 0;
+            contexto.Empleados.Add(empleado1);
+
+            var empleado2 = new Empleado();
+            empleado2.Nombre = "Claudia Isabel";
+            empleado2.Apellido = "Zepeda Castillo";
+            empleado2.RTN = 0;
+            empleado2.Telefono = 99151346;
+            empleado2.Direccion = "Barrio Santa ana";
+            empleado2.Ciudad = "San Pedro Sula";
+            empleado2.Correo = "zcastillo@gmail.com";
+            empleado2.Fecha = new DateTime(2021, 2, 6);
+            empleado2.Imagen = null;
+            empleado2.Activo = true;
+            empleado2.PuestoId = 2;
+            empleado2.MetodoId = 5;
+            empleado1.Salario = 15000;
+            contexto.Empleados.Add(empleado2);
+            #endregion
+
+
             #region Puestos
             var Puesto1 = new Puesto();
             Puesto1.Descripcion = "Gerente General";
@@ -190,8 +225,44 @@ namespace BL.yahoohub
             MetodoPago5.Descripcion = "Mensual";
             contexto.MetodoPagos.Add(MetodoPago5);
 
+            var MetodoPago7 = new MetodoPago();
+            MetodoPago7.Descripcion = "Comision";
+            contexto.MetodoPagos.Add(MetodoPago7);
+
             #endregion
 
+            #region TipoUsuario
+
+            var privi = new TipoUsuario();
+            privi.Descripcion = "Administrador";
+            contexto.TipoUsuarios.Add(privi);
+
+            var privi1 = new TipoUsuario();
+            privi1.Descripcion = "Gerente";
+            contexto.TipoUsuarios.Add(privi1);
+
+            var privi2 = new TipoUsuario();
+            privi2.Descripcion = "Supervisor";
+            contexto.TipoUsuarios.Add(privi2);
+
+            #endregion
+
+            #region Usuario
+            var usuario1 = new Usuario();
+            usuario1.NombUsuario = "admin";
+            usuario1.Contrasena = "123";
+            usuario1.TipoUsuarioId = 1;
+            usuario1.EmpleadoId = 1;
+            contexto.Usuarios.Add(usuario1);
+
+            var usuario2 = new Usuario();
+            usuario2.NombUsuario = "ClaudiaZCastillo";
+            usuario2.Contrasena = "Claudia1974";
+            usuario2.TipoUsuarioId = 2;
+            usuario1.EmpleadoId = 2;
+            contexto.Usuarios.Add(usuario2);
+
+            #endregion
 
             base.Seed(contexto);
 
