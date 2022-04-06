@@ -117,6 +117,24 @@ namespace BL.yahoohub
 
             #endregion
 
+            #region
+            var tipocliente1 = new TipoCliente();
+            tipocliente1.Descripcion = "Empresa";
+            contexto.TipoClientes.Add(tipocliente1);
+
+            var tipocliente2 = new TipoCliente();
+            tipocliente2.Descripcion = "Institución";
+            contexto.TipoClientes.Add(tipocliente2);
+
+            var tipocliente3 = new TipoCliente();
+            tipocliente3.Descripcion = "Iglesia";
+            contexto.TipoClientes.Add(tipocliente3);
+
+            var tipocliente4 = new TipoCliente();
+            tipocliente4.Descripcion = "Persona";
+            contexto.TipoClientes.Add(tipocliente4);
+
+            #endregion
 
             base.Seed(contexto);
 

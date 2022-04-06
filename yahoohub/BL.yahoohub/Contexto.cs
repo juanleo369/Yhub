@@ -26,7 +26,9 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
     public DbSet<PrecioCuadrado> PrecioCuadrados { get; set; }
      
     public  DbSet<Categoria> Categorias { get; set; }
+    public DbSet<Cliente> Clientes { get; set; }
 
+        public DbSet<TipoCliente> TipoClientes { get; set; }
 
     }
 }
