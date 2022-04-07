@@ -38,6 +38,12 @@ namespace BL.yahoohub
         public DbSet<CDetalle> CDetalles { get; set; }
         public DbSet<Material> Materiales { get; set; }
         public DbSet<Inventario> Inventarios { get; set; }
+        public DbSet<Planilla> Planillas { get; set; }
+        public DbSet<TipoPago> TipoPagos { get; set; }
+        public DbSet<EstadoPedido> EstadoPedidos { get; set; }
+        public DbSet<OrdenDetalle> OrdenDetalles { get; set; }
+        public DbSet<Orden> Ordenes { get; set; }
+        public DbSet<Impuesto> Impuestos { get; set; }
 
 
 

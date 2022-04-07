@@ -264,6 +264,92 @@ namespace BL.yahoohub
 
             #endregion
 
+            #region Tipo Pago
+            var Tipopago1 = new TipoPago();
+            Tipopago1.Descripcion = "60% Anticipo";
+            Tipopago1.Valor = 0.60;
+            contexto.TipoPagos.Add(Tipopago1);
+
+            var Tipopago2 = new TipoPago();
+            Tipopago2.Descripcion = "50% Anticipo";
+            Tipopago2.Valor = 0.50;
+            contexto.TipoPagos.Add(Tipopago2);
+
+            var Tipopago3 = new TipoPago();
+            Tipopago3.Descripcion = "40% Anticipo";
+            Tipopago3.Valor = 0.50;
+            contexto.TipoPagos.Add(Tipopago3);
+
+            var Tipopago4 = new TipoPago();
+            Tipopago4.Descripcion = "30% Anticipo";
+            Tipopago4.Valor = 0.40;
+            contexto.TipoPagos.Add(Tipopago4);
+
+            var Tipopago5 = new TipoPago();
+            Tipopago5.Descripcion = "30% Anticipo";
+            Tipopago5.Valor = 0.30;
+            contexto.TipoPagos.Add(Tipopago5);
+
+            var Tipopago6 = new TipoPago();
+            Tipopago6.Descripcion = "20% Anticipo";
+            Tipopago6.Valor = 0.20;
+            contexto.TipoPagos.Add(Tipopago6);
+
+            var Tipopago7 = new TipoPago();
+            Tipopago7.Descripcion = "10% Anticipo";
+            Tipopago7.Valor = 0.10;
+            contexto.TipoPagos.Add(Tipopago7);
+
+            var Tipopago8 = new TipoPago();
+            Tipopago8.Descripcion = "5% Anticipo";
+            Tipopago8.Valor = 0.05;
+            contexto.TipoPagos.Add(Tipopago8);
+
+            var Tipopago9 = new TipoPago();
+            Tipopago9.Descripcion = "Pago Completo";
+            Tipopago9.Valor = 0;
+            contexto.TipoPagos.Add(Tipopago9);
+
+
+            #endregion
+
+            #region Estado Pedido
+            var EstadoPedido = new EstadoPedido();
+            EstadoPedido.Descripcion = "Cotizacion";
+            contexto.EstadoPedidos.Add(EstadoPedido);
+
+            var EstadoPedido1 = new EstadoPedido();
+            EstadoPedido1.Descripcion = "Pedido";
+            contexto.EstadoPedidos.Add(EstadoPedido1);
+
+            var EstadoPedido2 = new EstadoPedido();
+            EstadoPedido2.Descripcion = "En Fabricación";
+            contexto.EstadoPedidos.Add(EstadoPedido2);
+
+            var EstadoPedido3 = new EstadoPedido();
+            EstadoPedido3.Descripcion = "Entregado";
+            contexto.EstadoPedidos.Add(EstadoPedido3);
+
+            #endregion
+
+            #region impuesto
+
+            var impuesto1 = new Impuesto();
+            impuesto1.Descripcion = "15%";
+            impuesto1.Valor = 0.15;
+            contexto.Impuestos.Add(impuesto1);
+
+            var impuesto2 = new Impuesto();
+            impuesto2.Descripcion = "12%";
+            impuesto2.Valor = 0.12;
+            contexto.Impuestos.Add(impuesto2);
+
+            var impuesto3 = new Impuesto();
+            impuesto3.Descripcion = "0%";
+            impuesto3.Valor = 0;
+            contexto.Impuestos.Add(impuesto3);
+            #endregion
+
             base.Seed(contexto);
 
         }

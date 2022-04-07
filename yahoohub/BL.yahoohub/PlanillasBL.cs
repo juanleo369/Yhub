@@ -8,33 +8,33 @@ using System.Threading.Tasks;
 
 namespace BL.yahoohub
 {
-   public class MaterialesBL
+    public class PlanillasBL
     {
         //Variable local de la base y Variable de la lista
         Contexto _contexto;
 
-        public BindingList<Material> ListaMateriales { get; set; }
+        public BindingList<Planilla> ListaPlanillas { get; set; }
 
         //Codigo que sirve para hacer el llamado de la base de datos y inicializar listas.
-        public MaterialesBL()
+        public PlanillasBL()
         {
             _contexto = new Contexto();
-            ListaMateriales = new BindingList<Material>();
+            ListaPlanillas = new BindingList<Planilla>();
 
         }
 
         //Codigo que sirve para crear una lista de  datos y enviarla al form
-        public BindingList<Material> ObtenerMateriales()
+        public BindingList<Planilla> ObtenerPlanillas()
         {
-            _contexto.Materiales.Load();
-            ListaMateriales = _contexto.Materiales.Local.ToBindingList();
-            return ListaMateriales;
+            _contexto.Planillas.Load();
+            ListaPlanillas = _contexto.Planillas.Local.ToBindingList();
+            return ListaPlanillas;
         }
 
         //Codigo que sirve para Guardar datos en la base de datos
-        public ResultadoMaterial GuardarMaterial(Material material)
+        public ResultadoPlanilla GuardarPlanilla(Planilla planilla)
         {
-            var resultado = Validar(material);
+            var resultado = Validar(planilla);
 
             if (resultado.Exitoso == false)
             {
@@ -47,20 +47,20 @@ namespace BL.yahoohub
         }
 
         //Codigo que sirve para agregar datos en la base de datos
-        public void AgregarMaterial()
+        public void AgregarPlanilla()
         {
-            var nuevoMateriales = new Material();
-            ListaMateriales.Add(nuevoMateriales);
+            var nuevoPlanillas = new Planilla();
+            ListaPlanillas.Add(nuevoPlanillas);
         }
 
         //Codigo que sirve para eliminar datos en la base de datos
-        public bool EliminarMaterial(int id)
+        public bool EliminarPlanilla(int id)
         {
-            foreach (var material in ListaMateriales)
+            foreach (var planilla in ListaPlanillas)
             {
-                if (material.MaterialesId == id)
+                if (planilla.PlanillaId == id)
                 {
-                    ListaMateriales.Remove(material);
+                    ListaPlanillas.Remove(planilla);
                     _contexto.SaveChanges();
                     return true;
                 }
@@ -69,48 +69,50 @@ namespace BL.yahoohub
         }
 
         //Codigo para validar los campos  que se desean guardar no esten vacios.
-        private ResultadoMaterial Validar(Material material)
+        private ResultadoPlanilla Validar(Planilla planillas)
         {
-            var resultado = new ResultadoMaterial();
+            var resultado = new ResultadoPlanilla();
             resultado.Exitoso = true;
-            if (string.IsNullOrEmpty(material.Nombre) == true)
-            {
-                resultado.Mensaje = "ingrese un material";
-                resultado.Exitoso = false;
 
-            }
-            if (string.IsNullOrEmpty(material.Descripcion) == true)
+            if (planillas.EmpleadoId <= 0)
             {
-                resultado.Mensaje = "ingrese la Descripción";
+                resultado.Mensaje = "Ingrese el empleado";
                 resultado.Exitoso = false;
 
             }
 
-            if (material.PrecioUnit <= 0)
+            if (planillas.Pago <= 0)
             {
-                resultado.Mensaje = "ingrese el precio del material";
+                resultado.Mensaje = "Ingrese la cantidad a pagar";
                 resultado.Exitoso = false;
 
             }
 
+            if (string.IsNullOrEmpty(planillas.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese descripcion del pago";
+                resultado.Exitoso = false;
+
+            }
             return resultado;
         }
     }
 
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
-    public class Material
+    public class Planilla
     {
-        public int MaterialesId { get; set; }
-        public string  Nombre { get; set; }
+        public int PlanillaId { get; set; }
+        public int EmpleadoId { get; set; }
+        public Empleado Empleado { get; set; }
+        public DateTime FechaPago { get; set; }
+        public double Pago { get; set; }
         public string Descripcion { get; set; }
-        public double PrecioUnit { get; set; }
-        public int Stock { get; set; }
-
 
     }
 
     //Codigo que sirve para validar los campos que se ingresan
-    public class ResultadoMaterial
+
+    public class ResultadoPlanilla
     {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
