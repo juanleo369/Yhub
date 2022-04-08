@@ -33,7 +33,7 @@ namespace Win.yahoohub
         {
 
         }
-
+        /*
         private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             listaProductosBindingSource.EndEdit();
@@ -105,6 +105,7 @@ namespace Win.yahoohub
            
         }
 
+        
         private void Eliminar(int id)
         {
             var resultado = _productos.EliminarProducto(id);
@@ -157,5 +158,6 @@ namespace Win.yahoohub
         {
 
         }
+        */
     }
 }
