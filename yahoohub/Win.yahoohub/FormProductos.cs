@@ -89,12 +89,12 @@ namespace Win.yahoohub
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
           
-            if (productoIdTextBox.Text != "")
+            if (IdTextBox.Text != "")
                {
                 var resultado = MessageBox.Show("Desea Eliminar este registro?","Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                    {
-                    var id = Convert.ToInt32(productoIdTextBox.Text);
+                    var id = Convert.ToInt32(IdTextBox.Text);
 
                     Eliminar(id);
                     }
@@ -121,7 +121,7 @@ namespace Win.yahoohub
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
-          DeshabilitarHabilitarBotones(true);
+            DeshabilitarHabilitarBotones(true);
             Eliminar(0);
         }
 
@@ -151,6 +151,11 @@ namespace Win.yahoohub
         private void button2_Click(object sender, EventArgs e)
         {
             ImagenPictureBox.Image = null;
+        }
+
+        private void listaProductosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
         }
     }
 }

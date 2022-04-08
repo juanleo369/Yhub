@@ -61,7 +61,7 @@ namespace BL.yahoohub
         {
             foreach (var preciocuadrado in ListaPrecioCuadrados)
             {
-                if (preciocuadrado.PrecioCuadradoId == id)
+                if (preciocuadrado.Id == id)
                 {
                     ListaPrecioCuadrados.Remove(preciocuadrado);
                     _contexto.SaveChanges();
@@ -101,7 +101,7 @@ namespace BL.yahoohub
 
     public class PrecioCuadrado
     {
-        public int PrecioCuadradoId { get; set; }
+        public int Id { get; set; }
         public int Valor { get; set; }
         public string Descripcion { get; set; }
     }

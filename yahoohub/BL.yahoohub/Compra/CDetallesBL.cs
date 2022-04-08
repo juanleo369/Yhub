@@ -62,7 +62,7 @@ namespace BL.yahoohub
         {
             foreach (var cdetalle in ListaCDetalles)
             {
-                if (cdetalle.CDetalleId == id)
+                if (cdetalle.Id == id)
                 {
                     ListaCDetalles.Remove(cdetalle);
                     _contexto.SaveChanges();
@@ -77,13 +77,13 @@ namespace BL.yahoohub
         {
             var resultado = new ResultadoCDetalle();
             resultado.Exitoso = true;
-            if (cdetalle.MaterialesId <=0)
+            if (cdetalle.MaterialId <=0)
             {
                 resultado.Mensaje = "ingrese un material";
                 resultado.Exitoso = false;
 
             }
-            if (cdetalle.cantidad <= 0)
+            if (cdetalle.Cantidad <= 0)
             {
                 resultado.Mensaje = "ingrese la cantidad";
                 resultado.Exitoso = false;
@@ -96,10 +96,10 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class CDetalle
     {
-        public int CDetalleId { get; set; }
-        public int MaterialesId { get; set; }
+        public int Id { get; set; }
+        public int MaterialId { get; set; }
         public Material Material { get; set; }
-        public double cantidad { get; set; }
+        public double Cantidad { get; set; }
         public double Precio { get; set; }
 
 

@@ -59,7 +59,7 @@ namespace BL.yahoohub
         {
             foreach (var ordendetalle in ListaOrdenDetalles)
             {
-                if (ordendetalle.OrdenDetalleId == id)
+                if (ordendetalle.Id == id)
                 {
                     ListaOrdenDetalles.Remove(ordendetalle);
                     _contexto.SaveChanges();
@@ -107,7 +107,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class OrdenDetalle
     {
-        public int OrdenDetalleId { get; set; }
+        public int Id { get; set; }
         public int OrdenId { get; set; }
         public Orden Orden { get; set; }
         public int ProductoId { get; set; }

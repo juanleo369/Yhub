@@ -56,7 +56,7 @@ namespace BL.yahoohub
         {
             foreach (var proveedor in ListaProveedores)
             {
-                if (proveedor.ProveedorId == id)
+                if (proveedor.Id == id)
                 {
                     ListaProveedores.Remove(proveedor);
                     _contexto.SaveChanges();
@@ -111,7 +111,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Proveedor
     {
-        public int ProveedorId { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public int RTN { get; set; }
         public int Telefono { get; set; }

@@ -30,14 +30,14 @@ namespace Win.yahoohub
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label activoLabel;
-            System.Windows.Forms.Label descripcionLabel;
-            System.Windows.Forms.Label nombreLabel;
-            System.Windows.Forms.Label precioLabel;
-            System.Windows.Forms.Label productoIdLabel;
-            System.Windows.Forms.Label tamaño_AnchoLabel;
-            System.Windows.Forms.Label tamaño_LargoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductos));
+            System.Windows.Forms.Label tamaño_LargoLabel;
+            System.Windows.Forms.Label tamaño_AnchoLabel;
+            System.Windows.Forms.Label productoIdLabel;
+            System.Windows.Forms.Label precioLabel;
+            System.Windows.Forms.Label nombreLabel;
+            System.Windows.Forms.Label descripcionLabel;
+            System.Windows.Forms.Label activoLabel;
             this.listaProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -54,92 +54,29 @@ namespace Win.yahoohub
             this.listaProductosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.button7 = new System.Windows.Forms.Button();
-            this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.descripcionTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.productoIdTextBox = new System.Windows.Forms.TextBox();
-            this.tamaño_AnchoTextBox = new System.Windows.Forms.TextBox();
-            this.tamaño_LargoTextBox = new System.Windows.Forms.TextBox();
             this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            activoLabel = new System.Windows.Forms.Label();
-            descripcionLabel = new System.Windows.Forms.Label();
-            nombreLabel = new System.Windows.Forms.Label();
-            precioLabel = new System.Windows.Forms.Label();
-            productoIdLabel = new System.Windows.Forms.Label();
-            tamaño_AnchoLabel = new System.Windows.Forms.Label();
+            this.tamaño_LargoTextBox = new System.Windows.Forms.TextBox();
+            this.tamaño_AnchoTextBox = new System.Windows.Forms.TextBox();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.precioTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
             tamaño_LargoLabel = new System.Windows.Forms.Label();
+            tamaño_AnchoLabel = new System.Windows.Forms.Label();
+            productoIdLabel = new System.Windows.Forms.Label();
+            precioLabel = new System.Windows.Forms.Label();
+            nombreLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
+            activoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingNavigator)).BeginInit();
             this.listaProductosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // activoLabel
-            // 
-            activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(41, 320);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(50, 17);
-            activoLabel.TabIndex = 8;
-            activoLabel.Text = "Activo:";
-            // 
-            // descripcionLabel
-            // 
-            descripcionLabel.AutoSize = true;
-            descripcionLabel.Location = new System.Drawing.Point(41, 147);
-            descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(86, 17);
-            descripcionLabel.TabIndex = 10;
-            descripcionLabel.Text = "Descripcion:";
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(41, 102);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(62, 17);
-            nombreLabel.TabIndex = 12;
-            nombreLabel.Text = "Nombre:";
-            // 
-            // precioLabel
-            // 
-            precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(41, 201);
-            precioLabel.Name = "precioLabel";
-            precioLabel.Size = new System.Drawing.Size(52, 17);
-            precioLabel.TabIndex = 14;
-            precioLabel.Text = "Precio:";
-            // 
-            // productoIdLabel
-            // 
-            productoIdLabel.AutoSize = true;
-            productoIdLabel.Location = new System.Drawing.Point(41, 65);
-            productoIdLabel.Name = "productoIdLabel";
-            productoIdLabel.Size = new System.Drawing.Size(84, 17);
-            productoIdLabel.TabIndex = 16;
-            productoIdLabel.Text = "Producto Id:";
-            // 
-            // tamaño_AnchoLabel
-            // 
-            tamaño_AnchoLabel.AutoSize = true;
-            tamaño_AnchoLabel.Location = new System.Drawing.Point(41, 244);
-            tamaño_AnchoLabel.Name = "tamaño_AnchoLabel";
-            tamaño_AnchoLabel.Size = new System.Drawing.Size(108, 17);
-            tamaño_AnchoLabel.TabIndex = 18;
-            tamaño_AnchoLabel.Text = "Tamaño Ancho:";
-            // 
-            // tamaño_LargoLabel
-            // 
-            tamaño_LargoLabel.AutoSize = true;
-            tamaño_LargoLabel.Location = new System.Drawing.Point(41, 281);
-            tamaño_LargoLabel.Name = "tamaño_LargoLabel";
-            tamaño_LargoLabel.Size = new System.Drawing.Size(105, 17);
-            tamaño_LargoLabel.TabIndex = 20;
-            tamaño_LargoLabel.Text = "Tamaño Largo:";
             // 
             // listaProductosBindingNavigator
             // 
@@ -169,9 +106,10 @@ namespace Win.yahoohub
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(876, 27);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(899, 27);
             this.listaProductosBindingNavigator.TabIndex = 0;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
+            this.listaProductosBindingNavigator.RefreshItems += new System.EventHandler(this.listaProductosBindingNavigator_RefreshItems);
             // 
             // listaProductosBindingSource
             // 
@@ -288,7 +226,7 @@ namespace Win.yahoohub
             // button7
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(805, 12);
+            this.button7.Location = new System.Drawing.Point(828, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(59, 51);
             this.button7.TabIndex = 8;
@@ -296,69 +234,11 @@ namespace Win.yahoohub
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // activoCheckBox
-            // 
-            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(155, 315);
-            this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.activoCheckBox.TabIndex = 9;
-            this.activoCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // descripcionTextBox
-            // 
-            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
-            this.descripcionTextBox.Location = new System.Drawing.Point(155, 144);
-            this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(104, 22);
-            this.descripcionTextBox.TabIndex = 11;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(155, 99);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(104, 22);
-            this.nombreTextBox.TabIndex = 13;
-            // 
-            // precioTextBox
-            // 
-            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(155, 198);
-            this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(104, 22);
-            this.precioTextBox.TabIndex = 15;
-            // 
-            // productoIdTextBox
-            // 
-            this.productoIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "ProductoId", true));
-            this.productoIdTextBox.Location = new System.Drawing.Point(155, 62);
-            this.productoIdTextBox.Name = "productoIdTextBox";
-            this.productoIdTextBox.ReadOnly = true;
-            this.productoIdTextBox.Size = new System.Drawing.Size(104, 22);
-            this.productoIdTextBox.TabIndex = 17;
-            // 
-            // tamaño_AnchoTextBox
-            // 
-            this.tamaño_AnchoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Tamaño_Ancho", true));
-            this.tamaño_AnchoTextBox.Location = new System.Drawing.Point(155, 241);
-            this.tamaño_AnchoTextBox.Name = "tamaño_AnchoTextBox";
-            this.tamaño_AnchoTextBox.Size = new System.Drawing.Size(104, 22);
-            this.tamaño_AnchoTextBox.TabIndex = 19;
-            // 
-            // tamaño_LargoTextBox
-            // 
-            this.tamaño_LargoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Tamaño_Largo", true));
-            this.tamaño_LargoTextBox.Location = new System.Drawing.Point(155, 278);
-            this.tamaño_LargoTextBox.Name = "tamaño_LargoTextBox";
-            this.tamaño_LargoTextBox.Size = new System.Drawing.Size(104, 22);
-            this.tamaño_LargoTextBox.TabIndex = 21;
-            // 
             // ImagenPictureBox
             // 
             this.ImagenPictureBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ImagenPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaProductosBindingSource, "Imagen", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.ImagenPictureBox.Location = new System.Drawing.Point(418, 69);
+            this.ImagenPictureBox.Location = new System.Drawing.Point(490, 78);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(292, 231);
             this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,7 +247,7 @@ namespace Win.yahoohub
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(433, 315);
+            this.button1.Location = new System.Drawing.Point(490, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 58);
             this.button1.TabIndex = 24;
@@ -377,7 +257,7 @@ namespace Win.yahoohub
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(571, 315);
+            this.button2.Location = new System.Drawing.Point(643, 320);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 58);
             this.button2.TabIndex = 25;
@@ -389,11 +269,132 @@ namespace Win.yahoohub
             // 
             this.openFileDialog1.Filter = "jpg,png | *.jpg; *.png";
             // 
+            // tamaño_LargoTextBox
+            // 
+            this.tamaño_LargoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Tamaño_Largo", true));
+            this.tamaño_LargoTextBox.Location = new System.Drawing.Point(155, 278);
+            this.tamaño_LargoTextBox.Name = "tamaño_LargoTextBox";
+            this.tamaño_LargoTextBox.Size = new System.Drawing.Size(104, 22);
+            this.tamaño_LargoTextBox.TabIndex = 21;
+            // 
+            // tamaño_LargoLabel
+            // 
+            tamaño_LargoLabel.AutoSize = true;
+            tamaño_LargoLabel.Location = new System.Drawing.Point(41, 281);
+            tamaño_LargoLabel.Name = "tamaño_LargoLabel";
+            tamaño_LargoLabel.Size = new System.Drawing.Size(105, 17);
+            tamaño_LargoLabel.TabIndex = 20;
+            tamaño_LargoLabel.Text = "Tamaño Largo:";
+            // 
+            // tamaño_AnchoTextBox
+            // 
+            this.tamaño_AnchoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Tamaño_Ancho", true));
+            this.tamaño_AnchoTextBox.Location = new System.Drawing.Point(155, 241);
+            this.tamaño_AnchoTextBox.Name = "tamaño_AnchoTextBox";
+            this.tamaño_AnchoTextBox.Size = new System.Drawing.Size(104, 22);
+            this.tamaño_AnchoTextBox.TabIndex = 19;
+            // 
+            // tamaño_AnchoLabel
+            // 
+            tamaño_AnchoLabel.AutoSize = true;
+            tamaño_AnchoLabel.Location = new System.Drawing.Point(41, 244);
+            tamaño_AnchoLabel.Name = "tamaño_AnchoLabel";
+            tamaño_AnchoLabel.Size = new System.Drawing.Size(108, 17);
+            tamaño_AnchoLabel.TabIndex = 18;
+            tamaño_AnchoLabel.Text = "Tamaño Ancho:";
+            // 
+            // IdTextBox
+            // 
+            this.IdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "ProductoId", true));
+            this.IdTextBox.Location = new System.Drawing.Point(155, 62);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
+            this.IdTextBox.Size = new System.Drawing.Size(104, 22);
+            this.IdTextBox.TabIndex = 17;
+            // 
+            // productoIdLabel
+            // 
+            productoIdLabel.AutoSize = true;
+            productoIdLabel.Location = new System.Drawing.Point(41, 65);
+            productoIdLabel.Name = "productoIdLabel";
+            productoIdLabel.Size = new System.Drawing.Size(23, 17);
+            productoIdLabel.TabIndex = 16;
+            productoIdLabel.Text = "Id:";
+            // 
+            // precioTextBox
+            // 
+            this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Precio", true));
+            this.precioTextBox.Location = new System.Drawing.Point(155, 198);
+            this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.Size = new System.Drawing.Size(104, 22);
+            this.precioTextBox.TabIndex = 15;
+            // 
+            // precioLabel
+            // 
+            precioLabel.AutoSize = true;
+            precioLabel.Location = new System.Drawing.Point(41, 201);
+            precioLabel.Name = "precioLabel";
+            precioLabel.Size = new System.Drawing.Size(52, 17);
+            precioLabel.TabIndex = 14;
+            precioLabel.Text = "Precio:";
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(155, 99);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(104, 22);
+            this.nombreTextBox.TabIndex = 13;
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(41, 102);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(62, 17);
+            nombreLabel.TabIndex = 12;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(155, 144);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(104, 22);
+            this.descripcionTextBox.TabIndex = 11;
+            // 
+            // descripcionLabel
+            // 
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(41, 147);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(86, 17);
+            descripcionLabel.TabIndex = 10;
+            descripcionLabel.Text = "Descripcion:";
+            // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaProductosBindingSource, "Activo", true));
+            this.activoCheckBox.Location = new System.Drawing.Point(155, 315);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.activoCheckBox.TabIndex = 9;
+            this.activoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // activoLabel
+            // 
+            activoLabel.AutoSize = true;
+            activoLabel.Location = new System.Drawing.Point(41, 320);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(50, 17);
+            activoLabel.TabIndex = 8;
+            activoLabel.Text = "Activo:";
+            // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 524);
+            this.ClientSize = new System.Drawing.Size(899, 531);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ImagenPictureBox);
@@ -406,7 +407,7 @@ namespace Win.yahoohub
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
             this.Controls.Add(productoIdLabel);
-            this.Controls.Add(this.productoIdTextBox);
+            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(tamaño_AnchoLabel);
             this.Controls.Add(this.tamaño_AnchoTextBox);
             this.Controls.Add(tamaño_LargoLabel);
@@ -444,17 +445,17 @@ namespace Win.yahoohub
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listaProductosBindingNavigatorSaveItem;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.CheckBox activoCheckBox;
-        private System.Windows.Forms.TextBox descripcionTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
-        private System.Windows.Forms.TextBox precioTextBox;
-        private System.Windows.Forms.TextBox productoIdTextBox;
-        private System.Windows.Forms.TextBox tamaño_AnchoTextBox;
-        private System.Windows.Forms.TextBox tamaño_LargoTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
         private System.Windows.Forms.PictureBox ImagenPictureBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox tamaño_LargoTextBox;
+        private System.Windows.Forms.TextBox tamaño_AnchoTextBox;
+        private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.TextBox precioTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.CheckBox activoCheckBox;
     }
 }

@@ -36,7 +36,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class TipoPago
     {
-        public int TipoPagoId { get; set; }
+        public int Id { get; set; }
         public string Descripcion { get; set; }
         public double Valor { get; set; }
 

@@ -59,7 +59,7 @@ namespace BL.yahoohub
         {
             foreach (var cliente in ListaClientes)
             {
-                if (cliente.ClienteId == id)
+                if (cliente.Id == id)
                 {
                     ListaClientes.Remove(cliente);
                     _contexto.SaveChanges();
@@ -116,7 +116,7 @@ namespace BL.yahoohub
 
     public class Cliente
     {
-        public int ClienteId { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int RTN { get; set; }

@@ -30,7 +30,7 @@ namespace BL.yahoohub
 
     public class TipoUsuario
     {
-        public int TipoUsuarioId { get; set; }
+        public int Id { get; set; }
         public string Descripcion { get; set; }
     }
 }

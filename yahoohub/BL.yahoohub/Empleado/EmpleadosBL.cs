@@ -59,7 +59,7 @@ namespace BL.yahoohub
         {
             foreach (var empleado in ListaEmpleados)
             { 
-                if (empleado.EmpleadoId == id)
+                if (empleado.Id == id)
                 {
                     ListaEmpleados.Remove(empleado);
                     _contexto.SaveChanges();
@@ -112,7 +112,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Empleado
     {
-        public int EmpleadoId { get; set; }
+        public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int RTN { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.yahoohub;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -10,6 +11,8 @@ namespace Win.yahoohub
 {
     static class Program
     {
+        public static Usuario usuario;
+
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

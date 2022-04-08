@@ -58,7 +58,7 @@ namespace BL.yahoohub
         {
             foreach (var material in ListaMateriales)
             {
-                if (material.MaterialesId == id)
+                if (material.Id == id)
                 {
                     ListaMateriales.Remove(material);
                     _contexto.SaveChanges();
@@ -100,7 +100,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Material
     {
-        public int MaterialesId { get; set; }
+        public int Id { get; set; }
         public string  Nombre { get; set; }
         public string Descripcion { get; set; }
         public double PrecioUnit { get; set; }

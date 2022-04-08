@@ -62,7 +62,7 @@ namespace BL.yahoohub
         {
             foreach (var compra in ListaCompras)
             {
-                if (compra.ComprasId == id)
+                if (compra.Id == id)
                 {
                     ListaCompras.Remove(compra);
                     _contexto.SaveChanges();
@@ -90,7 +90,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Compra
     {
-        public int ComprasId { get; set; }
+        public int Id { get; set; }
         public int ProveedorId { get; set; }
         public Proveedor Proveedor { get; set; }
         public DateTime FechaCompra { get; set; }

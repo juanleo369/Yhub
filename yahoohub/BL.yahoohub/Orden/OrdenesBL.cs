@@ -59,7 +59,7 @@ namespace BL.yahoohub
         {
             foreach (var orden in ListaOrdenes)
             {
-                if (orden.OrdenId == id)
+                if (orden.Id == id)
                 {
                     ListaOrdenes.Remove(orden);
                     _contexto.SaveChanges();
@@ -115,7 +115,7 @@ namespace BL.yahoohub
                 resultado.Mensaje = "Ingrese un Subtotal";
                 resultado.Exitoso = false;
             }
-            if (orden.impuestoId < 0)
+            if (orden.ImpuestoId < 0)
             {
                 resultado.Mensaje = "Ingrese un Impuesto";
                 resultado.Exitoso = false;
@@ -139,7 +139,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Orden
     {
-        public int OrdenId { get; set; }
+        public int Id { get; set; }
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
         public int EmpleadoId { get; set; }
@@ -149,7 +149,7 @@ namespace BL.yahoohub
         public string Observacion { get; set; }
         public double Descuento { get; set; }
         public double Subtotal { get; set; }
-        public int impuestoId { get; set; }
+        public int ImpuestoId { get; set; }
         public Impuesto Impuesto { get; set; }
         public double ISV { get; set; }
         public double Total { get; set; }

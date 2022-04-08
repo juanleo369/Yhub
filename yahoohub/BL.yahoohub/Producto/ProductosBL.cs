@@ -62,7 +62,7 @@ namespace BL.yahoohub
         {
             foreach (var producto in ListaProductos)
             {
-                if(producto.ProductoId == id)
+                if(producto.Id == id)
                 {
                     ListaProductos.Remove(producto);
                     _contexto.SaveChanges();
@@ -119,7 +119,7 @@ namespace BL.yahoohub
 
     public class Producto
     {
-        public int ProductoId { get; set; }
+        public int Id { get; set; }
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
         public string Nombre { get; set; }

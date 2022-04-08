@@ -58,7 +58,7 @@ namespace BL.yahoohub
         {
             foreach (var inventario in ListaInventarios)
             {
-                if (inventario.InventarioId == id)
+                if (inventario.Id == id)
                 {
                     ListaInventarios.Remove(inventario);
                     _contexto.SaveChanges();
@@ -81,7 +81,7 @@ namespace BL.yahoohub
 
             }
 
-            if (inventarios.MaterialesId <= 0)
+            if (inventarios.MaterialId <= 0)
             {
                 resultado.Mensaje = "ingrese el material";
                 resultado.Exitoso = false;
@@ -101,8 +101,8 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Inventario
     {
-        public int InventarioId { get; set; }
-        public int MaterialesId { get; set; }
+        public int Id { get; set; }
+        public int MaterialId { get; set; }
         public Material Material { get; set; }
         public DateTime FechaSalida { get; set; }
         public int Cantidad { get; set; }

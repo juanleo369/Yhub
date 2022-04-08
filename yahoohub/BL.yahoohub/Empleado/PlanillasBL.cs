@@ -58,7 +58,7 @@ namespace BL.yahoohub
         {
             foreach (var planilla in ListaPlanillas)
             {
-                if (planilla.PlanillaId == id)
+                if (planilla.Id == id)
                 {
                     ListaPlanillas.Remove(planilla);
                     _contexto.SaveChanges();
@@ -101,7 +101,7 @@ namespace BL.yahoohub
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)
     public class Planilla
     {
-        public int PlanillaId { get; set; }
+        public int Id { get; set; }
         public int EmpleadoId { get; set; }
         public Empleado Empleado { get; set; }
         public DateTime FechaPago { get; set; }

@@ -15,6 +15,11 @@ namespace Win.yahoohub
     public partial class FormLogin : Form
     {
         SeguridadBL _seguridad;
+      public bool UsuarioAutenticado { get; set; }
+      public bool Cancelar { get; set; }
+
+      public bool u { get; set; }
+      public bool c { get; set; }
 
         public FormLogin()
         {
@@ -25,16 +30,18 @@ namespace Win.yahoohub
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario;
-            string contraseña;
+            string contrasena;
 
             usuario = textBox1.Text;
-            contraseña = textBox2.Text;
+            contrasena = textBox2.Text;
 
-            var resultado = _seguridad.Autorizar(usuario, contraseña);
+            var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             // codigo para validar credenciales
-            if(resultado == true)
+            if(resultado != null)
             {
+               c = u;
+               Program.usuario = resultado;
                 //codigo para abrir form menu y cerrar form login
                 FormMenu formMenu = new FormMenu();
                 this.Hide();
@@ -54,7 +61,8 @@ namespace Win.yahoohub
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+         UsuarioAutenticado = !Cancelar;
+         c = !u;
         }
 
        

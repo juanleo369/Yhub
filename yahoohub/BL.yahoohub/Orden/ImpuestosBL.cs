@@ -35,7 +35,7 @@ namespace BL.yahoohub
     }
     public class Impuesto
     {
-        public int ImpuestoId { get; set; }
+        public int Id { get; set; }
         public double Valor { get; set; }
         public string Descripcion { get; set; }
     }
