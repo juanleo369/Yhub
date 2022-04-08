@@ -125,10 +125,14 @@ namespace Win.yahoohub
             // Close
             // 
             this.Close.BackColor = System.Drawing.SystemColors.Window;
+            this.Close.FlatAppearance.BorderSize = 0;
+            this.Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.Location = new System.Drawing.Point(399, 4);
+            this.Close.Location = new System.Drawing.Point(405, -1);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(51, 48);
+            this.Close.Size = new System.Drawing.Size(50, 46);
             this.Close.TabIndex = 7;
             this.Close.Text = "X";
             this.Close.UseVisualStyleBackColor = false;

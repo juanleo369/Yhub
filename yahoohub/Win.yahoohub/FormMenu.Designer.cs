@@ -71,8 +71,10 @@ namespace Win.yahoohub
             this.button18 = new System.Windows.Forms.Button();
             this.btnInventarios = new System.Windows.Forms.Button();
             this.panelEmpleadosSubmenu = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.panelComprasSubmenu = new System.Windows.Forms.Panel();
@@ -83,16 +85,14 @@ namespace Win.yahoohub
             this.panelOrdenesSubmenu = new System.Windows.Forms.Panel();
             this.button40 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnOrdenes = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button12 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.panelStatus.SuspendLayout();
             this.panelChildForm.SuspendLayout();
             this.panelInformaciones.SuspendLayout();
@@ -173,8 +173,8 @@ namespace Win.yahoohub
             this.button32.BackColor = System.Drawing.Color.Transparent;
             this.button32.Dock = System.Windows.Forms.DockStyle.Right;
             this.button32.FlatAppearance.BorderSize = 0;
-            this.button32.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.button32.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button32.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.button32.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button32.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button32.Location = new System.Drawing.Point(820, 0);
@@ -786,6 +786,24 @@ namespace Win.yahoohub
             this.panelEmpleadosSubmenu.Size = new System.Drawing.Size(250, 215);
             this.panelEmpleadosSubmenu.TabIndex = 12;
             // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button11.Location = new System.Drawing.Point(0, 160);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(250, 40);
+            this.button11.TabIndex = 6;
+            this.button11.Text = "Planilla";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click_1);
+            // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -821,6 +839,24 @@ namespace Win.yahoohub
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button12
+            // 
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
+            this.button12.Location = new System.Drawing.Point(0, 40);
+            this.button12.Name = "button12";
+            this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(250, 40);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "Puestos";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -997,6 +1033,24 @@ namespace Win.yahoohub
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 120);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(250, 40);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Modificar Cotización";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1032,6 +1086,24 @@ namespace Win.yahoohub
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(250, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Crear Cotización";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnOrdenes
             // 
@@ -1077,78 +1149,6 @@ namespace Win.yahoohub
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button12.Location = new System.Drawing.Point(0, 40);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(250, 40);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Puestos";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 120);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(250, 40);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Modificar Cotización";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(250, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Crear Cotización";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button11.Location = new System.Drawing.Point(0, 160);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(250, 40);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Planilla";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click_1);
             // 
             // FormMenu
             // 
