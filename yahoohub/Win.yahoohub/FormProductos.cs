@@ -14,27 +14,98 @@ namespace Win.yahoohub
 {
     public partial class FormProductos : Form
     {
+        //Variables locales 
         ProductosBL _productos;
+        CategoriasBL _categorias;
+        PrecioCuadradosBL _preciocuadrado; 
 
+        //Inicializador de las tablas e intancias de sus listas. 
         public FormProductos()
         {
             InitializeComponent();
             _productos = new ProductosBL();
             listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+
+            _categorias = new CategoriasBL();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            _preciocuadrado = new PrecioCuadradosBL();
+            listaPrecioCuadradosBindingSource.DataSource = _preciocuadrado.ObtenerPrecioCuadrados();
+
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
+    
 
         private void FormProductos_Load(object sender, EventArgs e)
         {
 
         }
-        /*
-        private void listaProductosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        
+
+       //codigo para habilitar o desabilitar los bonotes en el navegador
+            private void DeshabilitarHabilitarBotones(bool valor)
+        {
+            bindingNavigatorMoveFirstItem.Enabled = valor ;
+            bindingNavigatorMoveLastItem.Enabled = valor;
+            bindingNavigatorMovePreviousItem.Enabled = valor;
+            bindingNavigatorMoveNextItem.Enabled = valor;
+            bindingNavigatorPositionItem.Enabled = valor;
+            bindingNavigatorAddNewItem.Enabled = valor;
+            bindingNavigatorDeleteItem.Enabled = valor;
+            toolStripButtonCancelar.Visible = !valor;
+        }
+
+  
+        //codigo para la eliminación 
+        private void Eliminar(int id)
+        {
+            var resultado = _productos.EliminarProducto(id);
+
+            if (resultado == true)
+            {
+                listaProductosBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al eliminar el producto");
+            }
+        }
+
+   
+        private void listaProductosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+        //codigo para agregar, usando el boton agregar del navegador  
+
+        private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
+        {
+            _productos.AgregarProducto();
+
+            listaProductosBindingSource.MoveLast();
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        //codigo para eliminar, usando el boton delete del navegador  
+
+        private void bindingNavigatorDeleteItem_Click_1(object sender, EventArgs e)
+        {
+            if (IdTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea Eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(IdTextBox.Text);
+
+                    Eliminar(id);
+                }
+
+            }
+        }
+        //codigo para Guardar, usando el boton save del navegador  
+
+        private void listaProductosBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             listaProductosBindingSource.EndEdit();
             var producto = (Producto)listaProductosBindingSource.Current;
@@ -51,7 +122,7 @@ namespace Win.yahoohub
 
             var resultado = _productos.GuardarProducto(producto);
 
-            if(resultado.Exitoso == true)
+            if (resultado.Exitoso == true)
             {
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
@@ -63,70 +134,18 @@ namespace Win.yahoohub
             }
         }
 
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        //codigo para Cancelar, usando el boton del navegador  
+
+        private void toolStripButtonCancelar_Click_1(object sender, EventArgs e)
         {
-
-            _productos.AgregarProducto();
-
-            listaProductosBindingSource.MoveLast();
-
-            DeshabilitarHabilitarBotones(false);
-
-        }
-
-        private void DeshabilitarHabilitarBotones(bool valor)
-        {
-            bindingNavigatorMoveFirstItem.Enabled = valor ;
-            bindingNavigatorMoveLastItem.Enabled = valor;
-            bindingNavigatorMovePreviousItem.Enabled = valor;
-            bindingNavigatorMoveNextItem.Enabled = valor;
-            bindingNavigatorPositionItem.Enabled = valor;
-            bindingNavigatorAddNewItem.Enabled = valor;
-            bindingNavigatorDeleteItem.Enabled = valor;
-            toolStripButtonCancelar.Visible = !valor;
-        }
-
-        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
-        {
-          
-            if (IdTextBox.Text != "")
-               {
-                var resultado = MessageBox.Show("Desea Eliminar este registro?","Eliminar", MessageBoxButtons.YesNo);
-                if (resultado == DialogResult.Yes)
-                   {
-                    var id = Convert.ToInt32(IdTextBox.Text);
-
-                    Eliminar(id);
-                    }
-               
-               }
-            
-            
-           
-        }
-
-        
-        private void Eliminar(int id)
-        {
-            var resultado = _productos.EliminarProducto(id);
-
-            if (resultado == true)
-            {
-                listaProductosBindingSource.ResetBindings(false);
-            }
-            else
-            {
-                MessageBox.Show("Ocurrio un error al eliminar el producto");
-            }
-        }
-
-        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
-        {
+            _productos.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //codigo para crear un cuadro de dialogo y elegir una imagen, usando un Boton  
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             var producto = (Producto)listaProductosBindingSource.Current;
 
@@ -148,16 +167,18 @@ namespace Win.yahoohub
                 MessageBox.Show("Cree un Producto antes de asignarle una imagen");
             }
         }
+        //codigo para cancelar una imagen seleccionada, usando un Boton  
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             ImagenPictureBox.Image = null;
-        }
 
-        private void listaProductosBindingNavigator_RefreshItems(object sender, EventArgs e)
+        }
+        // codigo para cerrar el form con un boton x
+
+        private void button7_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
-        */
     }
 }

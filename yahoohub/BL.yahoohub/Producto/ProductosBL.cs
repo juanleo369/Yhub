@@ -55,7 +55,14 @@ namespace BL.yahoohub
             var nuevoProducto = new Producto(); 
             ListaProductos.Add(nuevoProducto);
         }
-
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         //Codigo que sirve para eliminar datos en la base de datos
 
         public bool EliminarProducto(int id)
