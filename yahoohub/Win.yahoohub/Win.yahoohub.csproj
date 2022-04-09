@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Productos\FormBuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FormBuscarProductos.Designer.cs">
+      <DependentUpon>FormBuscarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,14 +80,17 @@
     <Compile Include="FormOrdenes.Designer.cs">
       <DependentUpon>FormOrdenes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductos.cs">
+    <Compile Include="Productos\FormProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProductos.Designer.cs">
+    <Compile Include="Productos\FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Productos\FormBuscarProductos.resx">
+      <DependentUpon>FormBuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,7 +100,7 @@
     <EmbeddedResource Include="FormOrdenes.resx">
       <DependentUpon>FormOrdenes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProductos.resx">
+    <EmbeddedResource Include="Productos\FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
