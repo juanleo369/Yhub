@@ -35,6 +35,11 @@ namespace Win.yahoohub
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "VERIFICANDO...";
+            Application.DoEvents();
+
+
             var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             // codigo para validar credenciales
@@ -52,6 +57,9 @@ namespace Win.yahoohub
             { 
             MessageBox.Show("Usuario o Contraseña incorrecto, intente de nuevo.");
             }
+
+            button1.Enabled = true;
+            button1.Text = "INGRESAR";
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

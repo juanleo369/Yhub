@@ -117,6 +117,18 @@ namespace BL.yahoohub
                 resultado.Exitoso = false;
 
             }
+            if (producto.CategoriaId < 0)
+            {
+                resultado.Mensaje = "Ingrese una categoria del producto";
+                resultado.Exitoso = false;
+
+            }
+            if (producto.PrecioCuadradoId < 0)
+            {
+                resultado.Mensaje = "Ingrese el precio de la medida del producto";
+                resultado.Exitoso = false;
+
+            }
 
             return resultado;
         }

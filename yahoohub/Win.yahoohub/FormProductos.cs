@@ -180,5 +180,38 @@ namespace Win.yahoohub
         {
             this.Close();
         }
+
+        private void descripcionLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+             int preciomedida = 0;
+            int tamanol = 0;
+            int tamanoa = 0;
+            int tamanototal = 0;
+            double preciototal= 0;
+
+
+
+
+            preciomedida = Convert.ToInt32(precioCuadradoIdComboBox.Text);
+            tamanoa = Convert.ToInt32(tamaño_AnchoTextBox.Text);
+            tamanol = Convert.ToInt32(tamaño_LargoTextBox.Text);
+
+            tamanototal = tamanoa * tamanol;
+            preciototal = tamanototal * preciomedida;
+
+            precioTextBox.Text = Convert.ToString(preciototal);
+
+
+        }
+
+        private void ImagenPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
