@@ -281,15 +281,13 @@ namespace Win.yahoohub
         {
             //Codigo que sirve para llamar al form hijo
             openChildForm(new FormBuscarProductos()); 
-                //poner codigo para llamar form hijo
-
             hideSubMenu();
         }
 
         private void button21_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            //Codigo que sirve para llamar al form hijo
+            openChildForm(new FormModificarProductos());
             hideSubMenu();
         }
 

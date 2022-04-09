@@ -38,7 +38,15 @@ namespace Win.yahoohub
 
         private void FormProductos_Load(object sender, EventArgs e)
         {
-
+            //Codigo que permite inicializar el formulario con datos vacios
+            nombreTextBox.Text = "";
+            precioTextBox.Text = "";
+            tamaño_AnchoTextBox.Text = "";
+            tamaño_LargoTextBox.Text = "";
+            descripcionTextBox.Text = "";
+            ImagenPictureBox.Image = null;
+            categoriaIdComboBox.Text = null;
+            precioCuadradoIdComboBox.Text = null;
         }
         
 
@@ -127,11 +135,22 @@ namespace Win.yahoohub
                 listaProductosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
                 MessageBox.Show("Producto guardado exitosamente");
+                //Codigo que permite inicializar el formulario con datos vacios
+                nombreTextBox.Text = "";
+                precioTextBox.Text = "";
+                tamaño_AnchoTextBox.Text = "";
+                tamaño_LargoTextBox.Text = "";
+                descripcionTextBox.Text = "";
+                ImagenPictureBox.Image = null;
+                categoriaIdComboBox.Text = null;
+                precioCuadradoIdComboBox.Text = null;
             }
             else
             {
                 MessageBox.Show(resultado.Mensaje);
             }
+
+
         }
 
         //codigo para Cancelar, usando el boton del navegador  
@@ -210,6 +229,16 @@ namespace Win.yahoohub
         }
 
         private void ImagenPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

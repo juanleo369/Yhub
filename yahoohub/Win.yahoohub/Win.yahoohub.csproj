@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormModificarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarProductos.Designer.cs">
+      <DependentUpon>FormModificarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\FormBuscarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormModificarProductos.resx">
+      <DependentUpon>FormModificarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormBuscarProductos.resx">
       <DependentUpon>FormBuscarProductos.cs</DependentUpon>
     </EmbeddedResource>
