@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 namespace BL.yahoohub
 {
     public class ClientesBL
-    {
+    {      
+        //Variable local de la base y Variable de la lista
+
         Contexto _contexto;
         public BindingList<Cliente> ListaClientes { get; set; }
 
@@ -31,6 +33,15 @@ namespace BL.yahoohub
             return ListaClientes;
         }
 
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         //Codigo que sirve para Guardar datos en la base de datos
 
         public ResultadoCliente GuardarCliente(Cliente cliente)
@@ -131,9 +142,14 @@ namespace BL.yahoohub
         public byte[] Imagen { get; set; }
         public bool  Activo { get; set; }
 
-
+        //para inicializar el cliente marcado el activo y fecha actual
+        public Cliente()
+        {
+            Fecha = DateTime.Now;
+            Activo = true;
+        }
     }
-
+ 
     //Codigo que sirve para validar los campos que se ingresan
 
     public class ResultadoCliente
@@ -142,4 +158,6 @@ namespace BL.yahoohub
         public string Mensaje { get; set; }
 
     }
+
+
 }

@@ -23,9 +23,9 @@ namespace BL.yahoohub
 
         //Codigo que sirve para crear una lista de  datos y enviarla al form
 
-        public BindingList<TipoCliente> ObtenerClientes()
+        public BindingList<TipoCliente> ObtenerTipoClientes()
         {
-            _contexto.Clientes.Load();
+            _contexto.TipoClientes.Load();
 
             ListaTipoClientes = _contexto.TipoClientes.Local.ToBindingList();
             return ListaTipoClientes;

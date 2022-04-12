@@ -319,8 +319,8 @@ namespace Win.yahoohub
 
         private void button29_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            //Codigo que sirve para llamar al form hijo
+            openChildForm(new FormClientes());
             hideSubMenu();
         }
 

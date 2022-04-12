@@ -160,6 +160,16 @@ namespace Win.yahoohub
             _productos.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
 
+            //Codigo que permite inicializar el formulario con datos vacios
+            nombreTextBox.Text = "";
+            precioTextBox.Text = "";
+            tamaño_AnchoTextBox.Text = "";
+            tamaño_LargoTextBox.Text = "";
+            descripcionTextBox.Text = "";
+            ImagenPictureBox.Image = null;
+            categoriaIdComboBox.Text = null;
+            precioCuadradoIdComboBox.Text = null;
+
         }
 
         //codigo para crear un cuadro de dialogo y elegir una imagen, usando un Boton  
