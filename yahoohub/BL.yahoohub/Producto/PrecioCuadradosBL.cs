@@ -56,6 +56,14 @@ namespace BL.yahoohub
             ListaPrecioCuadrados.Add(nuevoPrecioCuadrado);
         }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         //Codigo que sirve para eliminar datos en la base de datos
         public bool EliminarPrecioCuadrado(int id)
         {
