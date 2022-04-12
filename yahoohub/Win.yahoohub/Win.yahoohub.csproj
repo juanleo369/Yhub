@@ -56,10 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormModificarProductos.cs">
+    <Compile Include="FormCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModificarProductos.Designer.cs">
+    <Compile Include="FormCategorias.Designer.cs">
+      <DependentUpon>FormCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\FormModificarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\FormModificarProductos.Designer.cs">
       <DependentUpon>FormModificarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\FormBuscarProductos.cs">
@@ -94,7 +100,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormModificarProductos.resx">
+    <EmbeddedResource Include="FormCategorias.resx">
+      <DependentUpon>FormCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\FormModificarProductos.resx">
       <DependentUpon>FormModificarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormBuscarProductos.resx">

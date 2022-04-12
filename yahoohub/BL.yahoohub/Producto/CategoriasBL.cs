@@ -31,9 +31,70 @@ namespace BL.yahoohub
 
             ListaCategorias = _contexto.Categorias.Local.ToBindingList();
             return ListaCategorias;
-        }  
-        
-   
+        }
+
+        public ResultadoCategoria GuardarCategoria(Categoria categoria)
+        {
+            var resultado = Validar(categoria);
+
+            if (resultado.Exitoso == false)
+            {
+                return resultado;
+            }
+
+            _contexto.SaveChanges();
+            resultado.Exitoso = true;
+            return resultado;
+        }
+
+        //Codigo que sirve para agregar datos en la base de datos
+
+        public void AgregarCategoria()
+        {
+            var nuevoCategoria = new Categoria();
+            ListaCategorias.Add(nuevoCategoria);
+        }
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+        //Codigo que sirve para eliminar datos en la base de datos
+
+        public bool EliminarCategoria(int id)
+        {
+            foreach (var categoria in ListaCategorias)
+            {
+                if (categoria.Id == id)
+                {
+                    ListaCategorias.Remove(categoria);
+                    _contexto.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Codigo para validar los campos  que se desean guardar no esten vacios.
+        private ResultadoCategoria Validar(Categoria categoria)
+        {
+            var resultado = new ResultadoCategoria();
+            resultado.Exitoso = true;
+
+            if (string.IsNullOrEmpty(categoria.Descripcion) == true)
+            {
+                resultado.Mensaje = "ingrese una descripción";
+                resultado.Exitoso = false;
+
+            }
+           
+
+            return resultado;
+        }
+
     }
 
     //Codigo que sirve para crear la tabla y sus campos en la base de datos(Contexto)

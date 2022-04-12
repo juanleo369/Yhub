@@ -204,7 +204,7 @@ namespace Win.yahoohub
         {
 
         }
-
+        //Botón que realiza los calculos de los precios de los productos
         private void button3_Click(object sender, EventArgs e)
         {
              int preciomedida = 0;
