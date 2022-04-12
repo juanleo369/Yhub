@@ -183,6 +183,7 @@ namespace Win.yahoohub
 
         }
 
+        //Codigo que permite cancelar datos generados.
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
             _clientes.CancelarCambios();

@@ -418,10 +418,10 @@ namespace Win.yahoohub
             // 
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
             this.descripcionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcionTextBox.Location = new System.Drawing.Point(22, 448);
+            this.descripcionTextBox.Location = new System.Drawing.Point(72, 448);
             this.descripcionTextBox.Multiline = true;
             this.descripcionTextBox.Name = "descripcionTextBox";
-            this.descripcionTextBox.Size = new System.Drawing.Size(441, 181);
+            this.descripcionTextBox.Size = new System.Drawing.Size(344, 181);
             this.descripcionTextBox.TabIndex = 31;
             this.descripcionTextBox.UseWaitCursor = true;
             // 

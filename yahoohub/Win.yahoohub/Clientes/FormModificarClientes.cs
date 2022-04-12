@@ -61,11 +61,7 @@ namespace Win.yahoohub
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+    
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
@@ -157,6 +153,11 @@ namespace Win.yahoohub
         private void FormModificarClientes_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

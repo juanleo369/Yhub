@@ -44,6 +44,16 @@ namespace BL.yahoohub
             return resultadoproveedor;
         }
 
+        //codigo que permite cancelar los datos generados
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
+
         //Codigo que sirve para agregar datos en la base de datos
         public void AgregarProveedor()
         {
@@ -113,8 +123,8 @@ namespace BL.yahoohub
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public int RTN { get; set; }
-        public int Telefono { get; set; }
+        public string RTN { get; set; }
+        public string Telefono { get; set; }
         public string Direccion { get; set; }
         public string Deparmento { get; set; }
         public string Ciudad { get; set; }
@@ -123,6 +133,12 @@ namespace BL.yahoohub
         public byte[] Imagen { get; set; }
         public bool Activo { get; set; }
 
+        //para inicializar el cliente marcado el activo y fecha actual
+        public Proveedor()
+        {
+            Fecha = DateTime.Now;
+            Activo = true;
+        }
 
     }
 

@@ -74,6 +74,24 @@
     <Compile Include="Clientes\FormModificarClientes.Designer.cs">
       <DependentUpon>FormModificarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proveedores\FormModificarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores\FormModificarProveedores.Designer.cs">
+      <DependentUpon>FormModificarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores\FormBuscarProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores\FormBuscarProveedores.Designer.cs">
+      <DependentUpon>FormBuscarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores\FormProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedores\FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos\FormPrecioCuadrados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +150,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\FormModificarClientes.resx">
       <DependentUpon>FormModificarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores\FormModificarProveedores.resx">
+      <DependentUpon>FormModificarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores\FormBuscarProveedores.resx">
+      <DependentUpon>FormBuscarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedores\FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormCategorias.resx">
       <DependentUpon>FormCategorias.cs</DependentUpon>

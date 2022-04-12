@@ -200,7 +200,7 @@ namespace Win.yahoohub
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(95, 43);
+            this.groupBox3.Location = new System.Drawing.Point(62, 43);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -238,7 +238,7 @@ namespace Win.yahoohub
             this.groupBox2.Controls.Add(this.nombreTextBox);
             this.groupBox2.Controls.Add(nombreLabel);
             this.groupBox2.Controls.Add(this.IdTextBox);
-            this.groupBox2.Location = new System.Drawing.Point(95, 96);
+            this.groupBox2.Location = new System.Drawing.Point(62, 96);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -391,7 +391,7 @@ namespace Win.yahoohub
             this.listaProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaProductosBindingNavigator.Name = "listaProductosBindingNavigator";
             this.listaProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(1484, 27);
+            this.listaProductosBindingNavigator.Size = new System.Drawing.Size(1419, 27);
             this.listaProductosBindingNavigator.TabIndex = 42;
             this.listaProductosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -585,7 +585,7 @@ namespace Win.yahoohub
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1413, 12);
+            this.button7.Location = new System.Drawing.Point(1348, 12);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(59, 50);
@@ -598,7 +598,7 @@ namespace Win.yahoohub
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox1.Controls.Add(this.listaProductosDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(95, 567);
+            this.groupBox1.Location = new System.Drawing.Point(62, 567);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -615,7 +615,7 @@ namespace Win.yahoohub
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.descripcionTextBox);
             this.groupBox4.Controls.Add(descripcionLabel);
-            this.groupBox4.Location = new System.Drawing.Point(843, 96);
+            this.groupBox4.Location = new System.Drawing.Point(810, 96);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -682,7 +682,7 @@ namespace Win.yahoohub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 833);
+            this.ClientSize = new System.Drawing.Size(1419, 833);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button7);

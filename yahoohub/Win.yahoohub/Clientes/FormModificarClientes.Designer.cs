@@ -72,7 +72,6 @@ namespace Win.yahoohub
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button7 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -95,6 +94,7 @@ namespace Win.yahoohub
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             tipoClienteIdLabel = new System.Windows.Forms.Label();
             telefonoLabel = new System.Windows.Forms.Label();
             rTNLabel = new System.Windows.Forms.Label();
@@ -271,7 +271,7 @@ namespace Win.yahoohub
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(1334, 27);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(1369, 27);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -530,24 +530,11 @@ namespace Win.yahoohub
             this.dataGridViewCheckBoxColumn1.ReadOnly = true;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1263, 11);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(59, 50);
-            this.button7.TabIndex = 44;
-            this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(43, 41);
+            this.groupBox3.Location = new System.Drawing.Point(60, 41);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -591,7 +578,7 @@ namespace Win.yahoohub
             this.groupBox2.Controls.Add(this.correoTextBox);
             this.groupBox2.Controls.Add(this.deparmentoTextBox);
             this.groupBox2.Controls.Add(deparmentoLabel);
-            this.groupBox2.Location = new System.Drawing.Point(43, 93);
+            this.groupBox2.Location = new System.Drawing.Point(60, 93);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(794, 518);
             this.groupBox2.TabIndex = 46;
@@ -716,7 +703,7 @@ namespace Win.yahoohub
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(direccionLabel);
             this.groupBox1.Controls.Add(this.direccionTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(843, 93);
+            this.groupBox1.Location = new System.Drawing.Point(860, 93);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(431, 518);
             this.groupBox1.TabIndex = 47;
@@ -774,23 +761,36 @@ namespace Win.yahoohub
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox4.Controls.Add(this.listaClientesDataGridView);
-            this.groupBox4.Location = new System.Drawing.Point(43, 611);
+            this.groupBox4.Location = new System.Drawing.Point(60, 611);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1231, 140);
             this.groupBox4.TabIndex = 48;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Base de Datos";
             // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(1298, 11);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(59, 50);
+            this.button7.TabIndex = 49;
+            this.button7.Text = "X";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
             // FormModificarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 763);
+            this.ClientSize = new System.Drawing.Size(1369, 763);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.listaClientesBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormModificarClientes";
@@ -832,7 +832,6 @@ namespace Win.yahoohub
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton listaClientesBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView listaClientesDataGridView;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -869,5 +868,6 @@ namespace Win.yahoohub
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
         private System.Windows.Forms.PictureBox ImagenPictureBox;
+        private System.Windows.Forms.Button button7;
     }
 }

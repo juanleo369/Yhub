@@ -349,21 +349,20 @@ namespace Win.yahoohub
 
         private void button31_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            //Codigo que sirve para llamar al form hijo
+            openChildForm(new FormProveedores());
             hideSubMenu();
         }
 
         private void button30_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            //Codigo que sirve para llamar al form hijo
+            openChildForm(new FormBuscarProveedores());
             hideSubMenu();
         }
         private void button26_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            openChildForm(new FormModificarProveedores());
             hideSubMenu();
         }
         #endregion
