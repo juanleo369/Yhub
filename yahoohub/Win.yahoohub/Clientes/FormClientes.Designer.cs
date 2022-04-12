@@ -30,7 +30,6 @@ namespace Win.yahoohub
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             System.Windows.Forms.Label activoLabel;
             System.Windows.Forms.Label apellidoLabel;
             System.Windows.Forms.Label ciudadLabel;
@@ -43,12 +42,14 @@ namespace Win.yahoohub
             System.Windows.Forms.Label rTNLabel;
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label tipoClienteIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
             this.listaClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +57,7 @@ namespace Win.yahoohub
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaClientesBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
             this.ciudadTextBox = new System.Windows.Forms.TextBox();
@@ -71,15 +73,13 @@ namespace Win.yahoohub
             this.label2 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tipoClienteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.listaTipoClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ImagenPictureBox = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.tipoClienteIdComboBox = new System.Windows.Forms.ComboBox();
-            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaTipoClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             ciudadLabel = new System.Windows.Forms.Label();
@@ -94,13 +94,133 @@ namespace Win.yahoohub
             tipoClienteIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).BeginInit();
             this.listaClientesBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTipoClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaTipoClientesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // activoLabel
+            // 
+            activoLabel.AutoSize = true;
+            activoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            activoLabel.Location = new System.Drawing.Point(164, 543);
+            activoLabel.Name = "activoLabel";
+            activoLabel.Size = new System.Drawing.Size(80, 24);
+            activoLabel.TabIndex = 1;
+            activoLabel.Text = "Activo:";
+            // 
+            // apellidoLabel
+            // 
+            apellidoLabel.AutoSize = true;
+            apellidoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidoLabel.Location = new System.Drawing.Point(152, 187);
+            apellidoLabel.Name = "apellidoLabel";
+            apellidoLabel.Size = new System.Drawing.Size(99, 24);
+            apellidoLabel.TabIndex = 3;
+            apellidoLabel.Text = "Apellido:";
+            // 
+            // ciudadLabel
+            // 
+            ciudadLabel.AutoSize = true;
+            ciudadLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ciudadLabel.Location = new System.Drawing.Point(162, 305);
+            ciudadLabel.Name = "ciudadLabel";
+            ciudadLabel.Size = new System.Drawing.Size(87, 24);
+            ciudadLabel.TabIndex = 5;
+            ciudadLabel.Text = "Ciudad:";
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            correoLabel.Location = new System.Drawing.Point(164, 347);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(84, 24);
+            correoLabel.TabIndex = 7;
+            correoLabel.Text = "Correo:";
+            // 
+            // deparmentoLabel
+            // 
+            deparmentoLabel.AutoSize = true;
+            deparmentoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            deparmentoLabel.Location = new System.Drawing.Point(109, 436);
+            deparmentoLabel.Name = "deparmentoLabel";
+            deparmentoLabel.Size = new System.Drawing.Size(142, 24);
+            deparmentoLabel.TabIndex = 9;
+            deparmentoLabel.Text = "Deparmento:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(178, 418);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(105, 24);
+            direccionLabel.TabIndex = 11;
+            direccionLabel.Text = "Dirección";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaLabel.Location = new System.Drawing.Point(168, 490);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new System.Drawing.Size(77, 24);
+            fechaLabel.TabIndex = 13;
+            fechaLabel.Text = "Fecha:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(205, 102);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(40, 24);
+            idLabel.TabIndex = 15;
+            idLabel.Text = "Id:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(154, 144);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(97, 24);
+            nombreLabel.TabIndex = 17;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // rTNLabel
+            // 
+            rTNLabel.AutoSize = true;
+            rTNLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rTNLabel.Location = new System.Drawing.Point(62, 226);
+            rTNLabel.Name = "rTNLabel";
+            rTNLabel.Size = new System.Drawing.Size(189, 24);
+            rTNLabel.TabIndex = 19;
+            rTNLabel.Text = "RTN/IDENTIDAD:";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.Location = new System.Drawing.Point(149, 389);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(104, 24);
+            telefonoLabel.TabIndex = 21;
+            telefonoLabel.Text = "Teléfono:";
+            // 
+            // tipoClienteIdLabel
+            // 
+            tipoClienteIdLabel.AutoSize = true;
+            tipoClienteIdLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoClienteIdLabel.Location = new System.Drawing.Point(108, 266);
+            tipoClienteIdLabel.Name = "tipoClienteIdLabel";
+            tipoClienteIdLabel.Size = new System.Drawing.Size(136, 24);
+            tipoClienteIdLabel.TabIndex = 22;
+            tipoClienteIdLabel.Text = "Tipo Cliente:";
             // 
             // listaClientesBindingNavigator
             // 
@@ -130,9 +250,21 @@ namespace Win.yahoohub
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(1332, 27);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(1334, 27);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaClientesBindingSource
+            // 
+            this.listaClientesBindingSource.DataSource = typeof(BL.yahoohub.Cliente);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            this.bindingNavigatorCountItem.Visible = false;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -170,17 +302,9 @@ namespace Win.yahoohub
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             this.bindingNavigatorPositionItem.Visible = false;
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            this.bindingNavigatorCountItem.Visible = false;
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -205,7 +329,7 @@ namespace Win.yahoohub
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorAddNewItem
@@ -238,15 +362,16 @@ namespace Win.yahoohub
             this.listaClientesBindingNavigatorSaveItem.Text = "Guardar datos";
             this.listaClientesBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaClientesBindingNavigatorSaveItem_Click);
             // 
-            // activoLabel
+            // toolStripButtonCancelar
             // 
-            activoLabel.AutoSize = true;
-            activoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            activoLabel.Location = new System.Drawing.Point(164, 543);
-            activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(80, 24);
-            activoLabel.TabIndex = 1;
-            activoLabel.Text = "Activo:";
+            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
+            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(70, 24);
+            this.toolStripButtonCancelar.Text = "Cancelar";
+            this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
             // activoCheckBox
             // 
@@ -257,16 +382,6 @@ namespace Win.yahoohub
             this.activoCheckBox.TabIndex = 2;
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // apellidoLabel
-            // 
-            apellidoLabel.AutoSize = true;
-            apellidoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            apellidoLabel.Location = new System.Drawing.Point(152, 187);
-            apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(99, 24);
-            apellidoLabel.TabIndex = 3;
-            apellidoLabel.Text = "Apellido:";
-            // 
             // apellidoTextBox
             // 
             this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Apellido", true));
@@ -275,16 +390,6 @@ namespace Win.yahoohub
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(406, 32);
             this.apellidoTextBox.TabIndex = 4;
-            // 
-            // ciudadLabel
-            // 
-            ciudadLabel.AutoSize = true;
-            ciudadLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ciudadLabel.Location = new System.Drawing.Point(162, 305);
-            ciudadLabel.Name = "ciudadLabel";
-            ciudadLabel.Size = new System.Drawing.Size(87, 24);
-            ciudadLabel.TabIndex = 5;
-            ciudadLabel.Text = "Ciudad:";
             // 
             // ciudadTextBox
             // 
@@ -295,16 +400,6 @@ namespace Win.yahoohub
             this.ciudadTextBox.Size = new System.Drawing.Size(406, 32);
             this.ciudadTextBox.TabIndex = 6;
             // 
-            // correoLabel
-            // 
-            correoLabel.AutoSize = true;
-            correoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            correoLabel.Location = new System.Drawing.Point(164, 347);
-            correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(84, 24);
-            correoLabel.TabIndex = 7;
-            correoLabel.Text = "Correo:";
-            // 
             // correoTextBox
             // 
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Correo", true));
@@ -314,16 +409,6 @@ namespace Win.yahoohub
             this.correoTextBox.Size = new System.Drawing.Size(406, 32);
             this.correoTextBox.TabIndex = 8;
             // 
-            // deparmentoLabel
-            // 
-            deparmentoLabel.AutoSize = true;
-            deparmentoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            deparmentoLabel.Location = new System.Drawing.Point(109, 436);
-            deparmentoLabel.Name = "deparmentoLabel";
-            deparmentoLabel.Size = new System.Drawing.Size(142, 24);
-            deparmentoLabel.TabIndex = 9;
-            deparmentoLabel.Text = "Deparmento:";
-            // 
             // deparmentoTextBox
             // 
             this.deparmentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Deparmento", true));
@@ -332,16 +417,6 @@ namespace Win.yahoohub
             this.deparmentoTextBox.Name = "deparmentoTextBox";
             this.deparmentoTextBox.Size = new System.Drawing.Size(406, 32);
             this.deparmentoTextBox.TabIndex = 10;
-            // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            direccionLabel.Location = new System.Drawing.Point(178, 418);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(105, 24);
-            direccionLabel.TabIndex = 11;
-            direccionLabel.Text = "Dirección";
             // 
             // direccionTextBox
             // 
@@ -353,16 +428,6 @@ namespace Win.yahoohub
             this.direccionTextBox.Size = new System.Drawing.Size(341, 134);
             this.direccionTextBox.TabIndex = 12;
             // 
-            // fechaLabel
-            // 
-            fechaLabel.AutoSize = true;
-            fechaLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fechaLabel.Location = new System.Drawing.Point(168, 490);
-            fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(77, 24);
-            fechaLabel.TabIndex = 13;
-            fechaLabel.Text = "Fecha:";
-            // 
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaClientesBindingSource, "Fecha", true));
@@ -371,16 +436,6 @@ namespace Win.yahoohub
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
             this.fechaDateTimePicker.Size = new System.Drawing.Size(406, 32);
             this.fechaDateTimePicker.TabIndex = 14;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(205, 102);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(40, 24);
-            idLabel.TabIndex = 15;
-            idLabel.Text = "Id:";
             // 
             // idTextBox
             // 
@@ -392,16 +447,6 @@ namespace Win.yahoohub
             this.idTextBox.Size = new System.Drawing.Size(406, 32);
             this.idTextBox.TabIndex = 16;
             // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(154, 144);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(97, 24);
-            nombreLabel.TabIndex = 17;
-            nombreLabel.Text = "Nombre:";
-            // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Nombre", true));
@@ -411,16 +456,6 @@ namespace Win.yahoohub
             this.nombreTextBox.Size = new System.Drawing.Size(406, 32);
             this.nombreTextBox.TabIndex = 18;
             // 
-            // rTNLabel
-            // 
-            rTNLabel.AutoSize = true;
-            rTNLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rTNLabel.Location = new System.Drawing.Point(62, 226);
-            rTNLabel.Name = "rTNLabel";
-            rTNLabel.Size = new System.Drawing.Size(189, 24);
-            rTNLabel.TabIndex = 19;
-            rTNLabel.Text = "RTN/IDENTIDAD:";
-            // 
             // rTNTextBox
             // 
             this.rTNTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "RTN", true));
@@ -429,16 +464,6 @@ namespace Win.yahoohub
             this.rTNTextBox.Name = "rTNTextBox";
             this.rTNTextBox.Size = new System.Drawing.Size(406, 32);
             this.rTNTextBox.TabIndex = 20;
-            // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefonoLabel.Location = new System.Drawing.Point(149, 389);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(104, 24);
-            telefonoLabel.TabIndex = 21;
-            telefonoLabel.Text = "Teléfono:";
             // 
             // telefonoTextBox
             // 
@@ -453,7 +478,7 @@ namespace Win.yahoohub
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(20, 41);
+            this.groupBox3.Location = new System.Drawing.Point(21, 41);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1231, 47);
             this.groupBox3.TabIndex = 40;
@@ -473,7 +498,7 @@ namespace Win.yahoohub
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1261, 12);
+            this.button7.Location = new System.Drawing.Point(1263, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(59, 51);
             this.button7.TabIndex = 41;
@@ -506,21 +531,41 @@ namespace Win.yahoohub
             this.groupBox2.Controls.Add(this.correoTextBox);
             this.groupBox2.Controls.Add(this.deparmentoTextBox);
             this.groupBox2.Controls.Add(deparmentoLabel);
-            this.groupBox2.Location = new System.Drawing.Point(20, 94);
+            this.groupBox2.Location = new System.Drawing.Point(21, 94);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(748, 801);
+            this.groupBox2.Size = new System.Drawing.Size(748, 636);
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Cliente";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // tipoClienteIdComboBox
+            // 
+            this.tipoClienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TipoClienteId", true));
+            this.tipoClienteIdComboBox.DataSource = this.listaTipoClientesBindingSource;
+            this.tipoClienteIdComboBox.DisplayMember = "Descripcion";
+            this.tipoClienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoClienteIdComboBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipoClienteIdComboBox.FormattingEnabled = true;
+            this.tipoClienteIdComboBox.Location = new System.Drawing.Point(265, 262);
+            this.tipoClienteIdComboBox.Name = "tipoClienteIdComboBox";
+            this.tipoClienteIdComboBox.Size = new System.Drawing.Size(406, 32);
+            this.tipoClienteIdComboBox.TabIndex = 23;
+            this.tipoClienteIdComboBox.ValueMember = "Id";
+            // 
+            // listaTipoClientesBindingSource
+            // 
+            this.listaTipoClientesBindingSource.DataSource = typeof(BL.yahoohub.TipoCliente);
+            // 
             // ImagenPictureBox
             // 
             this.ImagenPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ImagenPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ImagenPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.listaClientesBindingSource, "Imagen", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.ImagenPictureBox.Location = new System.Drawing.Point(67, 71);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(331, 257);
+            this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 43;
             this.ImagenPictureBox.TabStop = false;
             // 
@@ -532,9 +577,9 @@ namespace Win.yahoohub
             this.groupBox1.Controls.Add(this.ImagenPictureBox);
             this.groupBox1.Controls.Add(direccionLabel);
             this.groupBox1.Controls.Add(this.direccionTextBox);
-            this.groupBox1.Location = new System.Drawing.Point(774, 94);
+            this.groupBox1.Location = new System.Drawing.Point(775, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 801);
+            this.groupBox1.Size = new System.Drawing.Size(477, 636);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle del Cliente";
@@ -562,58 +607,15 @@ namespace Win.yahoohub
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tipoClienteIdLabel
-            // 
-            tipoClienteIdLabel.AutoSize = true;
-            tipoClienteIdLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoClienteIdLabel.Location = new System.Drawing.Point(108, 266);
-            tipoClienteIdLabel.Name = "tipoClienteIdLabel";
-            tipoClienteIdLabel.Size = new System.Drawing.Size(136, 24);
-            tipoClienteIdLabel.TabIndex = 22;
-            tipoClienteIdLabel.Text = "Tipo Cliente:";
-            // 
-            // tipoClienteIdComboBox
-            // 
-            this.tipoClienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaClientesBindingSource, "TipoClienteId", true));
-            this.tipoClienteIdComboBox.DataSource = this.listaTipoClientesBindingSource;
-            this.tipoClienteIdComboBox.DisplayMember = "Descripcion";
-            this.tipoClienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoClienteIdComboBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoClienteIdComboBox.FormattingEnabled = true;
-            this.tipoClienteIdComboBox.Location = new System.Drawing.Point(265, 262);
-            this.tipoClienteIdComboBox.Name = "tipoClienteIdComboBox";
-            this.tipoClienteIdComboBox.Size = new System.Drawing.Size(406, 32);
-            this.tipoClienteIdComboBox.TabIndex = 23;
-            this.tipoClienteIdComboBox.ValueMember = "Id";
-            // 
-            // toolStripButtonCancelar
-            // 
-            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
-            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
-            this.toolStripButtonCancelar.Size = new System.Drawing.Size(70, 24);
-            this.toolStripButtonCancelar.Text = "Cancelar";
-            this.toolStripButtonCancelar.Visible = false;
-            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // listaClientesBindingSource
-            // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.yahoohub.Cliente);
-            // 
-            // listaTipoClientesBindingSource
-            // 
-            this.listaTipoClientesBindingSource.DataSource = typeof(BL.yahoohub.TipoCliente);
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 928);
+            this.ClientSize = new System.Drawing.Size(1334, 763);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button7);
@@ -626,15 +628,15 @@ namespace Win.yahoohub
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).EndInit();
             this.listaClientesBindingNavigator.ResumeLayout(false);
             this.listaClientesBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTipoClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenPictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaTipoClientesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

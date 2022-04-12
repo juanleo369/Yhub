@@ -351,6 +351,7 @@ namespace Win.yahoohub
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(389, 32);
             this.nombreTextBox.TabIndex = 22;
+            this.nombreTextBox.TextChanged += new System.EventHandler(this.nombreTextBox_TextChanged);
             // 
             // IdTextBox
             // 

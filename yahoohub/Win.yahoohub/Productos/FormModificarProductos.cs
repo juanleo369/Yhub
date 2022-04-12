@@ -177,5 +177,10 @@ namespace Win.yahoohub
 
 
         }
+
+        private void nombreTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

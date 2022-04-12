@@ -326,15 +326,16 @@ namespace Win.yahoohub
 
         private void button28_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            //Codigo que sirve para llamar al form hijo
+       
+            openChildForm(new FormBuscarClientes());
             hideSubMenu();
         }
 
         private void button27_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            //Codigo que sirve para llamar al form hijo
+            openChildForm(new FormModificarClientes());
             hideSubMenu();
         }
         #endregion

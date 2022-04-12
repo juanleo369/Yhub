@@ -56,11 +56,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormClientes.cs">
+    <Compile Include="Clientes\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormClientes.Designer.cs">
+    <Compile Include="Clientes\FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormBuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormBuscarClientes.Designer.cs">
+      <DependentUpon>FormBuscarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormModificarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormModificarClientes.Designer.cs">
+      <DependentUpon>FormModificarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\FormPrecioCuadrados.cs">
       <SubType>Form</SubType>
@@ -112,8 +124,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormClientes.resx">
+    <EmbeddedResource Include="Clientes\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormBuscarClientes.resx">
+      <DependentUpon>FormBuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormModificarClientes.resx">
+      <DependentUpon>FormModificarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormCategorias.resx">
       <DependentUpon>FormCategorias.cs</DependentUpon>
@@ -247,9 +265,7 @@
       <Name>BL.yahoohub</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Clientes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
