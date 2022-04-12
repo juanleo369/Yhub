@@ -166,8 +166,8 @@ namespace BL.yahoohub
             empleado1.Id = 1;
             empleado1.Nombre = "juan Leonardo";
             empleado1.Apellido = "Alvarado Muñoz";
-            empleado1.RTN = 0;
-            empleado1.Telefono = 98887457;
+            empleado1.RTN = "0";
+            empleado1.Telefono = "98887457";
             empleado1.Direccion = "Barrio Santa ana";
             empleado1.Ciudad = "San Pedro Sula";
             empleado1.Correo = "juanleo369@gmail.com";
@@ -183,8 +183,8 @@ namespace BL.yahoohub
             empleado1.Id = 2;
             empleado2.Nombre = "Claudia Isabel";
             empleado2.Apellido = "Zepeda Castillo";
-            empleado2.RTN = 0;
-            empleado2.Telefono = 99151346;
+            empleado2.RTN = "0";
+            empleado2.Telefono = "99151346";
             empleado2.Direccion = "Barrio Santa ana";
             empleado2.Ciudad = "San Pedro Sula";
             empleado2.Correo = "zcastillo@gmail.com";

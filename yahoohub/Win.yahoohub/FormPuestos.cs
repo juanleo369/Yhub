@@ -11,23 +11,23 @@ using System.Windows.Forms;
 
 namespace Win.yahoohub
 {
-    public partial class FormCategorias : Form
+    public partial class FormPuestos : Form
     {
-        //Variables locales 
+        PuestosBL _puestos;
 
-        CategoriasBL _categorias;
-
-        //Inicializador de las tablas e intancias de sus listas. 
-
-        public FormCategorias()
+        public FormPuestos()
         {
             InitializeComponent();
-            _categorias = new CategoriasBL();
-            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
-
+            _puestos = new PuestosBL();
+            listaPuestosBindingSource.DataSource = _puestos.ObtenerPuestos();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormPuestos_Load(object sender, EventArgs e)
         {
 
         }
@@ -43,37 +43,29 @@ namespace Win.yahoohub
             bindingNavigatorDeleteItem.Enabled = valor;
             toolStripButtonCancelar.Visible = !valor;
         }
-        private void button7_Click(object sender, EventArgs e)
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            _puestos.AgregarPuesto();
+
+            listaPuestosBindingSource.MoveLast();
+
+            DeshabilitarHabilitarBotones(false);
         }
 
-        private void FormCategorias_Load(object sender, EventArgs e)
-        {
-
-        }
         //codigo para la eliminación 
         private void Eliminar(int id)
         {
-            var resultado = _categorias.EliminarCategoria(id);
+            var resultado = _puestos.EliminarPuesto(id);
 
             if (resultado == true)
             {
-                listaCategoriasBindingSource.ResetBindings(false);
+                listaPuestosBindingSource.ResetBindings(false);
             }
             else
             {
                 MessageBox.Show("Ocurrio un error al eliminar la Categoria");
             }
-        }
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-            _categorias.AgregarCategoria();
-
-            listaCategoriasBindingSource.MoveLast();
-
-            DeshabilitarHabilitarBotones(false);
         }
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
@@ -90,24 +82,23 @@ namespace Win.yahoohub
 
             }
         }
-        //codigo para Guardar, usando el boton save del navegador  
 
-        private void listaCategoriasBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void listaPuestosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            listaCategoriasBindingSource.EndEdit();
-            var categoria = (Categoria)listaCategoriasBindingSource.Current;
+            listaPuestosBindingSource.EndEdit();
+            var puesto = (Puesto)listaPuestosBindingSource.Current;
 
-    
 
-            var resultado = _categorias.GuardarCategoria(categoria);
+
+            var resultado = _puestos.GuardarPuesto(puesto);
 
             if (resultado.Exitoso == true)
             {
-                listaCategoriasBindingSource.ResetBindings(false);
+                listaPuestosBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
-                MessageBox.Show("Categoria guardada exitosamente");
-               
-            
+                MessageBox.Show("Puesto guardado exitosamente");
+
+
             }
             else
             {
@@ -118,23 +109,8 @@ namespace Win.yahoohub
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
-            _categorias.CancelarCambios();
+            _puestos.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-        }
-
-        private void listaCategoriasBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

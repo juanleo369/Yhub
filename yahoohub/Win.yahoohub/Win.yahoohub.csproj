@@ -74,6 +74,18 @@
     <Compile Include="Clientes\FormModificarClientes.Designer.cs">
       <DependentUpon>FormModificarClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmpleados.Designer.cs">
+      <DependentUpon>FormEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPuestos.Designer.cs">
+      <DependentUpon>FormPuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedores\FormModificarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,10 +140,10 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOrdenes.cs">
+    <Compile Include="Ordenes\FormOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOrdenes.Designer.cs">
+    <Compile Include="Ordenes\FormOrdenes.Designer.cs">
       <DependentUpon>FormOrdenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Productos\FormProductos.cs">
@@ -150,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes\FormModificarClientes.resx">
       <DependentUpon>FormModificarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmpleados.resx">
+      <DependentUpon>FormEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPuestos.resx">
+      <DependentUpon>FormPuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormModificarProveedores.resx">
       <DependentUpon>FormModificarProveedores.cs</DependentUpon>
@@ -175,7 +193,7 @@
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOrdenes.resx">
+    <EmbeddedResource Include="Ordenes\FormOrdenes.resx">
       <DependentUpon>FormOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos\FormPrecioCuadrados.resx">
