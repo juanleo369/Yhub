@@ -92,6 +92,18 @@
     <Compile Include="Empleados\FormBuscarEmpleados.Designer.cs">
       <DependentUpon>FormBuscarEmpleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empleados\FormModificarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormModificarEmpleados.Designer.cs">
+      <DependentUpon>FormModificarEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\FormPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormPlanillas.Designer.cs">
+      <DependentUpon>FormPlanillas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedores\FormModificarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\FormEmpleados.resx">
       <DependentUpon>FormEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\FormModificarEmpleados.resx">
+      <DependentUpon>FormModificarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\FormPlanillas.resx">
+      <DependentUpon>FormPlanillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\FormPuestos.resx">
       <DependentUpon>FormPuestos.cs</DependentUpon>

@@ -634,6 +634,7 @@ namespace Win.yahoohub
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Eliminar";
             this.bindingNavigatorDeleteItem.Visible = false;
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // listaEmpleadosBindingNavigatorSaveItem
             // 

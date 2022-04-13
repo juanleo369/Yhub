@@ -179,5 +179,10 @@ namespace Win.yahoohub
             salarioTextBox.Text = "";
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

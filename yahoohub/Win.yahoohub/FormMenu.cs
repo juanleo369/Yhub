@@ -193,7 +193,7 @@ namespace Win.yahoohub
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
+            openChildForm(new FormModificarEmpleados());
 
             hideSubMenu();
         }
@@ -495,8 +495,7 @@ namespace Win.yahoohub
 
         private void button11_Click_1(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            openChildForm(new FormPlanillas());
             hideSubMenu();
         }
     }

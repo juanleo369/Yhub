@@ -67,7 +67,14 @@ namespace BL.yahoohub
             }
             return false;
         }
-
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         //Codigo para validar los campos  que se desean guardar no esten vacios.
         private ResultadoPlanilla Validar(Planilla planillas)
         {
@@ -107,6 +114,11 @@ namespace BL.yahoohub
         public DateTime FechaPago { get; set; }
         public double Pago { get; set; }
         public string Descripcion { get; set; }
+
+        public Planilla()
+        {
+            FechaPago = DateTime.Now;
+        }
 
     }
 

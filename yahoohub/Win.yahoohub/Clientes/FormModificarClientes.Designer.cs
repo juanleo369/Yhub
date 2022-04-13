@@ -260,8 +260,8 @@ namespace Win.yahoohub
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
+            this.bindingNavigatorAddNewItem,
             this.listaClientesBindingNavigatorSaveItem,
             this.toolStripButtonCancelar});
             this.listaClientesBindingNavigator.Location = new System.Drawing.Point(0, 0);
