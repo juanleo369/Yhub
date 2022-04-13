@@ -74,17 +74,23 @@
     <Compile Include="Clientes\FormModificarClientes.Designer.cs">
       <DependentUpon>FormModificarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEmpleados.cs">
+    <Compile Include="Empleados\FormEmpleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEmpleados.Designer.cs">
+    <Compile Include="Empleados\FormEmpleados.Designer.cs">
       <DependentUpon>FormEmpleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPuestos.cs">
+    <Compile Include="Empleados\FormPuestos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPuestos.Designer.cs">
+    <Compile Include="Empleados\FormPuestos.Designer.cs">
       <DependentUpon>FormPuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\FormBuscarEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\FormBuscarEmpleados.Designer.cs">
+      <DependentUpon>FormBuscarEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Proveedores\FormModificarProveedores.cs">
       <SubType>Form</SubType>
@@ -163,11 +169,14 @@
     <EmbeddedResource Include="Clientes\FormModificarClientes.resx">
       <DependentUpon>FormModificarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEmpleados.resx">
+    <EmbeddedResource Include="Empleados\FormEmpleados.resx">
       <DependentUpon>FormEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPuestos.resx">
+    <EmbeddedResource Include="Empleados\FormPuestos.resx">
       <DependentUpon>FormPuestos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\FormBuscarEmpleados.resx">
+      <DependentUpon>FormBuscarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormModificarProveedores.resx">
       <DependentUpon>FormModificarProveedores.cs</DependentUpon>

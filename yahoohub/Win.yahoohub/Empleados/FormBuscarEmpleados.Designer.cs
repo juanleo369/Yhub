@@ -1,7 +1,7 @@
 ﻿
 namespace Win.yahoohub
 {
-    partial class FormBuscarClientes
+    partial class FormBuscarEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,11 @@ namespace Win.yahoohub
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaClientesDataGridView = new System.Windows.Forms.DataGridView();
+            this.listaEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaEmpleadosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,22 +45,37 @@ namespace Win.yahoohub
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.button7 = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEmpleadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEmpleadosDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(1271, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(59, 51);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "X";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(24, 12);
+            this.groupBox3.Location = new System.Drawing.Point(25, 15);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1231, 47);
-            this.groupBox3.TabIndex = 41;
+            this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
             // 
             // label2
@@ -68,25 +84,25 @@ namespace Win.yahoohub
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(501, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 21);
+            this.label2.Size = new System.Drawing.Size(225, 21);
             this.label2.TabIndex = 0;
-            this.label2.Text = "LISTADO DE CLIENTES";
+            this.label2.Text = "LISTADO DE EMPLEADOS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // listaClientesBindingSource
+            // listaEmpleadosBindingSource
             // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.yahoohub.Cliente);
+            this.listaEmpleadosBindingSource.DataSource = typeof(BL.yahoohub.Empleado);
             // 
-            // listaClientesDataGridView
+            // listaEmpleadosDataGridView
             // 
-            this.listaClientesDataGridView.AllowUserToAddRows = false;
-            this.listaClientesDataGridView.AllowUserToDeleteRows = false;
-            this.listaClientesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listaEmpleadosDataGridView.AllowUserToAddRows = false;
+            this.listaEmpleadosDataGridView.AllowUserToDeleteRows = false;
+            this.listaEmpleadosDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listaClientesDataGridView.AutoGenerateColumns = false;
-            this.listaClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaClientesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.listaEmpleadosDataGridView.AutoGenerateColumns = false;
+            this.listaEmpleadosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaEmpleadosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -97,16 +113,20 @@ namespace Win.yahoohub
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
-            this.Activo});
-            this.listaClientesDataGridView.DataSource = this.listaClientesBindingSource;
-            this.listaClientesDataGridView.Location = new System.Drawing.Point(49, 115);
-            this.listaClientesDataGridView.Name = "listaClientesDataGridView";
-            this.listaClientesDataGridView.ReadOnly = true;
-            this.listaClientesDataGridView.RowHeadersWidth = 51;
-            this.listaClientesDataGridView.RowTemplate.Height = 24;
-            this.listaClientesDataGridView.Size = new System.Drawing.Size(1197, 614);
-            this.listaClientesDataGridView.TabIndex = 42;
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.listaEmpleadosDataGridView.DataSource = this.listaEmpleadosBindingSource;
+            this.listaEmpleadosDataGridView.Location = new System.Drawing.Point(59, 94);
+            this.listaEmpleadosDataGridView.Name = "listaEmpleadosDataGridView";
+            this.listaEmpleadosDataGridView.ReadOnly = true;
+            this.listaEmpleadosDataGridView.RowHeadersWidth = 51;
+            this.listaEmpleadosDataGridView.RowTemplate.Height = 24;
+            this.listaEmpleadosDataGridView.Size = new System.Drawing.Size(1170, 611);
+            this.listaEmpleadosDataGridView.TabIndex = 46;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -191,69 +211,94 @@ namespace Win.yahoohub
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "TipoClienteId";
-            this.dataGridViewTextBoxColumn10.HeaderText = "TipoClienteId";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Fecha";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 125;
             // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "PuestoId";
+            this.dataGridViewTextBoxColumn11.HeaderText = "PuestoId";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
             // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Fecha";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Puesto";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Puesto";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 125;
             // 
-            // Activo
+            // dataGridViewTextBoxColumn13
             // 
-            this.Activo.DataPropertyName = "Activo";
-            this.Activo.HeaderText = "Activo";
-            this.Activo.MinimumWidth = 6;
-            this.Activo.Name = "Activo";
-            this.Activo.ReadOnly = true;
-            this.Activo.Width = 125;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "MetodoId";
+            this.dataGridViewTextBoxColumn13.HeaderText = "MetodoId";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 125;
             // 
-            // button7
+            // dataGridViewTextBoxColumn14
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1263, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(59, 51);
-            this.button7.TabIndex = 43;
-            this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "MetodoPago";
+            this.dataGridViewTextBoxColumn14.HeaderText = "MetodoPago";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 125;
             // 
-            // FormBuscarClientes
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Salario";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Salario";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Width = 125;
+            // 
+            // FormBuscarEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 763);
+            this.ClientSize = new System.Drawing.Size(1342, 763);
+            this.Controls.Add(this.listaEmpleadosDataGridView);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.listaClientesDataGridView);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormBuscarClientes";
-            this.Text = "FormBuscarClientes";
-            this.Load += new System.EventHandler(this.FormBuscarClientes_Load);
+            this.Name = "FormBuscarEmpleados";
+            this.Text = "FormBuscarEmpleados";
+            this.Load += new System.EventHandler(this.FormBuscarEmpleados_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEmpleadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaEmpleadosDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource listaClientesBindingSource;
-        private System.Windows.Forms.DataGridView listaClientesDataGridView;
+        private System.Windows.Forms.BindingSource listaEmpleadosBindingSource;
+        private System.Windows.Forms.DataGridView listaEmpleadosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -264,8 +309,11 @@ namespace Win.yahoohub
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Activo;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
     }
 }
