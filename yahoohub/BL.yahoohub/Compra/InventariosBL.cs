@@ -52,7 +52,14 @@ namespace BL.yahoohub
             var nuevoInventarios = new Inventario();
             ListaInventarios.Add(nuevoInventarios);
         }
-
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         //Codigo que sirve para eliminar datos en la base de datos
         public bool EliminarInventario(int id)
         {
@@ -109,7 +116,10 @@ namespace BL.yahoohub
         public int EmpleadoId { get; set; }
         public Empleado Empleado { get; set; }
 
-
+        public Inventario()
+        {
+            FechaSalida = DateTime.Now;
+        }
     }
 
     //Codigo que sirve para validar los campos que se ingresan

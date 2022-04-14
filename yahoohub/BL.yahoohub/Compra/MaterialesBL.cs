@@ -31,6 +31,15 @@ namespace BL.yahoohub
             return ListaMateriales;
         }
 
+
+        //Codigo que sirve para crear una lista de  datos y enviarla al form
+        public BindingList<Material> ObtenerMateriales(int id)
+        {
+            _contexto.Materiales.FirstOrDefault( r => r.Id == id);
+            ListaMateriales = _contexto.Materiales.Local.ToBindingList();
+            return ListaMateriales;
+        }
+
         //Codigo que sirve para Guardar datos en la base de datos
         public ResultadoMaterial GuardarMaterial(Material material)
         {
@@ -67,7 +76,14 @@ namespace BL.yahoohub
             }
             return false;
         }
-
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         //Codigo para validar los campos  que se desean guardar no esten vacios.
         private ResultadoMaterial Validar(Material material)
         {

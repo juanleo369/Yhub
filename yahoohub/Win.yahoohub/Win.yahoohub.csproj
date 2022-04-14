@@ -104,6 +104,30 @@
     <Compile Include="Empleados\FormPlanillas.Designer.cs">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\FormSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FormSalida.Designer.cs">
+      <DependentUpon>FormSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FormBuscarSalidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FormBuscarSalidas.Designer.cs">
+      <DependentUpon>FormBuscarSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FormMateriales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FormMateriales.Designer.cs">
+      <DependentUpon>FormMateriales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\FormInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\FormInventarios.Designer.cs">
+      <DependentUpon>FormInventarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedores\FormModificarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +219,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\FormBuscarEmpleados.resx">
       <DependentUpon>FormBuscarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FormBuscarSalidas.resx">
+      <DependentUpon>FormBuscarSalidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FormInventarios.resx">
+      <DependentUpon>FormInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FormMateriales.resx">
+      <DependentUpon>FormMateriales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\FormSalida.resx">
+      <DependentUpon>FormSalida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormModificarProveedores.resx">
       <DependentUpon>FormModificarProveedores.cs</DependentUpon>
@@ -337,7 +373,9 @@
       <Name>BL.yahoohub</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Compras\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
