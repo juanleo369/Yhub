@@ -41,7 +41,6 @@ namespace BL.yahoohub
         public DbSet<Planilla> Planillas { get; set; }
         public DbSet<TipoPago> TipoPagos { get; set; }
         public DbSet<EstadoPedido> EstadoPedidos { get; set; }
-        public DbSet<OrdenDetalle> OrdenDetalles { get; set; }
         public DbSet<Orden> Ordenes { get; set; }
         public DbSet<Impuesto> Impuestos { get; set; }
 

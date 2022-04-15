@@ -89,6 +89,14 @@ namespace BL.yahoohub
         {
             var resultado = new ResultadoMaterial();
             resultado.Exitoso = true;
+
+            if (material == null)
+            {
+                resultado.Mensaje = "Ingrese un material valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
             if (string.IsNullOrEmpty(material.Nombre) == true)
             {
                 resultado.Mensaje = "ingrese un material";

@@ -80,8 +80,17 @@ namespace BL.yahoohub
         //Codigo para validar los campos  que se desean guardar no esten vacios.
         private ResultadoEmpleado Validar(Empleado empleado)
         {
+
             var resultado = new ResultadoEmpleado();
             resultado.Exitoso = true;
+
+            if (empleado == null)
+            {
+                resultado.Mensaje = "Ingrese un empleado valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
             if (string.IsNullOrEmpty(empleado.Nombre) == true)
             {
                 resultado.Mensaje = "ingrese el nombre del Cliente";

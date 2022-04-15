@@ -72,6 +72,14 @@ namespace BL.yahoohub
             var resultado = new ResultadoUsuario();
             resultado.Exitoso = true;
 
+            if (usuario == null)
+            {
+                resultado.Mensaje = "Ingrese un usuario valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             //SEGURIDAD
             if (string.IsNullOrEmpty(usuario.NombUsuario) == true)
             {

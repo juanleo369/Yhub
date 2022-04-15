@@ -104,6 +104,18 @@
     <Compile Include="Empleados\FormPlanillas.Designer.cs">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarCompras.Designer.cs">
+      <DependentUpon>FormBuscarCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompras.Designer.cs">
+      <DependentUpon>FormCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\FormSalida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +231,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\FormBuscarEmpleados.resx">
       <DependentUpon>FormBuscarEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarCompras.resx">
+      <DependentUpon>FormBuscarCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompras.resx">
+      <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\FormBuscarSalidas.resx">
       <DependentUpon>FormBuscarSalidas.cs</DependentUpon>

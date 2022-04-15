@@ -85,7 +85,13 @@ namespace BL.yahoohub
         {
             var resultado = new ResultadoCliente();
             resultado.Exitoso = true;
+            if (cliente == null)
+            {
+                resultado.Mensaje = "Ingrese un cliente valido";
+                resultado.Exitoso = false;
 
+                return resultado;
+            }
             if (string.IsNullOrEmpty(cliente.Nombre) == true)
             {
                 resultado.Mensaje = "ingrese el nombre del Cliente";

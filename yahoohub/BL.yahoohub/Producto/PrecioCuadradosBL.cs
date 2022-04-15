@@ -85,6 +85,14 @@ namespace BL.yahoohub
             var resultado = new ResultadoPrecio();
             resultado.Exitoso = true;
 
+            if (precioCuadrado == null)
+            {
+                resultado.Mensaje = "Ingrese un precio cuadrado valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
             if (string.IsNullOrEmpty(precioCuadrado.Descripcion) == true)
             {
                 resultado.Mensaje = "ingrese una descripción";

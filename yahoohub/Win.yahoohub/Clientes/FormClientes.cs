@@ -207,5 +207,10 @@ namespace Win.yahoohub
         {
             this.Close();
         }
+
+        private void ImagenPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

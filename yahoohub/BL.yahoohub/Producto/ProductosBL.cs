@@ -55,6 +55,8 @@ namespace BL.yahoohub
             var nuevoProducto = new Producto(); 
             ListaProductos.Add(nuevoProducto);
         }
+
+        //Codigo que sirve para cancelar los cambios que se realizaron en el form
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
@@ -84,10 +86,18 @@ namespace BL.yahoohub
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
-
-            if(string.IsNullOrEmpty(producto.Descripcion) == true)
+           
+            if (producto == null)
             {
-                resultado.Mensaje = "ingrese una descripción";
+                resultado.Mensaje = "Ingrese un producto valido";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
+            if (string.IsNullOrEmpty(producto.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese una descripción";
                 resultado.Exitoso = false;
 
             }

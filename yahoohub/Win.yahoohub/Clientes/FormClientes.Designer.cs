@@ -568,6 +568,7 @@ namespace Win.yahoohub
             this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 43;
             this.ImagenPictureBox.TabStop = false;
+            this.ImagenPictureBox.Click += new System.EventHandler(this.ImagenPictureBox_Click);
             // 
             // groupBox1
             // 

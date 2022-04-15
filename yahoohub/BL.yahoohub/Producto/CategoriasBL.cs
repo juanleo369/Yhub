@@ -83,7 +83,13 @@ namespace BL.yahoohub
         {
             var resultado = new ResultadoCategoria();
             resultado.Exitoso = true;
+            if (categoria == null)
+            {
+                resultado.Mensaje = "Ingrese una categoria valida";
+                resultado.Exitoso = false;
 
+                return resultado;
+            }
             if (string.IsNullOrEmpty(categoria.Descripcion) == true)
             {
                 resultado.Mensaje = "ingrese una descripción";

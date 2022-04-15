@@ -427,7 +427,6 @@ namespace Win.yahoohub
             // 
             // empleadoIdComboBox
             // 
-            this.empleadoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaPlanillasBindingSource, "EmpleadoId", true));
             this.empleadoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaPlanillasBindingSource, "EmpleadoId", true));
             this.empleadoIdComboBox.DataSource = this.listaEmpleadosBindingSource;
             this.empleadoIdComboBox.DisplayMember = "Nombre";

@@ -310,7 +310,6 @@ namespace Win.yahoohub
             // 
             // puestoIdComboBox
             // 
-            this.puestoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "PuestoId", true));
             this.puestoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaEmpleadosBindingSource, "PuestoId", true));
             this.puestoIdComboBox.DataSource = this.listaPuestosBindingSource;
             this.puestoIdComboBox.DisplayMember = "Descripcion";
@@ -333,7 +332,6 @@ namespace Win.yahoohub
             // 
             // metodoIdComboBox
             // 
-            this.metodoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "MetodoId", true));
             this.metodoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaEmpleadosBindingSource, "MetodoId", true));
             this.metodoIdComboBox.DataSource = this.listaMetodoPagosBindingSource;
             this.metodoIdComboBox.DisplayMember = "Descripcion";
