@@ -30,28 +30,29 @@ namespace Win.yahoohub
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             System.Windows.Forms.Label contrasenaLabel;
             System.Windows.Forms.Label empleadoIdLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombUsuarioLabel;
             System.Windows.Forms.Label tipoUsuarioIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.listaSeguridadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaSeguridadBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaSeguridadBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.listaSeguridadDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,14 +62,13 @@ namespace Win.yahoohub
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button7 = new System.Windows.Forms.Button();
-            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.contrasenaTextBox = new System.Windows.Forms.TextBox();
             this.empleadoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.listaEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombUsuarioTextBox = new System.Windows.Forms.TextBox();
             this.tipoUsuarioIdComboBox = new System.Windows.Forms.ComboBox();
-            this.listaTipoPagosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaTipoUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             contrasenaLabel = new System.Windows.Forms.Label();
             empleadoIdLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -79,15 +79,70 @@ namespace Win.yahoohub
             ((System.ComponentModel.ISupportInitialize)(this.listaSeguridadBindingNavigator)).BeginInit();
             this.listaSeguridadBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaSeguridadDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaTipoPagosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaEmpleadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTipoUsuariosBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // contrasenaLabel
+            // 
+            contrasenaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            contrasenaLabel.Location = new System.Drawing.Point(434, 170);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(113, 21);
+            contrasenaLabel.TabIndex = 43;
+            contrasenaLabel.Text = "Contraseña:";
+            // 
+            // empleadoIdLabel
+            // 
+            empleadoIdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            empleadoIdLabel.AutoSize = true;
+            empleadoIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            empleadoIdLabel.Location = new System.Drawing.Point(447, 205);
+            empleadoIdLabel.Name = "empleadoIdLabel";
+            empleadoIdLabel.Size = new System.Drawing.Size(100, 21);
+            empleadoIdLabel.TabIndex = 45;
+            empleadoIdLabel.Text = "Empleado:";
+            // 
+            // idLabel
+            // 
+            idLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(510, 100);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(35, 21);
+            idLabel.TabIndex = 47;
+            idLabel.Text = "Id:";
+            // 
+            // nombUsuarioLabel
+            // 
+            nombUsuarioLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            nombUsuarioLabel.AutoSize = true;
+            nombUsuarioLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombUsuarioLabel.Location = new System.Drawing.Point(464, 135);
+            nombUsuarioLabel.Name = "nombUsuarioLabel";
+            nombUsuarioLabel.Size = new System.Drawing.Size(82, 21);
+            nombUsuarioLabel.TabIndex = 49;
+            nombUsuarioLabel.Text = "Usuario:";
+            // 
+            // tipoUsuarioIdLabel
+            // 
+            tipoUsuarioIdLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            tipoUsuarioIdLabel.AutoSize = true;
+            tipoUsuarioIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoUsuarioIdLabel.Location = new System.Drawing.Point(424, 243);
+            tipoUsuarioIdLabel.Name = "tipoUsuarioIdLabel";
+            tipoUsuarioIdLabel.Size = new System.Drawing.Size(124, 21);
+            tipoUsuarioIdLabel.TabIndex = 51;
+            tipoUsuarioIdLabel.Text = "Tipo Usuario:";
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(18, 32);
+            this.groupBox3.Location = new System.Drawing.Point(12, 32);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1231, 47);
             this.groupBox3.TabIndex = 41;
@@ -136,9 +191,35 @@ namespace Win.yahoohub
             this.listaSeguridadBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaSeguridadBindingNavigator.Name = "listaSeguridadBindingNavigator";
             this.listaSeguridadBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaSeguridadBindingNavigator.Size = new System.Drawing.Size(1334, 27);
+            this.listaSeguridadBindingNavigator.Size = new System.Drawing.Size(1323, 27);
             this.listaSeguridadBindingNavigator.TabIndex = 42;
             this.listaSeguridadBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -173,16 +254,9 @@ namespace Win.yahoohub
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -205,27 +279,8 @@ namespace Win.yahoohub
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // listaSeguridadBindingNavigatorSaveItem
             // 
@@ -235,94 +290,6 @@ namespace Win.yahoohub
             this.listaSeguridadBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.listaSeguridadBindingNavigatorSaveItem.Text = "Guardar datos";
             this.listaSeguridadBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaSeguridadBindingNavigatorSaveItem_Click);
-            // 
-            // listaSeguridadDataGridView
-            // 
-            this.listaSeguridadDataGridView.AutoGenerateColumns = false;
-            this.listaSeguridadDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listaSeguridadDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.listaSeguridadDataGridView.DataSource = this.listaSeguridadBindingSource;
-            this.listaSeguridadDataGridView.Location = new System.Drawing.Point(24, 303);
-            this.listaSeguridadDataGridView.Name = "listaSeguridadDataGridView";
-            this.listaSeguridadDataGridView.RowHeadersWidth = 51;
-            this.listaSeguridadDataGridView.RowTemplate.Height = 24;
-            this.listaSeguridadDataGridView.Size = new System.Drawing.Size(1218, 331);
-            this.listaSeguridadDataGridView.TabIndex = 42;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombUsuario";
-            this.dataGridViewTextBoxColumn2.HeaderText = "NombUsuario";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Contrasena";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Contrasena";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TipoUsuarioId";
-            this.dataGridViewTextBoxColumn4.HeaderText = "TipoUsuarioId";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "TipoUsuario";
-            this.dataGridViewTextBoxColumn5.HeaderText = "TipoUsuario";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "EmpleadoId";
-            this.dataGridViewTextBoxColumn6.HeaderText = "EmpleadoId";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Empleado";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Empleado";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1263, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(59, 51);
-            this.button7.TabIndex = 43;
-            this.button7.Text = "X";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // toolStripButtonCancelar
             // 
@@ -335,124 +302,174 @@ namespace Win.yahoohub
             this.toolStripButtonCancelar.Visible = false;
             this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
-            // contrasenaLabel
+            // listaSeguridadDataGridView
             // 
-            contrasenaLabel.AutoSize = true;
-            contrasenaLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contrasenaLabel.Location = new System.Drawing.Point(440, 170);
-            contrasenaLabel.Name = "contrasenaLabel";
-            contrasenaLabel.Size = new System.Drawing.Size(113, 21);
-            contrasenaLabel.TabIndex = 43;
-            contrasenaLabel.Text = "Contraseña:";
+            this.listaSeguridadDataGridView.AllowUserToAddRows = false;
+            this.listaSeguridadDataGridView.AllowUserToDeleteRows = false;
+            this.listaSeguridadDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.listaSeguridadDataGridView.AutoGenerateColumns = false;
+            this.listaSeguridadDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listaSeguridadDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.listaSeguridadDataGridView.DataSource = this.listaSeguridadBindingSource;
+            this.listaSeguridadDataGridView.Location = new System.Drawing.Point(18, 303);
+            this.listaSeguridadDataGridView.Name = "listaSeguridadDataGridView";
+            this.listaSeguridadDataGridView.ReadOnly = true;
+            this.listaSeguridadDataGridView.RowHeadersWidth = 51;
+            this.listaSeguridadDataGridView.RowTemplate.Height = 24;
+            this.listaSeguridadDataGridView.Size = new System.Drawing.Size(1218, 320);
+            this.listaSeguridadDataGridView.TabIndex = 42;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NombUsuario";
+            this.dataGridViewTextBoxColumn2.HeaderText = "NombUsuario";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Contrasena";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Contrasena";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TipoUsuarioId";
+            this.dataGridViewTextBoxColumn4.HeaderText = "TipoUsuarioId";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TipoUsuario";
+            this.dataGridViewTextBoxColumn5.HeaderText = "TipoUsuario";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "EmpleadoId";
+            this.dataGridViewTextBoxColumn6.HeaderText = "EmpleadoId";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Empleado";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Empleado";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(1252, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(59, 51);
+            this.button7.TabIndex = 43;
+            this.button7.Text = "X";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // contrasenaTextBox
             // 
+            this.contrasenaTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaSeguridadBindingSource, "Contrasena", true));
             this.contrasenaTextBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contrasenaTextBox.Location = new System.Drawing.Point(565, 167);
+            this.contrasenaTextBox.Location = new System.Drawing.Point(559, 167);
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.Size = new System.Drawing.Size(331, 28);
             this.contrasenaTextBox.TabIndex = 44;
             // 
-            // empleadoIdLabel
-            // 
-            empleadoIdLabel.AutoSize = true;
-            empleadoIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            empleadoIdLabel.Location = new System.Drawing.Point(453, 205);
-            empleadoIdLabel.Name = "empleadoIdLabel";
-            empleadoIdLabel.Size = new System.Drawing.Size(100, 21);
-            empleadoIdLabel.TabIndex = 45;
-            empleadoIdLabel.Text = "Empleado:";
-            // 
             // empleadoIdComboBox
             // 
-            this.empleadoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaSeguridadBindingSource, "EmpleadoId", true));
+            this.empleadoIdComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.empleadoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaSeguridadBindingSource, "EmpleadoId", true));
             this.empleadoIdComboBox.DataSource = this.listaEmpleadosBindingSource;
             this.empleadoIdComboBox.DisplayMember = "Nombre";
             this.empleadoIdComboBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empleadoIdComboBox.FormattingEnabled = true;
-            this.empleadoIdComboBox.Location = new System.Drawing.Point(565, 202);
+            this.empleadoIdComboBox.Location = new System.Drawing.Point(559, 202);
             this.empleadoIdComboBox.Name = "empleadoIdComboBox";
             this.empleadoIdComboBox.Size = new System.Drawing.Size(331, 29);
             this.empleadoIdComboBox.TabIndex = 46;
             this.empleadoIdComboBox.ValueMember = "Id";
             // 
-            // idLabel
+            // listaEmpleadosBindingSource
             // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(516, 100);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(35, 21);
-            idLabel.TabIndex = 47;
-            idLabel.Text = "Id:";
+            this.listaEmpleadosBindingSource.DataSource = typeof(BL.yahoohub.Empleado);
             // 
             // idTextBox
             // 
+            this.idTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaSeguridadBindingSource, "Id", true));
             this.idTextBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idTextBox.Location = new System.Drawing.Point(565, 97);
+            this.idTextBox.Location = new System.Drawing.Point(559, 97);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(331, 28);
             this.idTextBox.TabIndex = 48;
             // 
-            // nombUsuarioLabel
-            // 
-            nombUsuarioLabel.AutoSize = true;
-            nombUsuarioLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombUsuarioLabel.Location = new System.Drawing.Point(470, 135);
-            nombUsuarioLabel.Name = "nombUsuarioLabel";
-            nombUsuarioLabel.Size = new System.Drawing.Size(82, 21);
-            nombUsuarioLabel.TabIndex = 49;
-            nombUsuarioLabel.Text = "Usuario:";
-            // 
             // nombUsuarioTextBox
             // 
+            this.nombUsuarioTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.nombUsuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaSeguridadBindingSource, "NombUsuario", true));
             this.nombUsuarioTextBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombUsuarioTextBox.Location = new System.Drawing.Point(565, 132);
+            this.nombUsuarioTextBox.Location = new System.Drawing.Point(559, 132);
             this.nombUsuarioTextBox.Name = "nombUsuarioTextBox";
             this.nombUsuarioTextBox.Size = new System.Drawing.Size(331, 28);
             this.nombUsuarioTextBox.TabIndex = 50;
             // 
-            // tipoUsuarioIdLabel
-            // 
-            tipoUsuarioIdLabel.AutoSize = true;
-            tipoUsuarioIdLabel.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoUsuarioIdLabel.Location = new System.Drawing.Point(430, 243);
-            tipoUsuarioIdLabel.Name = "tipoUsuarioIdLabel";
-            tipoUsuarioIdLabel.Size = new System.Drawing.Size(124, 21);
-            tipoUsuarioIdLabel.TabIndex = 51;
-            tipoUsuarioIdLabel.Text = "Tipo Usuario:";
-            // 
             // tipoUsuarioIdComboBox
             // 
+            this.tipoUsuarioIdComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.tipoUsuarioIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaSeguridadBindingSource, "TipoUsuarioId", true));
             this.tipoUsuarioIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaSeguridadBindingSource, "TipoUsuarioId", true));
-            this.tipoUsuarioIdComboBox.DataSource = this.listaTipoPagosBindingSource;
-            this.tipoUsuarioIdComboBox.DisplayMember = "Descripcion";
             this.tipoUsuarioIdComboBox.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tipoUsuarioIdComboBox.FormattingEnabled = true;
-            this.tipoUsuarioIdComboBox.Location = new System.Drawing.Point(565, 240);
+            this.tipoUsuarioIdComboBox.Location = new System.Drawing.Point(559, 240);
             this.tipoUsuarioIdComboBox.Name = "tipoUsuarioIdComboBox";
             this.tipoUsuarioIdComboBox.Size = new System.Drawing.Size(331, 29);
             this.tipoUsuarioIdComboBox.TabIndex = 52;
-            this.tipoUsuarioIdComboBox.ValueMember = "Id";
             // 
-            // listaTipoPagosBindingSource
+            // listaTipoUsuariosBindingSource
             // 
-            this.listaTipoPagosBindingSource.DataSource = typeof(BL.yahoohub.TipoPago);
-            // 
-            // listaEmpleadosBindingSource
-            // 
-            this.listaEmpleadosBindingSource.DataSource = typeof(BL.yahoohub.Empleado);
+            this.listaTipoUsuariosBindingSource.DataSource = typeof(BL.yahoohub.TipoUsuario);
             // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 726);
+            this.ClientSize = new System.Drawing.Size(1323, 666);
             this.Controls.Add(contrasenaLabel);
             this.Controls.Add(this.contrasenaTextBox);
             this.Controls.Add(empleadoIdLabel);
@@ -469,7 +486,6 @@ namespace Win.yahoohub
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUsuarios";
-            this.Text = "FormUsuarios";
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -478,8 +494,8 @@ namespace Win.yahoohub
             this.listaSeguridadBindingNavigator.ResumeLayout(false);
             this.listaSeguridadBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaSeguridadDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaTipoPagosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaEmpleadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTipoUsuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,7 +534,7 @@ namespace Win.yahoohub
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombUsuarioTextBox;
         private System.Windows.Forms.ComboBox tipoUsuarioIdComboBox;
-        private System.Windows.Forms.BindingSource listaTipoPagosBindingSource;
         private System.Windows.Forms.BindingSource listaEmpleadosBindingSource;
+        private System.Windows.Forms.BindingSource listaTipoUsuariosBindingSource;
     }
 }

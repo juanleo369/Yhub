@@ -42,5 +42,10 @@ namespace Win.yahoohub
         {
 
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,12 +41,6 @@ namespace BL.yahoohub
 
 
             return ListaOrdenes;
-
-            /*
-            _contexto.Ordenes.Include("OrdenDetalle").Load();
-            ListaOrdenes = _contexto.Ordenes.Local.ToBindingList();
-            return ListaOrdenes;
-            */
         }
 
         //Codigo que sirve para Guardar datos en la base de datos
@@ -271,7 +265,7 @@ namespace BL.yahoohub
 
             if (orden.EstadoPedidoId < 0)
             {
-                resultado.Mensaje = "Ingrese un empleado";
+                resultado.Mensaje = "Ingrese un Estado para la orden";
                 resultado.Exitoso = false;
             }
 

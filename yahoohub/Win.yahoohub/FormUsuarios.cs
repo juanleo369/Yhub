@@ -14,13 +14,22 @@ namespace Win.yahoohub
     public partial class FormUsuarios : Form
     {
         SeguridadBL _seguridadBL;
-
+        TipoUsuariosBL  _tipoUsuario;
+        EmpleadosBL  _empleados;
         public FormUsuarios()
         {
             InitializeComponent();
             _seguridadBL = new SeguridadBL();
 
             listaSeguridadBindingSource.DataSource = _seguridadBL.ObtenerUsuario();
+
+            _empleados = new EmpleadosBL();
+
+            listaEmpleadosBindingSource.DataSource = _empleados.ObtenerEmpleados();
+
+            _tipoUsuario = new TipoUsuariosBL();
+
+            listaTipoUsuariosBindingSource.DataSource = _tipoUsuario.ObtenerTipoUsuarios();
         }
 
         private void button7_Click(object sender, EventArgs e)

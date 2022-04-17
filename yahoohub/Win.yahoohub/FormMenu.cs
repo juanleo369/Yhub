@@ -541,7 +541,19 @@ namespace Win.yahoohub
 
         private void button19_Click_1(object sender, EventArgs e)
         {
-            Application.Restart();
+            DialogResult result = MessageBox.Show("Seguro que desea Cerrar Sesión?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                FormLogin formLogin = new FormLogin();
+                this.Hide();
+                formLogin.ShowDialog();
+                this.Close();
+            }
+
+            if (result == DialogResult.No)
+            {
+
+            }
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -562,6 +574,18 @@ namespace Win.yahoohub
         private void panelReportesSubmenu_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new FormPerfil());
+            hideSubMenu();
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new FormUsuarios());
+            hideSubMenu();
         }
     }
 }

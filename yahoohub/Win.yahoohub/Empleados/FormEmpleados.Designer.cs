@@ -499,6 +499,7 @@ namespace Win.yahoohub
             // 
             // direccionTextBox
             // 
+            this.direccionTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Direccion", true));
             this.direccionTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionTextBox.Location = new System.Drawing.Point(113, 414);

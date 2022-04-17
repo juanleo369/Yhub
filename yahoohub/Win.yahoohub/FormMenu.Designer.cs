@@ -179,9 +179,10 @@ namespace Win.yahoohub
             this.button15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button15.Size = new System.Drawing.Size(228, 33);
             this.button15.TabIndex = 3;
-            this.button15.Text = "Configuración de Usuario";
+            this.button15.Text = "Perfil del Usuario";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
             // 
             // button9
             // 
@@ -199,6 +200,7 @@ namespace Win.yahoohub
             this.button9.Text = "Crear Usuario";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
             // button5
             // 

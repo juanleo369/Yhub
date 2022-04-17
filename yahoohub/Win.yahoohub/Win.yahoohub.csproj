@@ -127,6 +127,12 @@
     <Compile Include="FormBuscarCompras.Designer.cs">
       <DependentUpon>FormBuscarCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerfil.Designer.cs">
+      <DependentUpon>FormPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ordenes\FormBuscarOrdenes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,17 +156,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\FormReporteOrdenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\FormReporteOrdenes.Designer.cs">
-      <DependentUpon>FormReporteOrdenes.cs</DependentUpon>
-    </Compile>
     <Compile Include="ReporteOrdenes.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteOrdenes.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteOrdenes.Designer.cs">
+      <DependentUpon>FormReporteOrdenes.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FormReporteProductos.cs">
       <SubType>Form</SubType>
@@ -296,18 +302,21 @@
     <EmbeddedResource Include="FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPerfil.resx">
+      <DependentUpon>FormPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ordenes\FormBuscarOrdenes.resx">
       <DependentUpon>FormBuscarOrdenes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\FormReporteOrdenes.resx">
-      <DependentUpon>FormReporteOrdenes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ReporteOrdenes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteOrdenes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteOrdenes.resx">
+      <DependentUpon>FormReporteOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FormReporteProductos.resx">
       <DependentUpon>FormReporteProductos.cs</DependentUpon>
@@ -434,6 +443,7 @@
     <None Include="Properties\DataSources\BL.yahoohub.TipoPago.datasource" />
     <None Include="Properties\DataSources\BL.yahoohub.TipoPagosBL.datasource" />
     <None Include="Properties\DataSources\BL.yahoohub.TipoUsuario.datasource" />
+    <None Include="Properties\DataSources\BL.yahoohub.TipoUsuariosBL.datasource" />
     <None Include="Properties\DataSources\BL.yahoohub.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

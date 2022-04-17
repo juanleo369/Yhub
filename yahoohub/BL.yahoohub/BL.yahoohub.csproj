@@ -51,7 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Compra\CDetallesBL.cs" />
     <Compile Include="Compra\ComprasBL.cs" />
     <Compile Include="Compra\MaterialesBL.cs" />
     <Compile Include="Compra\InventariosBL.cs" />

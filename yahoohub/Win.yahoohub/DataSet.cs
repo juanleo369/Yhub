@@ -9,6 +9,10 @@
 
 namespace Win.yahoohub.DataSetTableAdapters
 {
+    partial class EstadoPedidoTableAdapter
+    {
+    }
+
     partial class ImpuestoTableAdapter
     {
     }

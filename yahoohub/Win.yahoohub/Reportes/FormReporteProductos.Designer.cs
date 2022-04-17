@@ -77,15 +77,16 @@ namespace Win.yahoohub
             this.crystalReportViewer1.Location = new System.Drawing.Point(19, 91);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ShowGroupTreeButton = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1231, 601);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1231, 581);
             this.crystalReportViewer1.TabIndex = 54;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
             // FormReporteProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 750);
+            this.ClientSize = new System.Drawing.Size(1326, 730);
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button7);

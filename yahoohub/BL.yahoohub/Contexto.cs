@@ -24,7 +24,6 @@ namespace BL.yahoohub
 
         public DbSet<Producto> Productos { get; set; }
         public DbSet<PrecioCuadrado> PrecioCuadrados { get; set; }
-
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<TipoCliente> TipoClientes { get; set; }
@@ -35,7 +34,6 @@ namespace BL.yahoohub
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<TipoUsuario> TipoUsuarios { get; set; }
         public DbSet<Compra> Compras { get; set; }
-        public DbSet<CDetalle> CDetalles { get; set; }
         public DbSet<Material> Materiales { get; set; }
         public DbSet<Inventario> Inventarios { get; set; }
         public DbSet<Planilla> Planillas { get; set; }

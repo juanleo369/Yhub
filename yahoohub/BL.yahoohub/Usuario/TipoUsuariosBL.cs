@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BL.yahoohub
 {
-    class TipoUsuariosBL
+    public class TipoUsuariosBL
     {
         Contexto _contexto;
         public BindingList<TipoUsuario> ListaTipoUsuarios { get; set; }

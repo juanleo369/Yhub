@@ -17,6 +17,7 @@ namespace Win.yahoohub
         public FormReporteOrdenes()
         {
             InitializeComponent();
+
             var _orden = new OrdenesBL();
             var _empleado = new EmpleadosBL();
             var _cliente = new ClientesBL();
@@ -24,40 +25,42 @@ namespace Win.yahoohub
             var _tipoPago = new TipoPagosBL();
             var _impuesto = new ImpuestosBL();
             var _producto = new ProductosBL();
-            
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = _orden.ObtenerOrdenes();
+            var _categoria = new CategoriasBL();
+
 
             var bindingSource1 = new BindingSource();
-            bindingSource.DataSource = _empleado.ObtenerEmpleados();
+            bindingSource1.DataSource = _orden.ObtenerOrdenes();
 
             var bindingSource2 = new BindingSource();
-            bindingSource.DataSource = _cliente.ObtenerClientes();
+            bindingSource2.DataSource = _empleado.ObtenerEmpleados();
 
             var bindingSource3 = new BindingSource();
-            bindingSource.DataSource = _estadoPedidos.ObtenerEstadoPedidos();
+            bindingSource3.DataSource = _cliente.ObtenerClientes();
 
             var bindingSource4 = new BindingSource();
-            bindingSource.DataSource = _tipoPago.ObtenerTipoPagos();
+            bindingSource4.DataSource = _estadoPedidos.ObtenerEstadoPedidos();
 
             var bindingSource5 = new BindingSource();
-            bindingSource.DataSource = _impuesto.ObtenerImpuestos();
+            bindingSource5.DataSource = _tipoPago.ObtenerTipoPagos();
 
             var bindingSource6 = new BindingSource();
-            bindingSource.DataSource = _producto.ObtenerProductos();
+            bindingSource6.DataSource = _impuesto.ObtenerImpuestos();
 
+            var bindingSource7 = new BindingSource();
+            bindingSource7.DataSource = _producto.ObtenerProductos();
 
+            var bindingSource8 = new BindingSource();
+            bindingSource8.DataSource = _categoria.ObtenerCategorias();
 
             var reporte = new ReporteOrdenes();
-            // reporte.SetDataSource(bindingSource);
-            reporte.Database.Tables["Orden"].SetDataSource(bindingSource);
-            reporte.Database.Tables["OrdenDetalle"].SetDataSource(bindingSource);
-            reporte.Database.Tables["Empleado"].SetDataSource(bindingSource1);
-            reporte.Database.Tables["Cliente"].SetDataSource(bindingSource2);
-            reporte.Database.Tables["EstadoPedido"].SetDataSource(bindingSource3);
-            reporte.Database.Tables["TipoPago"].SetDataSource(bindingSource4);
-            reporte.Database.Tables["Impuesto"].SetDataSource(bindingSource5);
-            reporte.Database.Tables["Producto"].SetDataSource(bindingSource6);
+            reporte.Database.Tables["Orden"].SetDataSource(bindingSource1);
+            reporte.Database.Tables["Empleado"].SetDataSource(bindingSource2);
+            reporte.Database.Tables["Cliente"].SetDataSource(bindingSource3);
+            reporte.Database.Tables["EstadoPedido"].SetDataSource(bindingSource4);
+            reporte.Database.Tables["TipoPago"].SetDataSource(bindingSource5);
+            reporte.Database.Tables["Impuesto"].SetDataSource(bindingSource6);
+            reporte.Database.Tables["Producto"].SetDataSource(bindingSource7);
+            reporte.Database.Tables["Categoria"].SetDataSource(bindingSource8);
 
             crystalReportViewer1.ReportSource = reporte;
             crystalReportViewer1.RefreshReport();
@@ -70,54 +73,58 @@ namespace Win.yahoohub
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(textBox1.Text);
 
-            var _orden = new OrdenesBL();
-            var _empleado = new EmpleadosBL();
-            var _cliente = new ClientesBL();
-            var _estadoPedidos = new EstadoPedidosBL();
-            var _tipoPago = new TipoPagosBL();
-            var _impuesto = new ImpuestosBL();
-            var _producto = new ProductosBL();
+            //int id = Convert.ToInt32(textBox1.Text);
 
-
-
-            var bindingSource = new BindingSource();
-            bindingSource.DataSource = _orden.ObtenerOrdenes(id);
-
-            var bindingSource1 = new BindingSource();
-            bindingSource.DataSource = _empleado.ObtenerEmpleados();
-
-            var bindingSource2 = new BindingSource();
-            bindingSource.DataSource = _cliente.ObtenerClientes();
-
-            var bindingSource3 = new BindingSource();
-            bindingSource.DataSource = _estadoPedidos.ObtenerEstadoPedidos();
-
-            var bindingSource4 = new BindingSource();
-            bindingSource.DataSource = _tipoPago.ObtenerTipoPagos();
-
-            var bindingSource5 = new BindingSource();
-            bindingSource.DataSource = _impuesto.ObtenerImpuestos();
-
-            var bindingSource6 = new BindingSource();
-            bindingSource.DataSource = _producto.ObtenerProductos();
+            //var _orden = new OrdenesBL();
+            //var _empleado = new EmpleadosBL();
+            //var _cliente = new ClientesBL();
+            //var _estadoPedidos = new EstadoPedidosBL();
+            //var _tipoPago = new TipoPagosBL();
+            //var _impuesto = new ImpuestosBL();
+            //var _producto = new ProductosBL();
+            //var _categoria = new CategoriasBL();
 
 
 
-            var reporte = new ReporteOrdenes();
-            // reporte.SetDataSource(bindingSource);
-            reporte.Database.Tables["Orden"].SetDataSource(bindingSource);
-            reporte.Database.Tables["OrdenDetalle"].SetDataSource(bindingSource);
-            reporte.Database.Tables["Empleado"].SetDataSource(bindingSource1);
-            reporte.Database.Tables["Cliente"].SetDataSource(bindingSource2);
-            reporte.Database.Tables["EstadoPedido"].SetDataSource(bindingSource3);
-            reporte.Database.Tables["TipoPago"].SetDataSource(bindingSource4);
-            reporte.Database.Tables["Impuesto"].SetDataSource(bindingSource5);
-            reporte.Database.Tables["Producto"].SetDataSource(bindingSource6);
+            //var bindingSource = new BindingSource();
+            //bindingSource.DataSource = _orden.ObtenerOrdenes(id);
+         
+            //var bindingSource1 = new BindingSource();
+            //bindingSource1.DataSource = _empleado.ObtenerEmpleados();
 
-            crystalReportViewer1.ReportSource = reporte;
-            crystalReportViewer1.RefreshReport();
+            //var bindingSource2 = new BindingSource();
+            //bindingSource2.DataSource = _cliente.ObtenerClientes();
+
+            //var bindingSource3 = new BindingSource();
+            //bindingSource3.DataSource = _estadoPedidos.ObtenerEstadoPedidos();
+
+            //var bindingSource4 = new BindingSource();
+            //bindingSource4.DataSource = _tipoPago.ObtenerTipoPagos();
+
+            //var bindingSource5 = new BindingSource();
+            //bindingSource5.DataSource = _impuesto.ObtenerImpuestos();
+
+            //var bindingSource6 = new BindingSource();
+            //bindingSource6.DataSource = _producto.ObtenerProductos();
+
+            //var bindingSource7 = new BindingSource();
+            //bindingSource7.DataSource = _categoria.ObtenerCategorias();
+
+
+            //var reporte = new ReporteOrdenes();
+            //// reporte.SetDataSource(bindingSource);
+            //reporte.Database.Tables["Orden"].SetDataSource(bindingSource);
+            //reporte.Database.Tables["Empleado"].SetDataSource(bindingSource1);
+            //reporte.Database.Tables["Cliente"].SetDataSource(bindingSource2);
+            //reporte.Database.Tables["EstadoPedido"].SetDataSource(bindingSource3);
+            //reporte.Database.Tables["TipoPago"].SetDataSource(bindingSource4);
+            //reporte.Database.Tables["Impuesto"].SetDataSource(bindingSource5);
+            //reporte.Database.Tables["Producto"].SetDataSource(bindingSource6);
+            //reporte.Database.Tables["Categoria"].SetDataSource(bindingSource7);
+
+            //crystalReportViewer1.ReportSource = reporte;
+            //crystalReportViewer1.RefreshReport();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -126,6 +133,11 @@ namespace Win.yahoohub
         }
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

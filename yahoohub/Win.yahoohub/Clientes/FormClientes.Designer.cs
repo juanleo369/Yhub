@@ -420,6 +420,7 @@ namespace Win.yahoohub
             // 
             // direccionTextBox
             // 
+            this.direccionTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Direccion", true));
             this.direccionTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionTextBox.Location = new System.Drawing.Point(70, 453);
@@ -533,7 +534,7 @@ namespace Win.yahoohub
             this.groupBox2.Controls.Add(deparmentoLabel);
             this.groupBox2.Location = new System.Drawing.Point(21, 94);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(748, 636);
+            this.groupBox2.Size = new System.Drawing.Size(748, 705);
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Cliente";
@@ -580,7 +581,7 @@ namespace Win.yahoohub
             this.groupBox1.Controls.Add(this.direccionTextBox);
             this.groupBox1.Location = new System.Drawing.Point(775, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 636);
+            this.groupBox1.Size = new System.Drawing.Size(477, 705);
             this.groupBox1.TabIndex = 43;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle del Cliente";
@@ -616,7 +617,7 @@ namespace Win.yahoohub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 763);
+            this.ClientSize = new System.Drawing.Size(1334, 832);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button7);

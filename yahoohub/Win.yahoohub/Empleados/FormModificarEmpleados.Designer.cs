@@ -482,6 +482,7 @@ namespace Win.yahoohub
             this.groupBox2.TabIndex = 49;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detalle del Empleado";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button1
             // 
@@ -518,6 +519,7 @@ namespace Win.yahoohub
             // 
             // direccionTextBox
             // 
+            this.direccionTextBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Direccion", true));
             this.direccionTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccionTextBox.Location = new System.Drawing.Point(82, 339);
@@ -742,7 +744,7 @@ namespace Win.yahoohub
             this.listaEmpleadosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaEmpleadosBindingNavigator.Name = "listaEmpleadosBindingNavigator";
             this.listaEmpleadosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaEmpleadosBindingNavigator.Size = new System.Drawing.Size(1325, 31);
+            this.listaEmpleadosBindingNavigator.Size = new System.Drawing.Size(1325, 27);
             this.listaEmpleadosBindingNavigator.TabIndex = 50;
             this.listaEmpleadosBindingNavigator.Text = "bindingNavigator1";
             this.listaEmpleadosBindingNavigator.RefreshItems += new System.EventHandler(this.listaEmpleadosBindingNavigator_RefreshItems);
@@ -760,7 +762,7 @@ namespace Win.yahoohub
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem

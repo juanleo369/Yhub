@@ -236,5 +236,27 @@ namespace Win.yahoohub
                 label1.Visible = false;
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(textBox1.Text);
+
+            if (id == 0)
+            {
+                _orden = new OrdenesBL();
+                listaOrdenesBindingSource.DataSource = _orden.ObtenerOrdenes();
+            }
+            
+            if (id != 0)
+            {
+
+                _orden = new OrdenesBL();
+
+                listaOrdenesBindingSource.DataSource = _orden.ObtenerOrdenes(id);
+
+
+                listaOrdenesBindingSource.ResetBindings(false);
+            }
+        }
     }
 }
