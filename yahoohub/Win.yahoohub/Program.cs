@@ -32,5 +32,13 @@ namespace Win.yahoohub
             return ms.ToArray();
         }
 
+        public static byte[] imageToByteArray2(Image imageIn)
+        {
+            var ms = new MemoryStream();
+            imageIn.Save(ms, imageIn.RawFormat);
+
+            return ms.ToArray();
+        }
+
     }
 }

@@ -63,9 +63,9 @@ namespace Win.yahoohub.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap p_okjn {
+        internal static System.Drawing.Bitmap cliente {
             get {
-                object obj = ResourceManager.GetObject("p.okjn", resourceCulture);
+                object obj = ResourceManager.GetObject("cliente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Win.yahoohub.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap password {
+        internal static System.Drawing.Bitmap entrada {
             get {
-                object obj = ResourceManager.GetObject("password", resourceCulture);
+                object obj = ResourceManager.GetObject("entrada", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Win.yahoohub.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap png_clipart_computer_icons_user_profile_symbol_miscellaneous_sign {
+        internal static System.Drawing.Bitmap inve {
             get {
-                object obj = ResourceManager.GetObject("png-clipart-computer-icons-user-profile-symbol-miscellaneous-sign", resourceCulture);
+                object obj = ResourceManager.GetObject("inve", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,39 @@ namespace Win.yahoohub.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap png_clipart_computer_icons_user_profile_symbol_miscellaneous_sign1 {
+        internal static System.Drawing.Bitmap orden {
             get {
-                object obj = ResourceManager.GetObject("png-clipart-computer-icons-user-profile-symbol-miscellaneous-sign1", resourceCulture);
+                object obj = ResourceManager.GetObject("orden", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap p_okjn3 {
+            get {
+                object obj = ResourceManager.GetObject("p.okjn3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap producto {
+            get {
+                object obj = ResourceManager.GetObject("producto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap proveedor {
+            get {
+                object obj = ResourceManager.GetObject("proveedor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,10 +153,19 @@ namespace Win.yahoohub.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap red_and_white_background_design_flat_and_minimalist_background_design_illustration_free_vector {
+        internal static System.Drawing.Bitmap publicom1 {
             get {
-                object obj = ResourceManager.GetObject("red-and-white-background-design-flat-and-minimalist-background-design-illustratio" +
-                        "n-free-vector", resourceCulture);
+                object obj = ResourceManager.GetObject("publicom1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reporte {
+            get {
+                object obj = ResourceManager.GetObject("reporte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

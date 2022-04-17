@@ -1,8 +1,10 @@
-﻿using System;
+﻿using BL.yahoohub;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +14,19 @@ namespace Win.yahoohub
 {
     public partial class FormMenu : Form
     {
+       EmpleadosBL  _empleado;
+
         public FormMenu()
         {
             InitializeComponent();
             customizeDesign();
+            panelUsuario.Width = 0;
+
+            int empleado = Program.usuario.EmpleadoId;
+
+            _empleado = new EmpleadosBL();
+
+            listaEmpleadosBindingSource.DataSource = _empleado.ObtenerEmpleados(empleado);
         }
         private void customizeDesign()
         {
@@ -65,7 +76,22 @@ namespace Win.yahoohub
         }
         private void FormMenu_Load(object sender, EventArgs e)
         {
-            
+
+            if (Program.usuario != null)
+            {
+                //label1.Text = Program.usuario.Empleado.Nombre + " " + Program.usuario.EmpleadoId;
+                label2.Text = Program.usuario.TipoUsuario.Descripcion;
+
+             /*
+                if (Program.usuario.Empleado.Imagen != null)
+                {
+                    MemoryStream ms = new MemoryStream(Program.usuario.Empleado.Imagen);
+                    System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+
+                    pictureBox3.Image = Image.FromStream(ms);
+                }
+             */
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -373,8 +399,7 @@ namespace Win.yahoohub
         }
         #endregion
 
-
-        #region Reportes
+       #region Reportes
         private void button32_Click(object sender, EventArgs e)
         {
             showSubMenu(panelReportesSubmenu);
@@ -385,8 +410,7 @@ namespace Win.yahoohub
 
         private void button39_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            openChildForm(new FormReporteOrdenes());
             hideSubMenu();
         }
 
@@ -413,16 +437,14 @@ namespace Win.yahoohub
 
         private void button35_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            openChildForm(new FormReporteProductos());
             hideSubMenu();
         }
 
         private void button34_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
-            hideSubMenu();
+        
+      
         }
 
         private void button33_Click(object sender, EventArgs e)
@@ -506,6 +528,42 @@ namespace Win.yahoohub
         {
             openChildForm(new FormInventarios());
             hideSubMenu();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            if (panelUsuario.Width == 0)
+            {
+                panelUsuario.Width = 313;
+            }
+            else
+                panelUsuario.Width = 0;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelReportesSubmenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -102,7 +102,14 @@ namespace BL.yahoohub
             return resultado;
         }
 
-
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         public Usuario Autorizar(string usuario, string contrasena)
         {
             var usuarios = _contexto.Usuarios.ToList();

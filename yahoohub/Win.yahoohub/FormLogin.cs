@@ -27,7 +27,53 @@ namespace Win.yahoohub
             _seguridad = new SeguridadBL();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+         UsuarioAutenticado = !Cancelar;
+         c = !u;
+        }
+
+       
+
+        private void Close_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                //UsuarioAutenticado = Cancelar;
+                Application.Exit();
+            }
+
+            if (result == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && !string.IsNullOrEmpty(textBox1.Text))
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && !string.IsNullOrEmpty(textBox2.Text))
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string usuario;
             string contrasena;
@@ -43,10 +89,10 @@ namespace Win.yahoohub
             var resultado = _seguridad.Autorizar(usuario, contrasena);
 
             // codigo para validar credenciales
-            if(resultado != null)
+            if (resultado != null)
             {
-               c = u;
-               Program.usuario = resultado;
+                c = u;
+                Program.usuario = resultado;
                 //codigo para abrir form menu y cerrar form login
                 FormMenu formMenu = new FormMenu();
                 this.Hide();
@@ -54,40 +100,12 @@ namespace Win.yahoohub
                 this.Close();
             }
             else
-            { 
-            MessageBox.Show("Usuario o Contraseña incorrecto, intente de nuevo.");
+            {
+                MessageBox.Show("Usuario o Contraseña incorrecto, intente de nuevo.");
             }
 
             button1.Enabled = true;
             button1.Text = "INGRESAR";
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-         UsuarioAutenticado = !Cancelar;
-         c = !u;
-        }
-
-       
-
-        private void Close_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (result == DialogResult.Yes)
-            {
-                //UsuarioAutenticado = Cancelar;
-                Application.Exit();
-            }
-
-            if (result == DialogResult.No)
-            {
-
-            }
         }
     }
 }

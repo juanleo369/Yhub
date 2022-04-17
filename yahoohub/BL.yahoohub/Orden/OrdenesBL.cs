@@ -31,6 +31,23 @@ namespace BL.yahoohub
             return ListaOrdenes;
         }
 
+        //Codigo que sirve para crear una lista de  datos y enviarla al form
+        public BindingList<Orden> ObtenerOrdenes(int id)
+        {
+
+            _contexto.Ordenes.Find(id);
+            _contexto.Ordenes.Include("OrdenDetalle").Load();
+            ListaOrdenes = _contexto.Ordenes.Local.ToBindingList();
+
+
+            return ListaOrdenes;
+
+            /*
+            _contexto.Ordenes.Include("OrdenDetalle").Load();
+            ListaOrdenes = _contexto.Ordenes.Local.ToBindingList();
+            return ListaOrdenes;
+            */
+        }
 
         //Codigo que sirve para Guardar datos en la base de datos
         public ResultadoOrden GuardarOrden(Orden orden)
@@ -180,7 +197,6 @@ namespace BL.yahoohub
             private ResultadoOrden Validar(Orden orden)
         {
 
-            string estado = Convert.ToString(orden.EstadoPedido);
             var resultado = new ResultadoOrden();
             resultado.Exitoso = true;
 
@@ -191,7 +207,7 @@ namespace BL.yahoohub
 
                 return resultado;
             }
-            if (orden.Id != 0 && estado == "Entregado")
+            if (orden.Id != 0 && orden.EstadoPedidoId == 4)
             {
                 resultado.Mensaje = "La orden ya fue emitida y no se pueden realizar cambios en ella";
                 resultado.Exitoso = false;
@@ -259,7 +275,7 @@ namespace BL.yahoohub
                 resultado.Exitoso = false;
             }
 
-            if (orden.Fecha_Entrega == null)
+            if (orden.Fecha_Entrega == null )
             {
                 resultado.Mensaje = "Ingrese un la fecha de entrega";
                 resultado.Exitoso = false;

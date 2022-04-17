@@ -512,6 +512,7 @@ namespace Win.yahoohub
             this.ImagenPictureBox.Location = new System.Drawing.Point(29, 84);
             this.ImagenPictureBox.Name = "ImagenPictureBox";
             this.ImagenPictureBox.Size = new System.Drawing.Size(233, 196);
+            this.ImagenPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImagenPictureBox.TabIndex = 17;
             this.ImagenPictureBox.TabStop = false;
             // 
@@ -741,7 +742,7 @@ namespace Win.yahoohub
             this.listaEmpleadosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaEmpleadosBindingNavigator.Name = "listaEmpleadosBindingNavigator";
             this.listaEmpleadosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaEmpleadosBindingNavigator.Size = new System.Drawing.Size(1325, 27);
+            this.listaEmpleadosBindingNavigator.Size = new System.Drawing.Size(1325, 31);
             this.listaEmpleadosBindingNavigator.TabIndex = 50;
             this.listaEmpleadosBindingNavigator.Text = "bindingNavigator1";
             this.listaEmpleadosBindingNavigator.RefreshItems += new System.EventHandler(this.listaEmpleadosBindingNavigator_RefreshItems);
@@ -759,7 +760,7 @@ namespace Win.yahoohub
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
             // 
             // bindingNavigatorMovePreviousItem

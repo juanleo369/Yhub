@@ -87,7 +87,7 @@ namespace Win.yahoohub
 
             if (resultado.Exitoso == true)
             {
-                listaClientesBindingSource.ResetBindings(false);
+                listaOrdenesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
                 MessageBox.Show("Orden guardado exitosamente");
                 //Codigo que permite inicializar el formulario con datos vacios

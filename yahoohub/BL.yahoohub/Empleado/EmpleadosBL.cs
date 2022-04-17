@@ -31,7 +31,12 @@ namespace BL.yahoohub
             ListaEmpleados = _contexto.Empleados.Local.ToBindingList();
             return ListaEmpleados;
         }
-
+        public BindingList<Empleado> ObtenerEmpleados(int empleado)
+        {
+            _contexto.Empleados.Find(empleado);
+            ListaEmpleados = _contexto.Empleados.Local.ToBindingList();
+            return ListaEmpleados;
+        }
         //Codigo que sirve para Guardar datos en la base de datos
         public ResultadoEmpleado GuardarEmpleado(Empleado empleado)
         {

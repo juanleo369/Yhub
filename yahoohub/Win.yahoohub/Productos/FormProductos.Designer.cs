@@ -416,6 +416,7 @@ namespace Win.yahoohub
             // 
             // descripcionTextBox
             // 
+            this.descripcionTextBox.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaProductosBindingSource, "Descripcion", true));
             this.descripcionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descripcionTextBox.Location = new System.Drawing.Point(72, 448);
@@ -558,6 +559,7 @@ namespace Win.yahoohub
             this.groupBox3.Size = new System.Drawing.Size(1231, 47);
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label2
             // 
