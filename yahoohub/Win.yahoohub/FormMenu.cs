@@ -132,15 +132,13 @@ namespace Win.yahoohub
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
             openChildForm(new FormOrdenes());
             hideSubMenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //poner codigo para llamar form hijo
-
+            openChildForm(new FormBuscarOrdenes());
             hideSubMenu();
         }
         private void button5_Click(object sender, EventArgs e)

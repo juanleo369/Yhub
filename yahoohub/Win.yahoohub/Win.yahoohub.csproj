@@ -127,6 +127,12 @@
     <Compile Include="FormBuscarCompras.Designer.cs">
       <DependentUpon>FormBuscarCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ordenes\FormBuscarOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordenes\FormBuscarOrdenes.Designer.cs">
+      <DependentUpon>FormBuscarOrdenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordenes\FormBuscarOrdenes.resx">
+      <DependentUpon>FormBuscarOrdenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FormReporteOrdenes.resx">
       <DependentUpon>FormReporteOrdenes.cs</DependentUpon>
