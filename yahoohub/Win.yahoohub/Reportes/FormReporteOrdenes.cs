@@ -26,7 +26,8 @@ namespace Win.yahoohub
             var _impuesto = new ImpuestosBL();
             var _producto = new ProductosBL();
             var _categoria = new CategoriasBL();
-
+                    
+        
 
             var bindingSource1 = new BindingSource();
             bindingSource1.DataSource = _orden.ObtenerOrdenes();
