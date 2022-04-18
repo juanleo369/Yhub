@@ -269,11 +269,12 @@ namespace BL.yahoohub
                 resultado.Exitoso = false;
             }
 
-            if (orden.Fecha_Entrega == null )
+            if (orden.Fecha_Entrega == orden.Fecha_Orden )
             {
                 resultado.Mensaje = "Ingrese un la fecha de entrega";
                 resultado.Exitoso = false;
             }
+
             if (orden.OrdenDetalle.Count == 0)
             {
                 resultado.Mensaje = "Ingrese productos a la orden";

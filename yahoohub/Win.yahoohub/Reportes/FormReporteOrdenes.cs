@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+
+
 
 namespace Win.yahoohub
 {
     public partial class FormReporteOrdenes : Form
     {
-
         public FormReporteOrdenes()
         {
             InitializeComponent();
@@ -53,8 +55,22 @@ namespace Win.yahoohub
             var bindingSource8 = new BindingSource();
             bindingSource8.DataSource = _categoria.ObtenerCategorias();
 
+
+           
             var reporte = new ReporteOrdenes();
+
             reporte.Database.Tables["Orden"].SetDataSource(bindingSource1);
+
+            //var ordenDetalle = new List<OrdenDetalle>();
+            //foreach (var orden in bindingSource1)
+            //{
+            //    foreach (var detalle in orden.OrdenDetalle)
+            //    {
+            //        ordenDetalle.Add(detalle);
+            //    }
+            //}
+            //reporte.Subreports[0].SetDataSource(ordenDetalle);
+
             reporte.Database.Tables["Empleado"].SetDataSource(bindingSource2);
             reporte.Database.Tables["Cliente"].SetDataSource(bindingSource3);
             reporte.Database.Tables["EstadoPedido"].SetDataSource(bindingSource4);

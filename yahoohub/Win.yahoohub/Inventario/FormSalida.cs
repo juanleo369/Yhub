@@ -35,17 +35,17 @@ namespace Win.yahoohub
         {
             //Codigo que permite inicializar el formulario con datos vacios
 
-            idTextBox.Text = "";
-            idTextBox2.Text = "";
-            cantidadTextBox.Text = "";
-            nombreTextBox1.Text = "";
-            descripcionTextBox.Text = "";
-            precioUnitTextBox.Text = "";
-            stockTextBox.Text = "";
-            empleadoIdComboBox.Text = null;
-            materialIdComboBox.Text = null;
-            empleadoIdComboBox.Enabled = false;
-            materialIdComboBox.Enabled = false;
+            //idTextBox.Text = "";
+            //idTextBox2.Text = "";
+            //cantidadTextBox.Text = "";
+            //nombreTextBox1.Text = "";
+            //descripcionTextBox.Text = "";
+            //precioUnitTextBox.Text = "";
+            //stockTextBox.Text = "";
+            //empleadoIdComboBox.Text = null;
+            //materialIdComboBox.Text = null;
+            //empleadoIdComboBox.Enabled = false;
+            //materialIdComboBox.Enabled = false;
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -56,17 +56,17 @@ namespace Win.yahoohub
             DeshabilitarHabilitarBotones(true);
             //Codigo que permite inicializar el formulario con datos vacios
 
-            idTextBox.Text = "";
-            idTextBox2.Text = "";
-            cantidadTextBox.Text = "";
-            nombreTextBox1.Text = "";
-            descripcionTextBox.Text = "";
-            precioUnitTextBox.Text = "";
-            stockTextBox.Text = "";
-            empleadoIdComboBox.Text = null;
-            materialIdComboBox.Text = null;
-            empleadoIdComboBox.Enabled = false;
-            materialIdComboBox.Enabled = false;
+            //idTextBox.Text = "";
+            //idTextBox2.Text = "";
+            //cantidadTextBox.Text = "";
+            //nombreTextBox1.Text = "";
+            //descripcionTextBox.Text = "";
+            //precioUnitTextBox.Text = "";
+            //stockTextBox.Text = "";
+            //empleadoIdComboBox.Text = null;
+            //materialIdComboBox.Text = null;
+            //empleadoIdComboBox.Enabled = false;
+            //materialIdComboBox.Enabled = false;
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -95,8 +95,8 @@ namespace Win.yahoohub
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            empleadoIdComboBox.Enabled = true;
-            materialIdComboBox.Enabled = true;
+            //empleadoIdComboBox.Enabled = true;
+            //materialIdComboBox.Enabled = true;
 
             _inventarios.AgregarInventario();
 
@@ -123,17 +123,17 @@ namespace Win.yahoohub
                 MessageBox.Show("Salida guardada exitosamente");
                 //Codigo que permite inicializar el formulario con datos vacios
                
-                idTextBox.Text = "";
-                idTextBox2.Text = "";
-                cantidadTextBox.Text = "";
-                nombreTextBox1.Text = "";
-                descripcionTextBox.Text = "";
-                precioUnitTextBox.Text = "";
-                stockTextBox.Text = "";
-                empleadoIdComboBox.Text = null;
-                materialIdComboBox.Text = null;
-                empleadoIdComboBox.Enabled = false;
-                materialIdComboBox.Enabled = false;
+                //idTextBox.Text = "";
+                //idTextBox2.Text = "";
+                //cantidadTextBox.Text = "";
+                //nombreTextBox1.Text = "";
+                //descripcionTextBox.Text = "";
+                //precioUnitTextBox.Text = "";
+                //stockTextBox.Text = "";
+                //empleadoIdComboBox.Text = null;
+                //materialIdComboBox.Text = null;
+                //empleadoIdComboBox.Enabled = false;
+                //materialIdComboBox.Enabled = false;
 
             }
             else
@@ -144,16 +144,16 @@ namespace Win.yahoohub
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int cantidad = 0;
-            int stock = 0;
-            int actualizacion = 0;
+            //int cantidad = 0;
+            //int stock = 0;
+            //int actualizacion = 0;
 
-            cantidad = Convert.ToInt32(cantidadTextBox.Text);
-            stock = Convert.ToInt32(stockTextBox.Text);
+            //cantidad = Convert.ToInt32(cantidadTextBox.Text);
+            //stock = Convert.ToInt32(stockTextBox.Text);
 
-             actualizacion = stock-cantidad;
+            // actualizacion = stock-cantidad;
 
-            stockTextBox.Text = Convert.ToString(actualizacion);
+            //stockTextBox.Text = Convert.ToString(actualizacion);
 
         }
 
@@ -192,6 +192,38 @@ namespace Win.yahoohub
             }
 
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var inventario = (Inventario)listaInventariosBindingSource.Current;
+
+            _inventarios.AgregarInventarioDetalle(inventario);
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void inventarioDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+
+        }
+
+        private void inventarioDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (empleadoIdComboBox.Text == "")
+            {
+                MessageBox.Show("Ingrese un empleado");
+
+            }
+
+            else
+            {
+                 var inventario = (Inventario)listaInventariosBindingSource.Current;
+                _inventarios.CalcularInventarios(inventario);
+
+                listaInventariosBindingSource.ResetBindings(false);
+            }
         }
     }
 }

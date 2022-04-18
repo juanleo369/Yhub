@@ -26,7 +26,7 @@ namespace BL.yahoohub
         //Codigo que sirve para crear una lista de  datos y enviarla al form
         public BindingList<Inventario> ObtenerInventarios()
         {
-            _contexto.Inventarios.Load();
+            _contexto.Inventarios.Include("InventarioDetalle").Load();
             ListaInventarios = _contexto.Inventarios.Local.ToBindingList();
             return ListaInventarios;
         }
@@ -52,6 +52,27 @@ namespace BL.yahoohub
             var nuevoInventarios = new Inventario();
             ListaInventarios.Add(nuevoInventarios);
         }
+
+        public void AgregarInventarioDetalle(Inventario inventario)
+        {
+            if (inventario != null)
+            {
+                var nuevoDetalle = new InventarioDetalle();
+                inventario.InventarioDetalle.Add(nuevoDetalle);
+            }
+        }
+
+
+        //Codigo que sirve para remover materiales a la tabla Inventario detalle
+
+        public void RemoverInventarioDetalle(Inventario inventario, InventarioDetalle inventarioDetalle)
+        {
+            if (inventario != null && inventarioDetalle != null)
+            {
+                inventario.InventarioDetalle.Remove(inventarioDetalle);
+            }
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
@@ -60,8 +81,51 @@ namespace BL.yahoohub
                 item.Reload();
             }
         }
-        //Codigo que sirve para eliminar datos en la base de datos
-        public bool EliminarInventario(int id)
+        public void CalcularInventarios(Inventario inventario)
+        {
+            //if (inventario != null)
+            //{
+            //    double subtotal = 0;
+
+            //    foreach (var detalle in compra.CompraDetalle)
+            //    {
+            //        var material = _contexto.Productos.Find(detalle.MaterialId);
+            //        if (material != null)
+            //        {
+            //            detalle.Precio = material.Precio;
+            //            detalle.Total = detalle.Cantidad * material.Precio;
+
+            //            subtotal += detalle.Total;
+            //        }
+            //    }
+
+            //    compra.Subtotal = subtotal;
+            //    compra.ISV = subtotal * impuesto;
+            //    compra.Total = subtotal + compra.ISV - descuento;
+            //}
+
+
+        }
+
+        public bool AnularCompra(int id)
+        {
+            foreach (var inventario in ListaInventarios)
+            {
+                if (inventario.Id == id)
+                {
+                    inventario.Activo = false;
+
+                    //CalcularExistencia(factura);
+
+                    _contexto.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
+        }
+      
+            //Codigo que sirve para eliminar datos en la base de datos
+            public bool EliminarInventario(int id)
         {
             foreach (var inventario in ListaInventarios)
             {
@@ -80,20 +144,26 @@ namespace BL.yahoohub
         {
             var resultado = new ResultadoInventario();
             resultado.Exitoso = true;
-             
-            if (inventarios.Cantidad <= 0)
+            
+            if (inventarios == null)
             {
-                resultado.Mensaje = "ingrese la cantidad del material";
+                resultado.Mensaje = "Ingrese una Salida valida";
                 resultado.Exitoso = false;
 
+                return resultado;
             }
-
-            if (inventarios.MaterialId <= 0)
+            if (inventarios.Id != 0 && inventarios.Activo == true)
             {
-                resultado.Mensaje = "ingrese el material";
+                resultado.Mensaje = "La Salida ya fue emitida y no se pueden realizar cambios en ella";
                 resultado.Exitoso = false;
-
             }
+
+            if (inventarios.Activo == false)
+            {
+                resultado.Mensaje = "La Salida esta anulada y no se pueden realizar cambios en ella";
+                resultado.Exitoso = false;
+            }
+
 
             if (inventarios.EmpleadoId <= 0)
             {
@@ -101,7 +171,19 @@ namespace BL.yahoohub
                 resultado.Exitoso = false;
 
             }
-
+            if (inventarios.InventarioDetalle.Count == 0)
+            {
+                resultado.Mensaje = "Ingrese un Material a la Salida";
+                resultado.Exitoso = false;
+            }
+            foreach (var detalle in inventarios.InventarioDetalle)
+            {
+                if (detalle.MaterialId == 0)
+                {
+                    resultado.Mensaje = "Seleccione Material validos";
+                    resultado.Exitoso = false;
+                }
+            }
             return resultado;
         }
     }
@@ -109,16 +191,16 @@ namespace BL.yahoohub
     public class Inventario
     {
         public int Id { get; set; }
-        public int MaterialId { get; set; }
-        public Material Material { get; set; }
         public DateTime FechaSalida { get; set; }
-        public int Cantidad { get; set; }
         public int EmpleadoId { get; set; }
         public Empleado Empleado { get; set; }
+        public BindingList<InventarioDetalle> InventarioDetalle { get; set; }
+        public bool Activo { get; set; }
 
         public Inventario()
         {
             FechaSalida = DateTime.Now;
+            Activo = true;
         }
     }
 
@@ -128,6 +210,20 @@ namespace BL.yahoohub
     {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }
+
+    }
+
+    public class InventarioDetalle
+    {
+        public int Id { get; set; }
+        public int MaterialId { get; set; }
+        public Material Material { get; set; }
+        public int Cantidad { get; set; }
+     
+        public InventarioDetalle()
+        {
+            Cantidad = 1;
+        }
 
     }
 }

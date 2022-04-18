@@ -121,16 +121,64 @@
     <Compile Include="Empleados\FormPlanillas.Designer.cs">
       <DependentUpon>FormPlanillas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscarCompras.cs">
+    <Compile Include="Compras\FormBuscarCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuscarCompras.Designer.cs">
+    <Compile Include="Compras\FormBuscarCompras.Designer.cs">
       <DependentUpon>FormBuscarCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPerfil.cs">
+    <Compile Include="FormReporteInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPerfil.Designer.cs">
+    <Compile Include="FormReporteInventario.Designer.cs">
+      <DependentUpon>FormReporteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteInventarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteInventarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteProveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteProveedores.Designer.cs">
+      <DependentUpon>FormReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FormReporteClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteClientes.Designer.cs">
+      <DependentUpon>FormReporteClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FormReporteEmpleados.Designer.cs">
+      <DependentUpon>FormReporteEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteEmpleados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteEmpleados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Usuario\FormPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\FormPerfil.Designer.cs">
       <DependentUpon>FormPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Ordenes\FormBuscarOrdenes.cs">
@@ -139,16 +187,16 @@
     <Compile Include="Ordenes\FormBuscarOrdenes.Designer.cs">
       <DependentUpon>FormBuscarOrdenes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCompras.cs">
+    <Compile Include="Compras\FormCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCompras.Designer.cs">
+    <Compile Include="Compras\FormCompras.Designer.cs">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsuarios.cs">
+    <Compile Include="Usuario\FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsuarios.Designer.cs">
+    <Compile Include="Usuario\FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -296,16 +344,44 @@
     <EmbeddedResource Include="Empleados\FormBuscarEmpleados.resx">
       <DependentUpon>FormBuscarEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscarCompras.resx">
+    <EmbeddedResource Include="Compras\FormBuscarCompras.resx">
       <DependentUpon>FormBuscarCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCompras.resx">
+    <EmbeddedResource Include="Compras\FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPerfil.resx">
+    <EmbeddedResource Include="FormReporteInventario.resx">
+      <DependentUpon>FormReporteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteInventarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteInventarios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteProveedores.resx">
+      <DependentUpon>FormReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteClientes.resx">
+      <DependentUpon>FormReporteClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FormReporteEmpleados.resx">
+      <DependentUpon>FormReporteEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteEmpleados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteEmpleados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\FormPerfil.resx">
       <DependentUpon>FormPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsuarios.resx">
+    <EmbeddedResource Include="Usuario\FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ordenes\FormBuscarOrdenes.resx">
@@ -464,9 +540,7 @@
       <Name>BL.yahoohub</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Compras\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>

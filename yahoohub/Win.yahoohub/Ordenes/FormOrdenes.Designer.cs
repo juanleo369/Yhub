@@ -798,7 +798,7 @@ namespace Win.yahoohub
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(885, 21);
+            this.label1.Location = new System.Drawing.Point(886, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 52);
             this.label1.TabIndex = 56;
@@ -903,6 +903,7 @@ namespace Win.yahoohub
             // 
             // ordenDetalleBindingSource
             // 
+            this.ordenDetalleBindingSource.AllowNew = false;
             this.ordenDetalleBindingSource.DataMember = "OrdenDetalle";
             this.ordenDetalleBindingSource.DataSource = this.listaOrdenesBindingSource;
             // 

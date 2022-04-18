@@ -58,16 +58,29 @@ namespace Win.yahoohub
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.compraDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordenDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordenDetalleDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaOrdenesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaOrdenesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraDetalleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenDetalleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenDetalleDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(22, 24);
+            this.groupBox3.Location = new System.Drawing.Point(30, 24);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1231, 47);
             this.groupBox3.TabIndex = 53;
@@ -87,7 +100,7 @@ namespace Win.yahoohub
             // 
             this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1262, 12);
+            this.button7.Location = new System.Drawing.Point(1278, 12);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(59, 51);
             this.button7.TabIndex = 52;
@@ -131,12 +144,12 @@ namespace Win.yahoohub
             this.dataGridViewCheckBoxColumn2,
             this.dataGridViewCheckBoxColumn3});
             this.listaOrdenesDataGridView.DataSource = this.listaOrdenesBindingSource;
-            this.listaOrdenesDataGridView.Location = new System.Drawing.Point(22, 106);
+            this.listaOrdenesDataGridView.Location = new System.Drawing.Point(30, 77);
             this.listaOrdenesDataGridView.Name = "listaOrdenesDataGridView";
             this.listaOrdenesDataGridView.ReadOnly = true;
             this.listaOrdenesDataGridView.RowHeadersWidth = 51;
             this.listaOrdenesDataGridView.RowTemplate.Height = 24;
-            this.listaOrdenesDataGridView.Size = new System.Drawing.Size(1231, 522);
+            this.listaOrdenesDataGridView.Size = new System.Drawing.Size(1231, 360);
             this.listaOrdenesDataGridView.TabIndex = 54;
             // 
             // dataGridViewTextBoxColumn1
@@ -346,11 +359,104 @@ namespace Win.yahoohub
             this.dataGridViewCheckBoxColumn3.ReadOnly = true;
             this.dataGridViewCheckBoxColumn3.Width = 125;
             // 
+            // compraDetalleBindingSource
+            // 
+            this.compraDetalleBindingSource.DataSource = typeof(BL.yahoohub.CompraDetalle);
+            // 
+            // ordenDetalleBindingSource
+            // 
+            this.ordenDetalleBindingSource.DataMember = "OrdenDetalle";
+            this.ordenDetalleBindingSource.DataSource = this.listaOrdenesBindingSource;
+            // 
+            // ordenDetalleDataGridView
+            // 
+            this.ordenDetalleDataGridView.AllowUserToAddRows = false;
+            this.ordenDetalleDataGridView.AllowUserToDeleteRows = false;
+            this.ordenDetalleDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ordenDetalleDataGridView.AutoGenerateColumns = false;
+            this.ordenDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ordenDetalleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26});
+            this.ordenDetalleDataGridView.DataSource = this.ordenDetalleBindingSource;
+            this.ordenDetalleDataGridView.Location = new System.Drawing.Point(30, 472);
+            this.ordenDetalleDataGridView.Name = "ordenDetalleDataGridView";
+            this.ordenDetalleDataGridView.ReadOnly = true;
+            this.ordenDetalleDataGridView.RowHeadersWidth = 51;
+            this.ordenDetalleDataGridView.RowTemplate.Height = 24;
+            this.ordenDetalleDataGridView.Size = new System.Drawing.Size(1231, 220);
+            this.ordenDetalleDataGridView.TabIndex = 54;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "ProductoId";
+            this.dataGridViewTextBoxColumn22.HeaderText = "ProductoId";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Producto";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Producto";
+            this.dataGridViewTextBoxColumn23.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Cantidad";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn24.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Precio";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn25.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Total";
+            this.dataGridViewTextBoxColumn26.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn26.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.Width = 125;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(566, 448);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(206, 21);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "DETALLE DE LA ORDEN";
+            // 
             // FormBuscarOrdenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 666);
+            this.ClientSize = new System.Drawing.Size(1349, 722);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ordenDetalleDataGridView);
             this.Controls.Add(this.listaOrdenesDataGridView);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button7);
@@ -362,7 +468,11 @@ namespace Win.yahoohub
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaOrdenesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaOrdenesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.compraDetalleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenDetalleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordenDetalleDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -396,5 +506,15 @@ namespace Win.yahoohub
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
+        private System.Windows.Forms.BindingSource compraDetalleBindingSource;
+        private System.Windows.Forms.BindingSource ordenDetalleBindingSource;
+        private System.Windows.Forms.DataGridView ordenDetalleDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -4,6 +4,9 @@
 
     public partial class DataSet
     {
+        partial class EmpleadoDataTable
+        {
+        }
     }
 }
 

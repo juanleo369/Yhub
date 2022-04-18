@@ -91,6 +91,15 @@ namespace BL.yahoohub
             }
         }
 
+        //Codigo que sirve para cancelar los cambios que se realizaron en el form
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
 
         //Codigo que sirve para eliminar datos en la base de datos
 
@@ -109,7 +118,7 @@ namespace BL.yahoohub
         }
 
         //Codigo que sirve para calcular los precios de los productos ingresados y sacar los precios
-        public void CalcularOrden(Compra compra, double impuesto, double descuento)
+        public void CalcularCompra(Compra compra, double impuesto, double descuento)
         {
             if (compra != null)
             {
@@ -117,11 +126,11 @@ namespace BL.yahoohub
 
                 foreach (var detalle in compra.CompraDetalle)
                 {
-                    var material = _contexto.Productos.Find(detalle.MaterialId);
+                    var material = _contexto.Materiales.Find(detalle.MaterialId);
                     if (material != null)
                     {
-                        detalle.Precio = material.Precio;
-                        detalle.Total = detalle.Cantidad * material.Precio;
+                        detalle.Precio = material.PrecioUnit;
+                        detalle.Total = detalle.Cantidad * material.PrecioUnit;
 
                         subtotal += detalle.Total;
                     }
@@ -133,6 +142,32 @@ namespace BL.yahoohub
             }
 
 
+        }
+
+        public void CalcularCompra2(Compra compra, double impuesto, double descuento)
+        {
+            if (compra != null)
+            {
+                double subtotal = 0;
+
+                foreach (var detalle in compra.CompraDetalle)
+                {
+                    var material = _contexto.Materiales.Find(detalle.MaterialId);
+                    if (material != null)
+                    {
+                        detalle.Precio = material.PrecioUnit;
+                        detalle.Total = detalle.Cantidad * material.PrecioUnit;
+
+                        subtotal += detalle.Total;
+                    }
+                }
+
+                compra.Subtotal = subtotal;
+                compra.ISV = subtotal * impuesto;
+                compra.Total = subtotal + compra.ISV - descuento;
+
+
+            }
         }
         public bool AnularCompra(int id)
         {

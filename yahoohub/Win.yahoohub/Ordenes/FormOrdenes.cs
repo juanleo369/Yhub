@@ -105,7 +105,7 @@ namespace Win.yahoohub
         {
             _orden.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            //Codigo que permite inicializar el formulario con datos vacios
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,10 +160,11 @@ namespace Win.yahoohub
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             double impuesto = Convert.ToDouble(impuestoIdComboBox.Text);
             double descuento = Convert.ToDouble(descuentoTextBox.Text);
-            double abono = Convert.ToDouble(impuestoIdComboBox.Text);
-            double saldopendiente = Convert.ToDouble(impuestoIdComboBox.Text);
+            double abono = Convert.ToDouble(abonoTextBox.Text);
+            double saldopendiente = Convert.ToDouble(saldo_PendienteTextBox.Text);
             double tipoPago = Convert.ToDouble(tipoPagoIdComboBox.Text);
 
             var orden = (Orden)listaOrdenesBindingSource.Current;
